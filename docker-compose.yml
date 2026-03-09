@@ -1,0 +1,154 @@
+services:
+  outreach_app:
+    build: .
+    env_file:
+      - .env
+    command:
+      [
+        "uvicorn",
+        "outreach_app.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000",
+      ]
+    environment:
+      DATABASE_URL: "sqlite:////app/data/operator.db"
+      GTM_DATABASE_URL: "sqlite+aiosqlite:////app/data/gtm.db"
+      ARTIFACTS_DIR: "/app/data/artifacts"
+      OPERATOR_SECRET: "change-me"
+      AGENT_API_KEYS: "change-me-agent-key"
+      AUTO_CREATE_DB: "true"
+      SCHEDULE_ENABLE_RUNNER: "true"
+      SCHEDULE_POLL_SECONDS: "60"
+      SCHEDULE_BATCH_SIZE: "10"
+      GOOGLE_APPLICATION_CREDENTIALS: "/app/openclaw-gdrive.json"
+      GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON: "${GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON:-}"
+      GOOGLE_SHEETS_SCOPES: "${GOOGLE_SHEETS_SCOPES:-https://www.googleapis.com/auth/spreadsheets}"
+      GTM_CRM_SPREADSHEET_ID: "${GTM_CRM_SPREADSHEET_ID:-}"
+      GTM_CRM_RANGE_A1: "${GTM_CRM_RANGE_A1:-Leads!A:Z}"
+      LOG_LEVEL: "INFO"
+    volumes:
+      - ./data:/app/data
+      - ./watchlists:/app/watchlists
+      - ./openclaw-gdrive.json:/app/openclaw-gdrive.json:ro
+    ports:
+      - "8102:8000"
+
+  pr_monitor_app:
+    build: .
+    env_file:
+      - .env
+    command:
+      [
+        "uvicorn",
+        "pr_monitor_app.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000",
+      ]
+    environment:
+      DATABASE_URL: "sqlite+aiosqlite:////app/data/pr_monitor.db"
+      REDIS_URL: "redis://redis:6379/0"
+      CELERY_BROKER_URL: "redis://redis:6379/0"
+      CELERY_RESULT_BACKEND: "redis://redis:6379/1"
+      INGEST_ENABLE_SCHEDULER: "false"
+      RADAR_DATABASE_URL: "sqlite+aiosqlite:////app/data/radar.db"
+      RADAR_WATCHLIST_PATH: "/app/watchlists/sample_watchlist.yaml"
+      RADAR_DOSSIERS_DIR: "/app/data/dossiers"
+      GOOGLE_APPLICATION_CREDENTIALS: "/app/openclaw-gdrive.json"
+      GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON: "${GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON:-}"
+      GOOGLE_SHEETS_SCOPES: "${GOOGLE_SHEETS_SCOPES:-https://www.googleapis.com/auth/spreadsheets}"
+      RADAR_EXPORT_TO_SHEETS: "false"
+      RADAR_OPPORTUNITIES_SHEET_SPREADSHEET_ID: ""
+      RADAR_OPPORTUNITIES_SHEET_RANGE_A1: "radar_opportunities!A:Z"
+      LOG_LEVEL: "INFO"
+    depends_on:
+      - redis
+    volumes:
+      - ./data:/app/data
+      - ./watchlists:/app/watchlists
+      - ./openclaw-gdrive.json:/app/openclaw-gdrive.json:ro
+    ports:
+      - "8101:8000"
+
+  pr_monitor_worker:
+    build: .
+    env_file:
+      - .env
+    command:
+      [
+        "celery",
+        "-A",
+        "pr_monitor_app.tasks.celery_app:celery_app",
+        "worker",
+        "-l",
+        "INFO",
+      ]
+    environment:
+      DATABASE_URL: "sqlite+aiosqlite:////app/data/pr_monitor.db"
+      REDIS_URL: "redis://redis:6379/0"
+      CELERY_BROKER_URL: "redis://redis:6379/0"
+      CELERY_RESULT_BACKEND: "redis://redis:6379/1"
+      RADAR_DATABASE_URL: "sqlite+aiosqlite:////app/data/radar.db"
+      RADAR_WATCHLIST_PATH: "/app/watchlists/sample_watchlist.yaml"
+      RADAR_DOSSIERS_DIR: "/app/data/dossiers"
+      GOOGLE_APPLICATION_CREDENTIALS: "/app/openclaw-gdrive.json"
+      GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON: "${GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON:-}"
+      GOOGLE_SHEETS_SCOPES: "${GOOGLE_SHEETS_SCOPES:-https://www.googleapis.com/auth/spreadsheets}"
+      RADAR_EXPORT_TO_SHEETS: "false"
+      RADAR_OPPORTUNITIES_SHEET_SPREADSHEET_ID: ""
+      RADAR_OPPORTUNITIES_SHEET_RANGE_A1: "radar_opportunities!A:Z"
+      LOG_LEVEL: "INFO"
+    depends_on:
+      - redis
+    volumes:
+      - ./data:/app/data
+      - ./watchlists:/app/watchlists
+      - ./openclaw-gdrive.json:/app/openclaw-gdrive.json:ro
+
+  pr_monitor_beat:
+    build: .
+    env_file:
+      - .env
+    command:
+      [
+        "sh",
+        "-c",
+        "rm -f /tmp/celerybeat-schedule* ; celery -A pr_monitor_app.tasks.celery_app:celery_app beat -l INFO --schedule /tmp/celerybeat-schedule",
+      ]
+    environment:
+      DATABASE_URL: "sqlite+aiosqlite:////app/data/pr_monitor.db"
+      REDIS_URL: "redis://redis:6379/0"
+      CELERY_BROKER_URL: "redis://redis:6379/0"
+      CELERY_RESULT_BACKEND: "redis://redis:6379/1"
+      RADAR_DATABASE_URL: "sqlite+aiosqlite:////app/data/radar.db"
+      RADAR_WATCHLIST_PATH: "/app/watchlists/sample_watchlist.yaml"
+      RADAR_DOSSIERS_DIR: "/app/data/dossiers"
+      GOOGLE_APPLICATION_CREDENTIALS: "/app/openclaw-gdrive.json"
+      GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON: "${GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON:-}"
+      GOOGLE_SHEETS_SCOPES: "${GOOGLE_SHEETS_SCOPES:-https://www.googleapis.com/auth/spreadsheets}"
+      RADAR_EXPORT_TO_SHEETS: "false"
+      RADAR_OPPORTUNITIES_SHEET_SPREADSHEET_ID: ""
+      RADAR_OPPORTUNITIES_SHEET_RANGE_A1: "radar_opportunities!A:Z"
+      LOG_LEVEL: "INFO"
+    depends_on:
+      - redis
+    volumes:
+      - ./data:/app/data
+      - ./watchlists:/app/watchlists
+      - ./openclaw-gdrive.json:/app/openclaw-gdrive.json:ro
+
+  dashboard_app:
+    build: ./dashboard_app
+    depends_on:
+      - outreach_app
+      - pr_monitor_app
+    ports:
+      - "8103:80"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

@@ -1,0 +1,96 @@
+companies:
+  - name: Atlas Forge Bio
+    domain: atlasforgebio.example
+    aliases: ["AFB"]
+    hq: Boston, MA
+    stage: preclinical
+    last_raise_date: 2025-04-18
+    last_raise_amount: 42000000
+    runway_months: 18
+    lead_investors: ["Northlake Ventures", "Beacon Hill Capital"]
+    board_members: ["Dana Rowe", "Mika Patel"]
+    therapeutic_areas: ["immunology", "fibrosis"]
+    warm_intro_paths: ["Northlake Ventures", "Dana Rowe"]
+    rss_feeds: []
+    contacts:
+      - name: Elena Voss
+        title: Chief Scientific Officer
+        email: elena.voss@atlasforgebio.example
+        role: CSO
+        warm_intro_strength: 0.8
+        is_primary: true
+      - name: Marcus Flint
+        title: Chief Executive Officer
+        email: marcus.flint@atlasforgebio.example
+        role: CEO
+        warm_intro_strength: 0.7
+        is_primary: false
+    programs:
+      - asset_name: AFB-101
+        target: TGFBR2
+        mechanism: selective kinase inhibition
+        modality: small molecule
+        indication: idiopathic pulmonary fibrosis
+        stage: IND-enabling
+        key_terms: ["TGFBR2", "pulmonary fibrosis", "IND-enabling", "mechanistic validation"]
+        lead_program_flag: true
+
+  - name: Helix River Therapeutics
+    domain: helixriver.example
+    aliases: ["HRTx", "Helix River"]
+    hq: South San Francisco, CA
+    stage: preclinical
+    last_raise_date: 2024-11-02
+    last_raise_amount: 65000000
+    runway_months: 14
+    lead_investors: ["Summit Axis", "Blue Delta BioVentures"]
+    board_members: ["Iris Chen"]
+    therapeutic_areas: ["rare disease", "gene therapy"]
+    warm_intro_paths: ["Blue Delta BioVentures"]
+    rss_feeds: []
+    contacts:
+      - name: Priya Raman
+        title: Chief Executive Officer
+        email: priya.raman@helixriver.example
+        role: CEO
+        warm_intro_strength: 0.9
+        is_primary: true
+    programs:
+      - asset_name: HRT-201
+        target: MFSD8
+        mechanism: AAV gene replacement
+        modality: gene therapy
+        indication: CLN7 Batten disease
+        stage: preclinical
+        key_terms: ["MFSD8", "CLN7", "gene replacement", "AAV", "translational bridge"]
+        lead_program_flag: true
+
+  - name: Meridian Loop Oncology
+    domain: meridianloop.example
+    aliases: ["MLO"]
+    hq: San Diego, CA
+    stage: preclinical
+    last_raise_date: 2025-01-15
+    last_raise_amount: 28000000
+    runway_months: 12
+    lead_investors: ["Catalyst Ridge", "Forward Engine"]
+    board_members: ["Arjun Khanna", "Leah Brooke"]
+    therapeutic_areas: ["oncology"]
+    warm_intro_paths: ["Catalyst Ridge", "Leah Brooke"]
+    rss_feeds: []
+    contacts:
+      - name: Noah Sato
+        title: VP Business Development
+        email: noah.sato@meridianloop.example
+        role: VP BD
+        warm_intro_strength: 0.7
+        is_primary: true
+    programs:
+      - asset_name: MLO-301
+        target: PRMT5
+        mechanism: synthetic lethal inhibitor
+        modality: small molecule
+        indication: MTAP-deleted solid tumors
+        stage: preclinical
+        key_terms: ["PRMT5", "MTAP deleted", "synthetic lethal", "partnering", "licensing"]
+        lead_program_flag: true

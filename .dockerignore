@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+data/
+*.db
+*.zip
+openclaw-gdrive.json
+venv/
+dashboard_app/node_modules
+dashboard_app/dist
+.history
+data/

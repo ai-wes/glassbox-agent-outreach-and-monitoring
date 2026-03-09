@@ -1,0 +1,9 @@
+pydantic>=2.0,<3
+requests>=2.31
+beautifulsoup4>=4.12
+google-search-results>=2.4.2
+openai>=1.30
+google-analytics-data>=0.18
+pytrends>=4.9
+extruct>=0.17
+w3lib>=2.1

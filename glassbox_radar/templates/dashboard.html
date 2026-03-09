@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Glassbox Radar</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; color: #1f2937; }
+      h1, h2 { margin-bottom: 0.3rem; }
+      .stats { display: flex; gap: 1rem; margin-bottom: 2rem; }
+      .card { padding: 1rem; border: 1px solid #d1d5db; border-radius: 8px; min-width: 160px; }
+      table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+      th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
+      .score { font-weight: 700; }
+      .muted { color: #6b7280; }
+    </style>
+  </head>
+  <body>
+    <h1>Glassbox Radar</h1>
+    <p class="muted">Internal milestone intelligence and fragility monitoring.</p>
+
+    <div class="stats">
+      <div class="card">
+        <div class="muted">Companies</div>
+        <div>{{ companies|length }}</div>
+      </div>
+      <div class="card">
+        <div class="muted">Programs</div>
+        <div>{{ programs|length }}</div>
+      </div>
+      <div class="card">
+        <div class="muted">Top Opportunities</div>
+        <div>{{ opportunities|length }}</div>
+      </div>
+    </div>
+
+    <h2>Ranked opportunities</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Program</th>
+          <th>Milestone</th>
+          <th>Radar Score</th>
+          <th>Fragility</th>
+          <th>Buyer</th>
+          <th>Tier</th>
+          <th>Dossier</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for opportunity in opportunities %}
+        <tr>
+          <td>{{ opportunity.program.asset_name or opportunity.program.target or opportunity.program_id }}<br><span class="muted">{{ opportunity.company.name }}</span></td>
+          <td>{{ opportunity.milestone_type.value }}</td>
+          <td class="score">{{ "%.2f"|format(opportunity.radar_score) }}</td>
+          <td>{{ "%.2f"|format(opportunity.fragility_score) }}</td>
+          <td>{{ opportunity.primary_buyer_role or "Unknown" }}</td>
+          <td>{{ opportunity.tier or "C" }}</td>
+          <td>{% if opportunity.dossier_path %}<code>{{ opportunity.dossier_path }}</code>{% else %}<span class="muted">Not generated</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

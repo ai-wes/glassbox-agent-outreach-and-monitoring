@@ -1,0 +1,2963 @@
+[0.86s -> 2.84s]  Support for the show comes from Adteo.
+[3.06s -> 5.88s]  Adteo is an AI-native CRM built for the next era of companies.
+[6.08s -> 8.20s]  Its powerful data structure adapts to your business model,
+[8.36s -> 10.18s]  syncs in all of your contacts and minutes,
+[10.30s -> 12.22s]  and enriches your business with actionable data.
+[12.78s -> 15.08s]  Adteo also allows you to create email sequences,
+[15.28s -> 17.18s]  real-time reports, and powerful automations,
+[17.32s -> 19.30s]  all to help you build what matters, your company.
+[19.74s -> 21.54s]  Join industry leaders including Flatfile,
+[21.66s -> 23.08s]  Replicate, Modal, and more.
+[23.20s -> 25.18s]  You can go to adteo.com slash pivot,
+[25.42s -> 27.50s]  and you'll get 15% off your first year.
+[27.50s -> 30.58s]  That's A-T-T-I-O dot com slash pivot.
+[57.50s -> 59.94s]  to vet and hire AI vendors,
+[60.46s -> 62.68s]  which means that you could be buying a fancy tool
+[62.68s -> 64.08s]  that no one will know how to use
+[64.08s -> 65.94s]  or missing out on the real innovation.
+[66.46s -> 67.62s]  Enter General Assembly.
+[68.10s -> 71.32s]  General Assembly's AI Academy helps teams master AI
+[71.32s -> 73.62s]  by offering role-specific real-world training
+[73.62s -> 76.48s]  designed to boost productivity and accelerate transformation.
+[77.16s -> 79.34s]  You and your team can learn the in-demand skills
+[79.34s -> 81.00s]  that can unlock the potential of AI
+[81.00s -> 82.68s]  at every level of your organization.
+[83.30s -> 86.36s]  Visit ga.co slash AI Academy
+[86.36s -> 87.36s]  to explore AI technology,
+[87.50s -> 88.88s]  AI Academy training tracks
+[88.88s -> 90.90s]  tailored to your team's roles and goals.
+[91.38s -> 95.40s]  That's ga.co slash AI Academy to learn more.
+[95.94s -> 98.84s]  ga.co slash AI Academy.
+[99.38s -> 100.18s]  General Assembly.
+[100.56s -> 102.28s]  Real skills, real impact.
+[105.86s -> 108.34s]  Support for the show comes from Intuit QuickBooks.
+[108.44s -> 110.20s]  Do you own a business that's ready to thrive?
+[110.36s -> 112.56s]  It's time to let Intuit QuickBooks take things
+[112.56s -> 114.60s]  like unpaid invoices and tracking expenses
+[114.60s -> 116.98s]  off your plate so you can take things to the next level.
+[116.98s -> 117.48s]  Intuit QuickBooks.
+[117.50s -> 119.50s]  Intuit QuickBooks is a powerful AI-driven
+[119.50s -> 120.90s]  all-in-one business solution
+[120.90s -> 123.00s]  that can help with day-to-day tasks
+[123.00s -> 125.24s]  like invoicing, expenses, and taxes.
+[125.82s -> 128.10s]  QuickBooks can help you unlock the growth in your business
+[128.10s -> 129.68s]  so you can get back to enjoying your business.
+[129.92s -> 132.14s]  Manage and grow your business all in one place.
+[132.64s -> 133.62s]  Intuit QuickBooks.
+[133.90s -> 134.90s]  Your way to money.
+[135.22s -> 136.84s]  Get 90% off for three months.
+[137.00s -> 137.74s]  Limited time only.
+[137.90s -> 139.00s]  Terms and conditions apply.
+[144.08s -> 145.38s]  Oh, pillow.
+[145.66s -> 146.52s]  He's too short.
+[146.52s -> 147.48s]  You need a little pillow?
+[147.50s -> 148.54s]  I need a pillow.
+[151.88s -> 152.64s]  Hi, everyone.
+[152.78s -> 154.28s]  This is Pivot from New York Magazine
+[154.28s -> 155.86s]  and the Vox Media Podcast Network.
+[156.00s -> 156.88s]  I'm Kara Swisher.
+[157.24s -> 158.42s]  And I'm Scott Galloway.
+[158.66s -> 159.52s]  What are you drinking there?
+[159.64s -> 160.18s]  What are you drinking?
+[160.34s -> 162.88s]  I got a grapefruit juice and I got a latte.
+[163.32s -> 163.80s]  Oh, nice.
+[163.80s -> 163.98s]  And I'm here.
+[164.34s -> 165.16s]  In Los Angeles.
+[165.48s -> 168.12s]  Yeah, I'm here at my second home, the Beverly Hills Hotel.
+[168.42s -> 168.76s]  Uh-huh.
+[168.94s -> 169.78s]  Where they greet me.
+[169.90s -> 170.96s]  They're like, hello, Mr. Galloway.
+[171.00s -> 172.10s]  It's so good to have you back.
+[172.26s -> 172.84s]  Oh, yeah.
+[172.88s -> 173.64s]  That's their job.
+[173.70s -> 174.70s]  It's called hospitality.
+[175.02s -> 175.60s]  You do know that, right?
+[175.60s -> 177.26s]  Yeah, it's called $1,400 a night.
+[177.26s -> 177.56s]  Yeah, okay.
+[177.56s -> 178.50s]  For people to be nice to you.
+[178.64s -> 178.76s]  Okay.
+[178.76s -> 179.30s]  But then I go down,
+[179.80s -> 181.90s]  went down to the Polo Lounge right now,
+[182.10s -> 184.36s]  made eye contact with a woman from Ukraine.
+[184.68s -> 185.34s]  Oh, great.
+[185.58s -> 186.20s]  Yeah, hello.
+[187.20s -> 189.36s]  And boy, did she find me charming.
+[189.86s -> 191.58s]  Oh, my God, she found me charming.
+[191.78s -> 192.18s]  Listen to me.
+[192.22s -> 194.18s]  Do you see any famous people in the Polo Lounge?
+[195.00s -> 196.30s]  No, it was pretty quiet last night.
+[196.36s -> 197.18s]  I actually ate outside.
+[197.24s -> 197.80s]  It was beautiful.
+[198.16s -> 200.34s]  I always run into Ted Sarandos there.
+[200.86s -> 201.12s]  Really?
+[201.16s -> 202.14s]  I love Ted Sarandos.
+[202.16s -> 203.78s]  Yeah, he's always there making deals.
+[203.92s -> 205.66s]  That's what I always see when I'm always there.
+[205.66s -> 207.24s]  The seldom times I was there.
+[207.56s -> 209.70s]  I went with the Tinder guys once there.
+[209.82s -> 210.72s]  You know who I run into here?
+[210.96s -> 214.38s]  It feels like WME agents are crawling the halls
+[214.38s -> 215.52s]  to try and find deals,
+[215.72s -> 218.02s]  wondering if like a new miniseries
+[218.02s -> 219.96s]  is going to spill out of a room here or something.
+[220.24s -> 222.94s]  I ran into a guy, an agent named Sam the other day.
+[222.96s -> 223.52s]  Oh, I'm Sam.
+[224.22s -> 225.08s]  This lovely young man.
+[225.18s -> 226.04s]  All these like super,
+[226.16s -> 227.50s]  he's like, hi, I'm Sam Rabinowitz.
+[227.60s -> 228.54s]  And before he even said,
+[228.64s -> 230.42s]  I'm an agent at WME and love your work,
+[230.46s -> 234.06s]  I knew he was an agent from WME and loves my work.
+[234.70s -> 236.06s]  WME, it's like their second.
+[236.14s -> 237.00s]  I think they've decided
+[237.00s -> 238.14s]  to go remote
+[238.14s -> 239.96s]  and they just work out of the lobby here.
+[240.16s -> 240.36s]  Lobby.
+[240.46s -> 241.46s]  That's a great, that's a great idea.
+[241.56s -> 242.38s]  I'm actually in New York.
+[242.44s -> 243.94s]  I took a very early morning train.
+[245.18s -> 246.02s]  So are you at my house?
+[246.38s -> 246.98s]  I'm not.
+[247.06s -> 247.88s]  In fact, I didn't.
+[247.94s -> 248.96s]  I was trying to be nice,
+[249.04s -> 250.46s]  but I have to stay in Brooklyn this weekend
+[250.46s -> 251.94s]  because I'm doing more secret filming.
+[252.14s -> 253.06s]  Oh God, here we go.
+[253.12s -> 253.86s]  How to live forever.
+[254.04s -> 255.30s]  I'm getting a full body scan.
+[255.36s -> 257.20s]  You've gone full like, what is it?
+[257.30s -> 259.02s]  You've gone full Sumner Redstone.
+[259.20s -> 261.50s]  You've decided that you can beat life.
+[261.86s -> 262.58s]  I have.
+[263.02s -> 264.00s]  Yes, I'm here in New York
+[264.00s -> 266.52s]  doing a number of things for my secret thing.
+[266.62s -> 266.64s]  And I'm doing a lot of things for my secret thing.
+[266.64s -> 268.60s]  And I would stay at your house,
+[268.66s -> 269.56s]  but I stayed at your house.
+[269.62s -> 270.68s]  I don't want to like, you know,
+[270.74s -> 271.36s]  overstay my welcome.
+[271.50s -> 271.78s]  By the way.
+[271.90s -> 274.50s]  Oh, that train left the station a while ago, Carol.
+[274.54s -> 275.36s]  I totally want to stay.
+[275.36s -> 275.96s]  That's hilarious.
+[275.96s -> 276.72s]  I totally.
+[277.16s -> 279.30s]  Were you self-conscious about staying at my place?
+[279.32s -> 280.16s]  No, not at all.
+[280.22s -> 280.74s]  I'm going to ask you.
+[280.84s -> 282.76s]  Amanda bought glasses for your place,
+[282.84s -> 283.86s]  actually for the kids.
+[284.32s -> 285.94s]  That's how presumptuous we are.
+[286.08s -> 287.38s]  If they're not Rydell,
+[287.42s -> 288.68s]  I don't want that shit in my house.
+[288.86s -> 289.48s]  As you can tell,
+[289.52s -> 291.10s]  I'm very particular about my house.
+[291.62s -> 293.28s]  If it's not Austrian glassware,
+[293.28s -> 294.56s]  it does not belong in the house.
+[294.58s -> 295.48s]  I know, but let me just say,
+[295.56s -> 296.30s]  we were going to hide it.
+[296.30s -> 297.12s]  You wouldn't have found it.
+[297.18s -> 298.70s]  But I didn't let her keep it there.
+[298.76s -> 300.78s]  I was like, we can't presume we can always stay there.
+[300.86s -> 302.76s]  And the Galloways are moving back possibly.
+[303.04s -> 303.26s]  And so.
+[303.28s -> 303.90s]  Oh, wait, I'm sorry.
+[304.24s -> 305.12s]  She didn't buy me glassware.
+[305.12s -> 306.62s]  She bought her own glassware.
+[307.18s -> 308.52s]  It's just like she bought her own.
+[308.96s -> 311.42s]  I show up and you guys have your own toiletries there.
+[311.68s -> 313.48s]  And you're like a girlfriend moving in.
+[313.72s -> 314.92s]  There's a drawer with your stuff.
+[315.12s -> 316.58s]  No, we use your toiletries.
+[316.76s -> 317.38s]  Let's be clear.
+[317.44s -> 318.78s]  I go into your things and use your toiletries.
+[318.88s -> 321.02s]  But the thing is, you have such a nice stuff.
+[321.12s -> 322.58s]  We're scared the kids are going to break it.
+[322.60s -> 325.22s]  So we bought a plastic version for the kids
+[325.22s -> 326.28s]  so they could drink water.
+[326.30s -> 327.12s]  And stuff like that.
+[327.20s -> 328.78s]  Anyway, we love staying at the Galloways.
+[328.84s -> 330.76s]  And we're excited to stay there when you move back.
+[330.94s -> 332.32s]  That's when we're really going to move in.
+[332.42s -> 333.00s]  It's going to be great.
+[333.18s -> 334.38s]  We're going to all like cuddle up.
+[335.16s -> 336.96s]  Anyway, we've got a lot to get to today,
+[336.98s -> 338.84s]  including Trump's latest tear of chaos
+[338.84s -> 340.72s]  and a major shakeup at Apple.
+[341.02s -> 343.02s]  But first, Scott, it's the day we knew
+[343.02s -> 344.68s]  was coming for quite some time.
+[344.78s -> 347.14s]  Linda Iaccarino is stepping down as CEO of X
+[347.14s -> 348.42s]  after two years in the job.
+[348.96s -> 350.96s]  Iaccarino announced her departure in a post on X,
+[351.04s -> 354.46s]  thanking Elon, calling the job an opportunity of a lifetime.
+[354.46s -> 356.04s]  And he responded cold.
+[356.30s -> 358.16s]  Thank you for your contributions.
+[359.00s -> 359.18s]  Yeah.
+[359.58s -> 359.80s]  Yeah.
+[359.94s -> 360.98s]  Clearly, they're very warm.
+[361.22s -> 362.96s]  They clearly are very close.
+[363.18s -> 363.38s]  Yeah.
+[363.56s -> 364.68s]  It was like love.
+[364.80s -> 365.72s]  Love all around.
+[366.24s -> 366.38s]  Yeah.
+[367.36s -> 369.20s]  Let me just say, that was cold.
+[369.34s -> 371.22s]  Like, when we break up, can you write me
+[371.22s -> 373.38s]  thank you for your contributions just because?
+[373.58s -> 374.46s]  I just, thank you.
+[374.46s -> 375.46s]  Yeah, no, that's, yeah.
+[375.54s -> 376.62s]  Thank you for your contributions.
+[376.74s -> 379.00s]  Anyway, she did not provide a reason for her departure,
+[379.10s -> 380.32s]  although we have speculated,
+[380.56s -> 382.64s]  especially when X and AI merged.
+[382.88s -> 384.78s]  The decision was reportedly months in the making.
+[384.78s -> 385.46s]  Of course it was.
+[385.46s -> 387.74s]  She was effectively demoted back in March,
+[387.82s -> 389.48s]  thanks to X's merge with XAI.
+[389.64s -> 390.82s]  And you and I talked about this,
+[390.88s -> 392.34s]  that she was layered, essentially,
+[392.48s -> 395.10s]  and that she was a CEO name only to start with.
+[395.16s -> 396.34s]  Now she really was layered,
+[396.40s -> 397.80s]  and she probably was getting layered further.
+[398.58s -> 401.24s]  Current and former employees told the Wall Street Journal
+[401.24s -> 402.58s]  Iaccarino's position was tenuous
+[402.58s -> 403.88s]  after clashes with management.
+[404.02s -> 406.50s]  He brought in someone from Tubi,
+[406.58s -> 410.62s]  which is interesting to be the CFO of XAI, I think.
+[410.82s -> 412.60s]  And again, layering, layering, layering.
+[412.60s -> 414.68s]  And this is a woman who really wanted to be CEO.
+[415.46s -> 417.68s]  Of course, she picked the wrong person to do that with.
+[417.82s -> 419.50s]  Her exit comes amid major problems
+[419.50s -> 421.60s]  with XAI's chatbot Grok this week.
+[421.68s -> 423.52s]  The bot was spewing anti-Semitic rhetoric,
+[423.72s -> 425.04s]  recommending a second Holocaust
+[425.04s -> 427.78s]  and calling itself Mecha-Hitler.
+[428.04s -> 429.58s]  I don't know where that came from.
+[429.90s -> 430.96s]  I guess mechanized Hitler?
+[431.12s -> 431.56s]  I don't know.
+[432.18s -> 433.44s]  So she's really leaving on a high note.
+[433.50s -> 437.42s]  By the way, Threads is about to catch up with X also.
+[437.72s -> 438.36s]  And what else?
+[438.66s -> 441.30s]  Probably she didn't want to get in the middle of the beef between...
+[441.30s -> 445.08s]  She can't use lawsuits and threats of Trump retribution anymore
+[445.08s -> 445.30s]  since she's a member of the White House.
+[445.30s -> 445.44s]  So she's really leaving on a high note.
+[445.46s -> 447.30s]  I guess Elon's not friends with him anymore.
+[448.02s -> 449.62s]  I can't wait to hear what you think,
+[449.70s -> 452.66s]  but let's first listen back to what we had to say about Linda last July.
+[453.84s -> 455.42s]  Like, Linda, what are you doing?
+[455.52s -> 456.66s]  You're not running a company.
+[456.92s -> 457.92s]  You're running a...
+[457.92s -> 460.08s]  Like, he's just using it for a political cudgel.
+[460.18s -> 460.62s]  That's it.
+[460.76s -> 461.06s]  That's it.
+[461.28s -> 461.98s]  That's all that's happening.
+[462.52s -> 464.30s]  Look, she's the circus clown
+[464.30s -> 466.42s]  following around an elephant scooping up his shit.
+[467.08s -> 468.64s]  She's constantly...
+[468.64s -> 471.34s]  She's basically the most overpaid apologist in history
+[471.34s -> 473.00s]  other than someone being in the Trump cabinet.
+[473.48s -> 475.16s]  I don't know what she's doing there.
+[475.16s -> 475.70s]  It's just...
+[475.70s -> 477.44s]  I don't really care because I don't really care for her,
+[477.54s -> 479.48s]  but it's embarrassing.
+[479.72s -> 481.18s]  It's an embarrassing way to spend your life.
+[481.32s -> 483.92s]  If you're a real ad person, which you used to be,
+[484.54s -> 486.10s]  get a job at a real company.
+[487.24s -> 489.14s]  So she's taken our advice, I guess.
+[489.34s -> 490.92s]  But in any case,
+[491.06s -> 492.68s]  what do you think about what's happening here?
+[492.76s -> 495.06s]  And obviously, the ad market is going to fall off
+[495.06s -> 496.34s]  drastically for this company
+[496.34s -> 498.46s]  because of the safety issues, for one, Nazis.
+[498.96s -> 500.44s]  It's now just not Nazi adjacent.
+[500.60s -> 501.26s]  It's full Nazi.
+[501.96s -> 504.40s]  And also, the numbers are declining,
+[504.40s -> 504.76s]  and now...
+[504.76s -> 507.22s]  Now advertisers probably don't feel the pressure anymore.
+[508.40s -> 511.16s]  I doubt he'll bring in someone to replace her, I guess.
+[511.20s -> 512.94s]  I don't think he really cares for the business.
+[513.32s -> 515.92s]  And talk about her ultimate legacy.
+[516.12s -> 518.18s]  I think it's probably the same as you said, correct?
+[518.54s -> 519.46s]  Look, it reflects...
+[519.46s -> 520.40s]  Linda, moving on, reflects...
+[521.10s -> 522.12s]  The kindest thing you could say,
+[522.20s -> 523.76s]  it reflects a shift in strategy
+[523.76s -> 525.30s]  as opposed to a failed strategy.
+[526.32s -> 527.98s]  You know, Elon Musk, people don't remember,
+[528.12s -> 530.60s]  he offered $44 billion under what I assume
+[530.60s -> 532.56s]  was a ketamine-induced mania
+[532.56s -> 534.40s]  and then did everything he could
+[534.40s -> 534.74s]  to try and make it work.
+[534.76s -> 535.70s]  And back out of the deal.
+[535.94s -> 537.02s]  Basically sued the company,
+[537.14s -> 538.98s]  went all the way to the Delaware Chancery Court
+[538.98s -> 540.64s]  saying, I don't have to close on this deal
+[540.64s -> 542.94s]  when he realized he was vastly overpaying
+[542.94s -> 545.46s]  for a subscale social media company.
+[545.68s -> 546.58s]  And the judge said,
+[546.82s -> 548.64s]  fuck you, you gotta close, boss.
+[548.68s -> 550.10s]  This still is a nation of laws.
+[550.72s -> 551.90s]  And the strategy was,
+[552.80s -> 554.56s]  you know, there were several pillars to the strategy.
+[554.94s -> 557.74s]  One was to dramatically cut costs.
+[557.90s -> 559.40s]  His Musk vision was,
+[559.54s -> 561.18s]  I could have a minimum viable product
+[561.18s -> 562.22s]  or a similar product
+[562.22s -> 564.74s]  with dramatically less costs.
+[564.76s -> 566.36s]  And to his credit,
+[567.24s -> 569.26s]  he shocked everyone and was right.
+[569.50s -> 571.08s]  He laid off 80% of the people.
+[571.34s -> 572.70s]  And the bottom line is,
+[572.78s -> 574.04s]  I'm not sure you would know the product
+[574.04s -> 576.12s]  was much different three or six months later.
+[576.60s -> 577.40s]  Except for the safety issues
+[577.40s -> 578.48s]  and sort of the crap.
+[578.94s -> 580.94s]  But that was a strategic decision,
+[581.20s -> 582.62s]  not cost-cutting.
+[582.88s -> 583.86s]  The reality is,
+[584.06s -> 585.58s]  so let's talk a little bit about that.
+[585.68s -> 586.76s]  Hate speech increased 50%.
+[587.40s -> 589.76s]  Transphobic slurs increased 260%.
+[590.50s -> 592.62s]  Homophobic tweets rose by 30%.
+[592.62s -> 593.76s]  Racist tweets, 42%.
+[594.76s -> 597.00s]  And engagement grew 70%
+[597.00s -> 598.80s]  for posts around hate speech.
+[598.90s -> 601.16s]  Meaning, this wasn't a function
+[601.16s -> 602.80s]  of a lack of moderation or cost-cutting.
+[602.86s -> 603.86s]  It was a function of the fact
+[603.86s -> 605.40s]  that Elon Musk, in my view,
+[605.56s -> 608.92s]  is racist and anti-Semitic.
+[609.14s -> 610.28s]  And let me be clear,
+[610.42s -> 612.14s]  everyone dances around rich people.
+[612.30s -> 614.76s]  I am calling Elon Musk anti-Semitic.
+[615.90s -> 618.28s]  When you're accidentally making waves
+[618.28s -> 620.60s]  that look like Nazi gestures,
+[620.84s -> 622.92s]  when you have decided that something,
+[623.08s -> 624.70s]  our nation needs to be focused,
+[624.70s -> 627.84s]  is the white genocide in South Africa.
+[628.28s -> 629.76s]  And when there tends to be
+[629.76s -> 632.60s]  a preponderance of swastikas
+[632.60s -> 634.76s]  appearing on your social media platform,
+[635.12s -> 636.78s]  this creates a pattern.
+[637.02s -> 638.24s]  These aren't mistakes.
+[638.84s -> 641.94s]  So this quote-unquote free speech strategy,
+[642.08s -> 643.40s]  which was part of his strategy,
+[644.02s -> 645.08s]  was not free speech.
+[645.14s -> 647.14s]  He was happy to regulate certain people.
+[647.82s -> 649.12s]  It was a belief that,
+[649.96s -> 650.78s]  I don't know, quite frankly,
+[650.90s -> 652.40s]  the guy, in my view,
+[652.94s -> 654.60s]  is got something deeply wronged.
+[654.70s -> 655.32s]  He's got something wrong with him
+[655.32s -> 657.36s]  and is very comfortable
+[657.36s -> 659.72s]  with normalizing hate speech.
+[660.10s -> 661.74s]  That is racism.
+[662.60s -> 664.40s]  And we keep, because he's so rich
+[664.40s -> 666.72s]  and he can land a rocket and scissors,
+[666.86s -> 668.16s]  we dance around it and say,
+[668.24s -> 669.40s]  oh, he has Tourette's.
+[669.52s -> 672.56s]  He's very disciplined about not saying
+[672.56s -> 675.20s]  outlandish, provocative things about the Chinese.
+[675.88s -> 679.56s]  He's very disciplined about not saying things about,
+[679.68s -> 680.92s]  you know, until recently,
+[681.76s -> 683.60s]  what were very aggressive actions
+[683.60s -> 684.68s]  on the Trump administration.
+[684.70s -> 687.50s]  So this strategy of free speech
+[687.50s -> 689.70s]  was nothing but a false flag.
+[690.34s -> 693.16s]  He also recognized, I think,
+[693.42s -> 695.68s]  and the strategy, he said,
+[695.76s -> 697.08s]  okay, this is an advertising platform,
+[697.08s -> 698.00s]  so I'm going to bring in
+[698.00s -> 699.82s]  who is one of the most respected people
+[699.82s -> 700.62s]  in the ad world.
+[700.70s -> 701.76s]  And Linda was that.
+[702.00s -> 702.44s]  Yeah, tough.
+[702.50s -> 703.20s]  A tough customer,
+[703.34s -> 704.48s]  but really well-respected.
+[704.66s -> 706.70s]  She was at NBC for people who didn't know.
+[706.86s -> 708.56s]  People hugely respected her.
+[708.64s -> 709.82s]  And what this represents is,
+[709.92s -> 711.88s]  one, the strategy isn't working.
+[712.12s -> 714.20s]  The entity that has benefited most
+[714.20s -> 714.68s]  from the acquisition,
+[714.72s -> 716.08s]  the acquisition of Twitter by Elon Musk,
+[716.84s -> 718.16s]  is, in fact, Meta.
+[718.36s -> 720.40s]  Meta is about to blow past Twitter
+[720.40s -> 724.18s]  because Twitter basically created an opening
+[724.18s -> 727.46s]  for a platform that was, quite frankly,
+[727.50s -> 728.56s]  had more adult management.
+[728.86s -> 730.72s]  And also, Mark Zuckerberg,
+[730.80s -> 732.14s]  one of the most brilliant business minds
+[732.14s -> 733.10s]  of the last generation,
+[733.26s -> 735.22s]  saw that if he turned his fire hose
+[735.22s -> 736.92s]  of three billion users
+[736.92s -> 739.34s]  on a microblogging platform called Threads,
+[739.80s -> 741.54s]  he could take advantage of the fact
+[741.54s -> 742.82s]  that people were looking for something.
+[742.82s -> 744.66s]  Both of us are off of X,
+[744.70s -> 747.10s]  and I think that's a pretty good experience.
+[747.22s -> 748.62s]  I am on both Blue Sky and Threads.
+[748.68s -> 750.00s]  I like Threads for certain things.
+[750.06s -> 751.38s]  I like Blue Sky for certain things.
+[751.76s -> 754.26s]  But it's the opening is what you're talking about,
+[754.32s -> 756.22s]  is that he, I would have stayed on Twitter
+[756.22s -> 758.14s]  had this not happened, correct?
+[758.30s -> 759.20s]  You would have too, correct?
+[759.32s -> 760.82s]  Yeah, you had a couple million users.
+[760.90s -> 761.66s]  I had half a million.
+[761.84s -> 763.78s]  We were generating a lot of Nissan ads,
+[763.94s -> 766.38s]  and we both liked the product,
+[766.54s -> 769.80s]  and we both eventually just got off of it.
+[769.86s -> 771.90s]  And I think a lot of people feel that way.
+[771.90s -> 773.48s]  But what this represents,
+[773.48s -> 775.64s]  it's something more meta.
+[775.78s -> 779.34s]  And you forwarded a really good article on this.
+[779.82s -> 781.68s]  This represents a shift,
+[781.98s -> 783.20s]  and we should find the name of the guy.
+[783.20s -> 784.32s]  I've got it right here, actually.
+[784.48s -> 785.26s]  I have it right here.
+[785.44s -> 786.46s]  It's Henry Innes.
+[786.72s -> 787.80s]  He put this piece.
+[787.86s -> 788.86s]  Let me just read one thing
+[788.86s -> 790.16s]  that I was going to read to you, actually,
+[790.22s -> 792.16s]  which I think was, you know, it's a great piece.
+[792.20s -> 792.86s]  It's very long.
+[792.90s -> 793.56s]  You should read it.
+[793.94s -> 794.50s]  And he goes,
+[794.60s -> 796.02s]  X, under the stewardship of Musk,
+[796.06s -> 797.86s]  appears to have chosen a second path.
+[797.94s -> 798.68s]  This isn't a retreat.
+[798.78s -> 800.26s]  It's a strategic repositioning.
+[800.26s -> 802.70s]  It's a wager that the future of some social platforms
+[802.70s -> 803.46s]  lies not in repositioning.
+[803.48s -> 804.54s]  It's not in renting out user attention
+[804.54s -> 805.28s]  to the highest bidder,
+[805.34s -> 807.42s]  but in selling intelligence, utility, and commerce
+[807.42s -> 808.76s]  directly to the user.
+[808.88s -> 811.16s]  This is a story of why the long-assumed marriage
+[811.16s -> 813.08s]  between social connection and advertising revenue
+[813.08s -> 816.30s]  may be headed for a messy, necessary divorce.
+[816.42s -> 817.14s]  And another thing you said,
+[817.20s -> 818.00s]  which I think is also,
+[818.48s -> 820.72s]  the monolithic concept of social media
+[820.72s -> 822.72s]  splitting into two distinct business models
+[822.72s -> 825.06s]  driven by a simple, brutal economic calculation.
+[825.52s -> 827.34s]  The cost of guaranteeing brand safety
+[827.34s -> 830.00s]  in the age of AI is becoming prohibitively expensive.
+[830.44s -> 832.38s]  This is forcing platforms to have a choice,
+[832.38s -> 833.38s]  either become a fortified,
+[833.48s -> 835.12s]  walled garden for advertisers,
+[835.34s -> 837.54s]  or find a new way to exist entirely.
+[837.70s -> 838.84s]  I thought that was well said.
+[838.94s -> 841.02s]  He really, that's an outstanding article.
+[841.26s -> 844.16s]  And it convinced me that you asked what her legacy is.
+[844.16s -> 848.46s]  This is essentially signals a pretty dramatic shift.
+[848.74s -> 851.28s]  And Elon Musk, for his faults on a business side,
+[851.46s -> 855.46s]  I also, I think people just have to acknowledge,
+[855.72s -> 857.08s]  he's a brilliant businessman.
+[857.40s -> 860.32s]  And he has decided, okay, this isn't working.
+[860.78s -> 863.26s]  I'm going to use Twitter as a,
+[863.48s -> 866.88s]  body bag or as nutrition for an LLM.
+[867.00s -> 869.56s]  That all the activity and all the information it produces
+[869.56s -> 871.10s]  will be fed into an LLM,
+[871.16s -> 873.46s]  which will offer a vertical, I believe,
+[873.76s -> 876.76s]  services such as your travel or dating
+[876.76s -> 879.64s]  or figuring out subscription services.
+[880.08s -> 882.84s]  He's going to try and go AI and offer,
+[883.06s -> 885.72s]  you know, a customized, individualized,
+[885.86s -> 887.62s]  premium content that you pay for.
+[887.94s -> 890.06s]  And answers and all kinds of things.
+[890.08s -> 891.00s]  Because the number four,
+[891.00s -> 893.00s]  the number five social media platform
+[893.00s -> 893.46s]  that doesn't,
+[893.46s -> 895.92s]  doesn't have the scale to pay for the tech stack
+[895.92s -> 897.86s]  or the brand moderation and safety,
+[898.00s -> 899.96s]  which is getting increasingly costly,
+[900.14s -> 901.68s]  both economically and non-economically.
+[902.12s -> 903.34s]  It's just not working.
+[903.62s -> 904.04s]  Can I ask you something?
+[904.18s -> 906.16s]  One of the things that she had talked about is like,
+[906.22s -> 907.70s]  we made it into an everything app.
+[907.80s -> 910.08s]  She didn't actually, it is not an everything app.
+[910.32s -> 914.00s]  The second thing is he signaled this early on with average.
+[914.12s -> 915.88s]  First, the first thing he did was get into a beef
+[915.88s -> 918.14s]  with advertisers when Yoel Roth was still there
+[918.14s -> 919.08s]  and they had to have a meeting
+[919.08s -> 920.58s]  where he was nice to advertisers.
+[920.74s -> 923.10s]  And then later in that famous New York Times,
+[923.46s -> 925.42s]  interview with our favorite Canadian,
+[925.42s -> 926.42s]  Andrew Ross Sorkin,
+[926.42s -> 927.90s]  he said to advertisers,
+[927.90s -> 929.08s]  go fuck yourselves.
+[929.08s -> 929.76s]  Remember that?
+[929.82s -> 932.10s]  And it was clearly something was on something
+[932.52s -> 935.58s]  and then insulted Bob Iger right there,
+[935.58s -> 936.74s]  who's sitting in the audience.
+[936.78s -> 937.52s]  If you remember that,
+[937.52s -> 939.08s]  go fuck yourself to advertisers.
+[939.34s -> 940.34s]  And, and then they,
+[940.38s -> 941.74s]  they, they conducted a,
+[941.92s -> 942.18s]  you know,
+[942.18s -> 943.98s]  a legal war on advertisers.
+[943.98s -> 946.34s]  So he never was going to be an advert.
+[946.38s -> 947.50s]  He didn't want it to be,
+[947.50s -> 950.22s]  he had no interest from the get from the first,
+[950.42s -> 952.80s]  first beginning of this company before Linda.
+[952.80s -> 955.22s]  But Linda, Linda is a trivia question.
+[955.22s -> 956.56s]  She's sort of unimportant in this.
+[956.56s -> 959.06s]  She was nothing but a figurehead who was there to be
+[959.06s -> 963.82s]  a professional apologist and hopefully renew some relationships on advertising.
+[964.48s -> 965.66s]  The, the,
+[965.66s -> 967.58s]  the two big things here from a,
+[967.64s -> 971.94s]  from an industry impact is that the reason that Meta had
+[971.94s -> 974.90s]  what is probably the most seminal earnings quarter in history,
+[974.90s -> 977.58s]  where they announced that their revenues were up 23%
+[977.94s -> 982.50s]  while employment was down 20% leading to a explosion in
+[982.50s -> 982.80s]  earnings.
+[982.80s -> 987.12s]  Of 72% is because I do think the entire corporate world in
+[987.12s -> 991.80s]  tech looked at what Elon Musk had done and said he
+[991.80s -> 996.42s]  laid off 80% of his staff and maintained a minimum viable product.
+[996.42s -> 998.06s]  And I think everyone started thinking,
+[998.06s -> 999.12s]  maybe we don't,
+[999.78s -> 1004.34s]  maybe we don't have to grow our employee base while maintaining revenue
+[1004.34s -> 1004.82s]  growth.
+[1004.82s -> 1007.22s]  I think that was the biggest impact that X has had
+[1007.22s -> 1010.34s]  on the ecosystem in the last two to three years.
+[1010.34s -> 1011.52s]  And then quite frankly,
+[1011.54s -> 1012.62s]  the guy does,
+[1012.80s -> 1017.36s]  the guy can see around corners and this does potentially represent a
+[1017.36s -> 1023.28s]  shift from an ad based scale model of social media to
+[1023.28s -> 1025.28s]  trying to use social media,
+[1025.34s -> 1026.60s]  the data it produces,
+[1026.60s -> 1029.84s]  the tokens to come up with more AI driven offerings.
+[1029.86s -> 1032.28s]  I think those are the two kind of shifts.
+[1032.30s -> 1032.42s]  Well,
+[1032.42s -> 1033.04s]  let me push,
+[1033.04s -> 1033.70s]  push back on that.
+[1033.70s -> 1034.46s]  He it's also,
+[1034.58s -> 1034.88s]  you know,
+[1034.88s -> 1035.36s]  Grock,
+[1035.36s -> 1036.30s]  he talked about that,
+[1036.30s -> 1038.36s]  that it's long way from being a commercial product.
+[1038.38s -> 1039.54s]  That's one thing he didn't say,
+[1039.92s -> 1042.44s]  but he also had to take on the anti-Semitic thing,
+[1042.44s -> 1043.84s]  where it was a Mecca Hitler.
+[1043.84s -> 1044.50s]  And it was really,
+[1044.50s -> 1045.32s]  and also taught,
+[1045.38s -> 1048.86s]  but had a very descriptive and very detailed way to rape someone.
+[1049.32s -> 1049.82s]  Um,
+[1049.94s -> 1052.16s]  Grock was too compliant to user prompts,
+[1052.16s -> 1053.88s]  too eager to please to be manipulated.
+[1053.88s -> 1054.44s]  Essentially.
+[1054.44s -> 1056.80s]  He just rolled out Grock for the latest iteration.
+[1057.14s -> 1057.74s]  The first,
+[1057.74s -> 1059.94s]  I guess the first ones were too woke.
+[1060.00s -> 1062.12s]  This one was to Hitler and I,
+[1062.12s -> 1062.36s]  we,
+[1062.36s -> 1063.34s]  I haven't used Grock.
+[1063.38s -> 1064.62s]  I don't use Grock that much.
+[1064.62s -> 1064.78s]  It's,
+[1064.78s -> 1067.32s]  it's certainly interlaced in everything in Twitter.
+[1067.32s -> 1068.08s]  If you go over there,
+[1068.08s -> 1068.60s]  I was there.
+[1068.60s -> 1069.00s]  I was like,
+[1069.00s -> 1070.92s]  it's ever Grock is everywhere.
+[1070.92s -> 1072.42s]  So that should tell you everything.
+[1072.44s -> 1073.28s]  Um,
+[1073.28s -> 1075.14s]  that has nothing to do with discussions,
+[1075.14s -> 1075.52s]  right?
+[1075.52s -> 1078.32s]  It's always there asking you if you want help with something.
+[1078.68s -> 1080.48s]  So how do you push back?
+[1080.50s -> 1081.38s]  How do you do this?
+[1081.38s -> 1082.10s]  If you're making a,
+[1082.16s -> 1086.48s]  you just said a minimally viable product is not really what makes money,
+[1086.48s -> 1086.84s]  right?
+[1086.84s -> 1088.34s]  You have to have a product that people like,
+[1088.34s -> 1091.94s]  they don't feel that they're going to be assaulted all the time or,
+[1091.94s -> 1092.66s]  or,
+[1092.66s -> 1093.02s]  or,
+[1093.02s -> 1095.16s]  or in an unsafe environment for,
+[1095.24s -> 1095.76s]  for people.
+[1095.76s -> 1096.50s]  So what,
+[1096.74s -> 1100.58s]  what does he do with this kind of thing or he just walks right through it?
+[1100.58s -> 1100.82s]  Like,
+[1100.82s -> 1101.18s]  ah,
+[1101.18s -> 1102.24s]  he was Hitler yesterday.
+[1102.24s -> 1102.42s]  Now,
+[1102.42s -> 1103.92s]  now he's not Hitler,
+[1103.98s -> 1104.52s]  I guess.
+[1104.70s -> 1104.82s]  Yeah.
+[1104.82s -> 1108.96s]  But you said this early on Twitter was always the subscale platform that
+[1108.96s -> 1112.20s]  could never kind of command the split space that wanted to occupy.
+[1112.20s -> 1114.84s]  It had an amazing advertising and an amazing product.
+[1114.84s -> 1117.80s]  It could just never figure out a business model that scaled like the rest.
+[1117.84s -> 1120.00s]  And he was unable to figure that out.
+[1120.00s -> 1123.26s]  But I'll go back to my original insult of,
+[1123.42s -> 1123.92s]  of Mr.
+[1123.92s -> 1124.32s]  Musk.
+[1124.32s -> 1128.94s]  And that is of all the social media platforms of all the individuals who
+[1128.94s -> 1129.24s]  are,
+[1129.24s -> 1129.54s]  you know,
+[1129.54s -> 1131.10s]  icons of technology.
+[1131.10s -> 1131.92s]  If I asked you,
+[1132.42s -> 1133.32s]  I care,
+[1133.32s -> 1136.98s]  there's a product that is calling for a second Holocaust.
+[1138.52s -> 1139.18s]  Who would you,
+[1139.18s -> 1143.82s]  so who would you say is most likely the person in charge of that product?
+[1143.82s -> 1144.36s]  Elon Musk.
+[1144.36s -> 1145.26s]  And then you have to say,
+[1145.26s -> 1145.66s]  okay,
+[1145.66s -> 1147.00s]  second is Mark Zuckerberg.
+[1147.00s -> 1147.20s]  Yeah,
+[1147.20s -> 1147.60s]  go ahead.
+[1147.60s -> 1148.50s]  And then you'd have to say,
+[1148.50s -> 1148.62s]  well,
+[1148.62s -> 1153.20s]  is that of a function of his embrace of free speech or is it a
+[1153.20s -> 1157.20s]  tolerance and a normalization of the type of hate speech that can take us to
+[1157.20s -> 1158.40s]  very dark places?
+[1159.36s -> 1161.86s]  And I'm kind of like,
+[1161.86s -> 1163.66s]  we just make all of the,
+[1163.66s -> 1164.86s]  and where do we go?
+[1164.86s -> 1177.76s]  I don't want an individual in the business community who does not want to put in the safeguards such that a quarter of a billion people such that we start normalizing the idea of a second Holocaust.
+[1177.76s -> 1182.96s]  I have no desire to pay taxes that subsidize his products.
+[1182.96s -> 1188.10s]  If he can't figure out a way to not have his products recommend a second Holocaust.
+[1188.10s -> 1191.12s]  I don't think that's a very high bar for someone.
+[1191.38s -> 1191.40s]  No,
+[1191.48s -> 1191.84s]  it's not.
+[1191.86s -> 1193.26s]  But this is typical of him.
+[1193.26s -> 1194.08s]  This is typical,
+[1194.08s -> 1194.52s]  you know,
+[1194.52s -> 1199.04s]  away from what is a scary word when he did the cars,
+[1199.04s -> 1203.98s]  he's always in the minimum viable safety of everything he does is minimum viable safety.
+[1204.04s -> 1204.46s]  Right.
+[1204.70s -> 1206.10s]  And so if the rocket blows up,
+[1206.14s -> 1206.86s]  what of it,
+[1206.86s -> 1208.06s]  if the car doesn't,
+[1208.96s -> 1210.54s]  but it's the same pattern,
+[1210.54s -> 1211.98s]  it's the same idea,
+[1211.98s -> 1213.40s]  I think that he does things.
+[1213.40s -> 1215.36s]  And so in this case,
+[1215.38s -> 1216.18s]  it's just,
+[1216.30s -> 1217.26s]  it's speech,
+[1217.26s -> 1217.62s]  but it's,
+[1217.62s -> 1217.90s]  it's,
+[1217.90s -> 1220.34s]  it's moved when it had to get to Hitler.
+[1220.34s -> 1220.78s]  Right.
+[1220.78s -> 1221.80s]  And you know,
+[1221.80s -> 1225.26s]  he's always pushing back on this Hitler thing and then he just shows up with Hitler.
+[1225.26s -> 1225.64s]  Right.
+[1225.64s -> 1225.88s]  Yeah.
+[1225.88s -> 1226.30s]  And here's,
+[1226.30s -> 1226.92s]  here's my,
+[1226.92s -> 1229.12s]  here's my wave that looks like a Nazi salute.
+[1229.12s -> 1231.34s]  And if you heard of the white genocide in South Africa,
+[1231.62s -> 1232.12s]  his,
+[1232.60s -> 1233.84s]  his ability,
+[1234.62s -> 1235.12s]  I mean,
+[1235.40s -> 1236.80s]  just trying to be a critical thinker,
+[1236.86s -> 1237.82s]  his most valuable company,
+[1237.82s -> 1241.24s]  I think is going to be SpaceX and his willingness to take enormous risks.
+[1241.62s -> 1245.26s]  The core competence of SpaceX is explosions.
+[1245.74s -> 1250.96s]  And that is NASA can't send up rockets that explode 15 minutes or 15 seconds,
+[1250.96s -> 1252.88s]  but Musk can and say,
+[1252.88s -> 1258.46s]  this is part of innovation is we have to hit the outer ring of innovation and risk to make huge progress.
+[1258.94s -> 1260.38s]  That is to a certain extent,
+[1260.38s -> 1260.88s]  there's a,
+[1260.88s -> 1262.30s]  there's a real genius in that.
+[1262.82s -> 1263.38s]  And the reason,
+[1263.38s -> 1266.50s]  and SpaceX is going to be worth more than Tesla.
+[1266.50s -> 1267.00s]  So,
+[1267.00s -> 1268.06s]  maybe now that,
+[1268.10s -> 1268.34s]  well,
+[1268.34s -> 1269.02s]  we'll get to the,
+[1269.02s -> 1269.44s]  you know,
+[1269.44s -> 1272.14s]  the head of NASA is going to be one of his enemies,
+[1272.14s -> 1272.80s]  Sean Duffy,
+[1272.92s -> 1274.28s]  who's totally incompetent,
+[1274.60s -> 1275.30s]  by the way,
+[1275.32s -> 1275.90s]  they,
+[1275.90s -> 1277.90s]  Trump just named the transportation secretary.
+[1277.90s -> 1279.68s]  Who's incompetent is the interim head of it.
+[1279.82s -> 1280.12s]  Yeah.
+[1280.12s -> 1280.52s]  But listen,
+[1280.52s -> 1280.78s]  just,
+[1280.78s -> 1281.08s]  just,
+[1281.08s -> 1282.28s]  just to put a bow on it,
+[1282.50s -> 1283.90s]  Linda's a trivia question.
+[1283.90s -> 1285.52s]  She'll go back to selling ads for,
+[1285.52s -> 1288.16s]  I hope when she first signed up for this,
+[1288.42s -> 1289.52s]  when she signed up for this,
+[1289.52s -> 1290.54s]  we said the following.
+[1290.66s -> 1291.02s]  I said,
+[1291.02s -> 1291.82s]  I hope she has,
+[1292.30s -> 1299.14s]  I hope her lawyers spent a dramatic amount of time talking about termination or termination.
+[1299.14s -> 1302.44s]  What for cause meant what happened when she's terminated?
+[1302.50s -> 1303.60s]  Cause she was fired here.
+[1303.64s -> 1307.10s]  You can call it constructive termination when you're just consistently layered.
+[1307.10s -> 1308.68s]  That's constructive termination.
+[1309.22s -> 1310.54s]  The CEOs will put in clause,
+[1310.54s -> 1319.24s]  clauses that say if my reporting relationship differs and you put me in the corner and chain me to a desk and tell me I'm now in charge of snacks and not the CEO,
+[1319.24s -> 1321.84s]  that is constructive termination because we said,
+[1321.84s -> 1323.50s]  there's just no way she w we said,
+[1323.50s -> 1325.18s]  there's no way she's going to survive here.
+[1325.36s -> 1327.02s]  People don't survive around this guy.
+[1327.04s -> 1327.28s]  Yeah.
+[1327.28s -> 1329.50s]  She'll go back to like a paramount makes sense.
+[1329.50s -> 1330.74s]  She's close with Jeff shell.
+[1330.74s -> 1332.86s]  Who's going to be now that she's a global brand.
+[1332.86s -> 1334.42s]  Now everybody knows who she is.
+[1334.44s -> 1336.36s]  She has huge relationships to do.
+[1336.36s -> 1337.18s]  She's still there.
+[1337.22s -> 1338.58s]  If you talk to ad people,
+[1338.98s -> 1339.42s]  they,
+[1339.46s -> 1340.22s]  they really,
+[1340.22s -> 1341.84s]  at con they were like,
+[1341.84s -> 1342.38s]  they,
+[1342.38s -> 1345.40s]  I was surprised by the level of vitriol towards her.
+[1345.40s -> 1345.72s]  I was like,
+[1345.72s -> 1345.92s]  ah,
+[1345.92s -> 1346.72s]  whatever she's,
+[1346.72s -> 1347.32s]  you know,
+[1347.32s -> 1348.84s]  I was nicer than they were.
+[1348.84s -> 1349.04s]  Um,
+[1349.04s -> 1349.54s]  but I should,
+[1349.54s -> 1350.84s]  of course they're advertising people.
+[1350.84s -> 1352.58s]  So she has a big job though.
+[1352.94s -> 1355.04s]  She joins paramount plus and toes.
+[1355.04s -> 1356.66s]  Everybody at a party at can that,
+[1356.66s -> 1358.88s]  that has Kygo and all this for a given.
+[1359.54s -> 1359.78s]  I mean,
+[1359.78s -> 1360.80s]  that's the bottom line.
+[1361.76s -> 1362.18s]  go ahead.
+[1362.18s -> 1369.98s]  But X under his ownership did ignite a dramatic shift in the entire technology.
+[1369.98s -> 1370.08s]  Echo.
+[1370.08s -> 1372.42s]  System where people woke up and said,
+[1372.42s -> 1373.10s]  wow,
+[1373.44s -> 1376.46s]  can we have the great taste of fewer employees,
+[1376.74s -> 1377.22s]  right?
+[1377.40s -> 1380.40s]  Without the calories of reduced growth.
+[1380.68s -> 1380.96s]  He,
+[1380.96s -> 1382.08s]  he questioned,
+[1382.30s -> 1384.36s]  he showed up to Twitter and said,
+[1384.66s -> 1390.04s]  I think I can do what you're doing almost as well on one fifth of the
+[1390.04s -> 1392.42s]  calories on one fifth of the people.
+[1392.76s -> 1398.90s]  And to this shift is a shift Zuckerberg and everyone I believe now is saying,
+[1398.90s -> 1399.54s]  okay,
+[1399.54s -> 1408.74s]  the age of social media getting 98% of its revenues as snap X and Meta do right now is shifting.
+[1408.74s -> 1410.54s]  It's going to move towards sort of a little bit.
+[1410.54s -> 1415.28s]  The model to a certain extent is the YouTube model and that is they still have scale.
+[1415.28s -> 1416.90s]  They still get a lot of money for advertising,
+[1416.90s -> 1427.90s]  but they also get a lot of money and the fastest growing part of their business is the subscription side where they say we can serve you up just a really great product using AI and using data that you start to pay for.
+[1427.90s -> 1428.22s]  By the way,
+[1428.22s -> 1429.52s]  if you notice how many ads are on,
+[1429.52s -> 1430.18s]  YouTube now,
+[1430.18s -> 1430.86s]  they really are,
+[1430.86s -> 1431.84s]  but let me say they have to,
+[1431.84s -> 1433.18s]  here's what they have to do there.
+[1433.18s -> 1434.32s]  They've got to make a great product.
+[1434.32s -> 1435.28s]  That's the issue.
+[1435.58s -> 1437.16s]  And we'll see if he can in media.
+[1437.16s -> 1438.64s]  I think he's very talented in other things.
+[1438.64s -> 1439.68s]  Media is not one of them.
+[1440.02s -> 1440.20s]  Uh,
+[1440.20s -> 1440.80s]  speaking of which,
+[1440.80s -> 1441.78s]  just two things at,
+[1441.78s -> 1442.72s]  at space X,
+[1442.76s -> 1443.08s]  um,
+[1443.08s -> 1444.22s]  they're planning to make,
+[1444.26s -> 1448.28s]  raise money and sell insider shares in a deal that would value it around 400 billion already.
+[1448.54s -> 1451.72s]  This would mark the highest ever valuation for a privately held us company.
+[1451.72s -> 1456.02s]  Surpassing spaces own record of $350 billion that last year,
+[1456.46s -> 1457.88s]  presumably there's going to be an IPO,
+[1457.88s -> 1458.56s]  but I got to tell you,
+[1458.56s -> 1459.40s]  there's gonna be some rough,
+[1459.40s -> 1459.50s]  uh,
+[1459.52s -> 1460.24s]  going there,
+[1460.24s -> 1461.84s]  especially with his relationships,
+[1461.86s -> 1466.18s]  as long as Trump's in office and Sean Duffy's in charge of NASA and areas where,
+[1466.18s -> 1469.42s]  and also he doesn't get to out of the oval office,
+[1469.42s -> 1469.96s]  get to,
+[1469.96s -> 1470.20s]  to,
+[1470.20s -> 1473.08s]  to shake down countries into taking a Starlink,
+[1473.08s -> 1474.56s]  even if it's the best product he was,
+[1474.58s -> 1475.70s]  that was happening there.
+[1476.02s -> 1476.48s]  So,
+[1476.48s -> 1476.76s]  uh,
+[1476.76s -> 1479.74s]  the Tesla on the other hand is really problematic for him.
+[1479.74s -> 1483.82s]  Shares dropping nearly 7% after Elon announced this new America party,
+[1484.12s -> 1485.24s]  it's not rebounding.
+[1485.28s -> 1485.80s]  Um,
+[1486.04s -> 1487.42s]  he's also focused on,
+[1487.42s -> 1487.66s]  uh,
+[1487.66s -> 1488.28s]  the Epstein.
+[1488.28s -> 1489.36s]  The focus is,
+[1489.36s -> 1490.44s]  is out once again,
+[1490.44s -> 1490.60s]  he,
+[1490.60s -> 1491.58s]  this board of directors,
+[1491.58s -> 1493.08s]  which we know is not really a board.
+[1493.44s -> 1493.86s]  Um,
+[1493.86s -> 1494.24s]  but,
+[1494.24s -> 1494.54s]  um,
+[1494.54s -> 1496.02s]  did you see his tweet about Bannon?
+[1496.14s -> 1496.50s]  Yes.
+[1496.50s -> 1496.88s]  Bannon.
+[1496.88s -> 1497.12s]  Yes.
+[1497.12s -> 1498.84s]  He's pointing the finger of Bannon and the Epstein.
+[1498.86s -> 1501.72s]  I'm waiting for him to say Scott Galloway's in the Epstein files.
+[1502.08s -> 1502.44s]  Um,
+[1502.44s -> 1507.54s]  tech Tesla stocks down 14% since early June and it's down 40% from their December.
+[1507.54s -> 1507.90s]  Pete,
+[1508.20s -> 1509.68s]  he got into a fight with Dan Ives,
+[1509.68s -> 1510.36s]  who I think is,
+[1510.42s -> 1512.86s]  who has been a long time Tesla bull far too long.
+[1512.86s -> 1514.62s]  Says the company is at a tipping point.
+[1514.68s -> 1518.12s]  He has a price target on Tesla 500 bucks and he's insulting that guy.
+[1518.12s -> 1518.58s]  I know,
+[1518.58s -> 1519.24s]  but he's urging the board.
+[1519.24s -> 1523.20s]  The board to set boundaries for Elon and both time at Tesla and his political activities.
+[1523.38s -> 1525.60s]  Elon responded to those suggestions on X saying,
+[1525.60s -> 1526.04s]  shut up,
+[1526.04s -> 1526.44s]  Dan.
+[1527.46s -> 1529.06s]  He's so nice to his fans.
+[1529.32s -> 1531.30s]  It's not just political activities.
+[1531.30s -> 1533.16s]  Vehicle deliveries obviously fell.
+[1533.18s -> 1533.34s]  No,
+[1533.34s -> 1537.42s]  but Bannon is in the Epstein files was the tweet he put out to a quarter of a billion people.
+[1537.42s -> 1537.84s]  I know,
+[1537.84s -> 1538.08s]  but,
+[1538.08s -> 1541.38s]  but let's just go product by product X X is definitely,
+[1541.44s -> 1543.40s]  they've given away the micro blogging business to,
+[1543.42s -> 1544.86s]  to mark Mark Zuckerberg.
+[1544.86s -> 1546.74s]  So that means the product is severely diminished.
+[1547.12s -> 1549.18s]  The Tesla product is at,
+[1549.18s -> 1550.74s]  the best sideways.
+[1550.80s -> 1552.34s]  A lot of people would say it needs,
+[1552.34s -> 1552.60s]  uh,
+[1552.60s -> 1554.86s]  you use the word fresh or freshening.
+[1555.36s -> 1557.34s]  I still think it's a great car.
+[1557.34s -> 1557.70s]  He,
+[1557.70s -> 1560.10s]  he absolutely ignited the Evie race.
+[1560.10s -> 1565.08s]  He deserves a lot of credit for that space X on the plane yesterday.
+[1565.08s -> 1565.98s]  I took from,
+[1566.16s -> 1567.06s]  from Spain.
+[1568.26s -> 1571.92s]  The Starling product is incredible in,
+[1572.52s -> 1573.06s]  in,
+[1573.72s -> 1575.68s]  I did a podcast for my plane,
+[1575.80s -> 1576.30s]  um,
+[1576.60s -> 1577.38s]  yesterday.
+[1577.50s -> 1578.58s]  And quite frankly,
+[1578.58s -> 1579.00s]  it was,
+[1579.00s -> 1579.84s]  it was near the same.
+[1579.84s -> 1581.58s]  Can we fly around and do it?
+[1581.58s -> 1581.88s]  Okay.
+[1581.88s -> 1582.18s]  Okay.
+[1582.18s -> 1583.86s]  It is,
+[1584.22s -> 1590.72s]  it is what he has pulled off with Starlink is nothing short of remarkable,
+[1590.76s -> 1594.78s]  but great product as opposed to X is not a great product.
+[1594.96s -> 1595.26s]  Oh yeah.
+[1595.26s -> 1600.24s]  No X is X has fallen off a cliff in terms of thing with Tesla in a lot of ways.
+[1600.36s -> 1600.90s]  Not new,
+[1600.96s -> 1601.26s]  no,
+[1601.26s -> 1602.12s]  no new products.
+[1602.12s -> 1603.36s]  And what we get is the cyber truck.
+[1603.36s -> 1603.66s]  So it's,
+[1603.66s -> 1604.74s]  it's a mixed bag.
+[1605.04s -> 1605.40s]  Scott,
+[1605.40s -> 1607.68s]  what's happened with Tesla is quite frankly,
+[1607.68s -> 1608.78s]  B he,
+[1609.00s -> 1610.44s]  he made a mistake.
+[1610.44s -> 1613.50s]  Everyone wants the great taste of lower manufacturing costs in China.
+[1613.86s -> 1618.66s]  Apple did it and gave browse to gave rise to Xiaomi and a bunch of other tech companies.
+[1619.02s -> 1619.50s]  Tesla,
+[1619.50s -> 1620.04s]  quite frankly,
+[1620.04s -> 1621.06s]  probably had a lot of it's,
+[1621.48s -> 1621.76s]  uh,
+[1621.76s -> 1622.82s]  IP stolen,
+[1623.30s -> 1623.64s]  uh,
+[1623.64s -> 1624.94s]  that ended up at BYD.
+[1624.94s -> 1626.28s]  BYD has innovated on it.
+[1626.28s -> 1626.88s]  And quite frankly,
+[1626.88s -> 1631.68s]  BYD is now offering a Tesla product that is equivalent,
+[1631.68s -> 1637.62s]  maybe even better for half the price we have given away anyways.
+[1637.62s -> 1638.94s]  And then these ridiculous tariffs,
+[1638.94s -> 1639.70s]  and all this shit,
+[1639.70s -> 1649.80s]  essentially China has essentially usurped global leadership in the automobile industry because of poor public policy internally.
+[1649.80s -> 1650.52s]  And two,
+[1650.52s -> 1654.12s]  I do think they have taken a lot of IP from Tesla and have scaled it.
+[1654.24s -> 1654.60s]  Yeah,
+[1654.60s -> 1655.32s]  he let it happen,
+[1655.32s -> 1655.62s]  right?
+[1655.62s -> 1656.28s]  He let it happen.
+[1656.28s -> 1656.76s]  It doesn't,
+[1656.76s -> 1657.30s]  he could,
+[1657.30s -> 1658.62s]  he could have done something to prevent that.
+[1658.86s -> 1659.52s]  In any case,
+[1659.68s -> 1662.34s]  Tesla's in a much more precarious place.
+[1662.34s -> 1663.06s]  I think we both agree.
+[1663.06s -> 1663.54s]  And they,
+[1663.54s -> 1664.32s]  and making,
+[1664.38s -> 1666.04s]  he's got to get back interested in it.
+[1666.26s -> 1667.88s]  He doesn't seem interested in it.
+[1667.92s -> 1668.34s]  Um,
+[1668.64s -> 1668.92s]  and when he,
+[1668.92s -> 1669.84s]  when he seems interested in it,
+[1669.84s -> 1670.96s]  doesn't sell to consumers.
+[1670.96s -> 1672.86s]  Saying that Bannon is in the Epstein files.
+[1672.98s -> 1673.10s]  Yeah,
+[1673.18s -> 1673.66s]  and Bannon's in the Epstein files.
+[1673.66s -> 1673.92s]  I mean,
+[1673.98s -> 1674.26s]  literally,
+[1674.34s -> 1674.66s]  literally,
+[1674.78s -> 1674.96s]  Kara,
+[1675.04s -> 1676.06s]  it's as if he's on drugs.
+[1677.68s -> 1678.00s]  Anyway,
+[1678.08s -> 1678.48s]  we'll see.
+[1678.48s -> 1679.24s]  It's as if he's on drugs.
+[1679.30s -> 1679.62s]  Linda,
+[1679.76s -> 1680.78s]  we wish you well.
+[1680.90s -> 1681.50s]  Give us a call.
+[1681.68s -> 1681.98s]  Actually,
+[1682.28s -> 1683.14s]  do we want her to call us?
+[1683.24s -> 1683.50s]  Yes,
+[1683.58s -> 1683.88s]  we do.
+[1684.02s -> 1684.30s]  Yes.
+[1684.70s -> 1685.08s]  Give us a call.
+[1685.10s -> 1686.08s]  You should interview Linda.
+[1686.28s -> 1686.84s]  I are,
+[1686.98s -> 1688.84s]  you think I haven't already contacted?
+[1689.06s -> 1689.86s]  What are you talking about?
+[1689.92s -> 1690.54s]  She won't do it.
+[1691.04s -> 1691.36s]  Linda,
+[1691.52s -> 1691.92s]  come on.
+[1692.18s -> 1692.62s]  Come on.
+[1692.94s -> 1693.28s]  We'll have fun.
+[1693.32s -> 1693.64s]  Linda.
+[1693.80s -> 1694.30s]  You can yell at me.
+[1694.30s -> 1694.64s]  Come on,
+[1694.68s -> 1694.88s]  Linda.
+[1695.20s -> 1696.38s]  Come on in the water's fine.
+[1697.44s -> 1698.24s]  We will have fun.
+[1698.30s -> 1700.34s]  You can yell at me all you want.
+[1700.46s -> 1701.48s]  You can scream at me.
+[1701.76s -> 1703.68s]  You can call me the C word.
+[1703.82s -> 1704.40s]  I don't care.
+[1704.56s -> 1705.10s]  Just come on.
+[1705.16s -> 1705.90s]  We'll talk about it.
+[1706.70s -> 1707.24s]  By the way,
+[1707.28s -> 1708.74s]  all those celebrity deals she did,
+[1708.78s -> 1709.14s]  you remember?
+[1709.38s -> 1710.16s]  And she was announcing.
+[1710.16s -> 1710.74s]  Don Lemon.
+[1711.04s -> 1711.86s]  How long was he there?
+[1712.22s -> 1712.96s]  Five minutes.
+[1713.32s -> 1713.98s]  Like 72.
+[1714.32s -> 1714.54s]  No,
+[1714.58s -> 1715.28s]  but there's others.
+[1715.44s -> 1717.66s]  They announced the Serena Williams thing at Con.
+[1717.82s -> 1718.06s]  Do you remember?
+[1718.70s -> 1719.94s]  Just two weeks ago,
+[1719.94s -> 1721.00s]  she was announcing that.
+[1721.12s -> 1721.44s]  I'm sorry,
+[1721.56s -> 1721.88s]  Serena.
+[1722.04s -> 1723.24s]  Looks like you're shit out of luck.
+[1723.24s -> 1724.02s]  If you're going to call,
+[1724.02s -> 1724.38s]  can,
+[1724.54s -> 1724.82s]  con,
+[1724.94s -> 1726.36s]  I'm going to say it's Serena Williams.
+[1726.62s -> 1727.14s]  In France.
+[1727.38s -> 1728.10s]  In France.
+[1728.58s -> 1728.94s]  Underpants.
+[1729.12s -> 1729.22s]  Okay.
+[1729.38s -> 1729.78s]  That's right.
+[1729.86s -> 1731.10s]  They did a deal with Serena Williams.
+[1731.18s -> 1731.50s]  Yes.
+[1731.80s -> 1732.18s]  I mean,
+[1732.26s -> 1732.72s]  seriously,
+[1733.04s -> 1733.60s]  it's like,
+[1733.76s -> 1734.28s]  you know.
+[1734.84s -> 1735.20s]  Anyway,
+[1735.58s -> 1737.06s]  let's go on a quick break.
+[1737.14s -> 1737.80s]  When we come back,
+[1738.04s -> 1738.78s]  tariffs galore.
+[1738.86s -> 1739.66s]  You're going to get to tariffs.
+[1743.74s -> 1746.08s]  Support for the show comes from Z Biotics.
+[1746.42s -> 1747.14s]  For many of us,
+[1747.30s -> 1749.60s]  Friday night is a time to unwind with a drink or two.
+[1749.80s -> 1750.62s]  But let's be honest,
+[1750.78s -> 1753.10s]  bouncing back the next morning isn't always easy.
+[1753.10s -> 1754.00s]  Z Biotics,
+[1754.02s -> 1755.80s]  Z Biotics is here to help you wake up feeling better.
+[1756.08s -> 1757.20s]  According to Z Biotics,
+[1757.26s -> 1758.12s]  here's how it works.
+[1758.42s -> 1763.16s]  Z Biotics pre-alcohol probiotic drink is the world's first genetically engineered probiotic.
+[1763.24s -> 1767.06s]  They say it was invented by PhD scientists to tackle rough mornings after drinking.
+[1767.46s -> 1768.46s]  According to the company,
+[1768.62s -> 1769.22s]  when you drink,
+[1769.32s -> 1772.12s]  alcohol gets converted into a toxic byproduct in the gut,
+[1772.20s -> 1774.24s]  and they say it's a buildup of this byproduct,
+[1774.40s -> 1775.46s]  not dehydration.
+[1775.62s -> 1778.00s]  That's to blame for rough days after drinking.
+[1778.44s -> 1782.44s]  Z Biotics pre-alcohol produces an enzyme to break this byproduct down.
+[1782.44s -> 1783.22s]  Just remember,
+[1783.22s -> 1785.48s]  to make pre-alcohol your first drink of the night,
+[1785.56s -> 1788.38s]  drink responsibly and you'll feel your best tomorrow.
+[1788.46s -> 1791.90s]  So this is the part where I'm supposed to give a personal experience or an anecdote.
+[1791.98s -> 1795.20s]  I am trying to reduce the amount of drinking I'm doing as I get older,
+[1795.28s -> 1800.62s]  but I still love to drink and I have tried Z Biotics and I now use it regularly.
+[1800.80s -> 1806.60s]  Go to zbiotics.com slash pivot to learn more and get 15% off your first order when you use pivoted checkout.
+[1806.68s -> 1809.52s]  Z Biotics is backed with a hundred percent money back guarantee.
+[1809.60s -> 1811.70s]  So if you're unsatisfied for any reason,
+[1811.78s -> 1812.64s]  they'll refund your money.
+[1812.64s -> 1813.88s]  No questions asked.
+[1813.96s -> 1820.26s]  Remember to head to zbiotics.com slash pivot and use the code pivot at checkout for 15% off.
+[1823.14s -> 1826.38s]  Blockchain is reshaping every aspect of society,
+[1826.56s -> 1827.70s]  starting with finance.
+[1828.08s -> 1829.84s]  It's happening across industries,
+[1829.84s -> 1831.82s]  across sectors and across the world.
+[1832.20s -> 1842.28s]  And it's happening with ripple with more than a decade of blockchain experience over 60 licenses and strong institutional trust ripple provides financial institutions with
+[1842.28s -> 1847.58s]  blockchain and cryptopowered solutions across payment and digital custody applications.
+[1847.86s -> 1851.06s]  This means secure 24 seven transactions,
+[1851.14s -> 1853.96s]  moving value across the world faster.
+[1854.12s -> 1856.40s]  Find out more at ripple dotcom.
+[1861.76s -> 1867.98s]  Support for this show comes from up way if you're stuck in traffic again or frustrated with rising gas prices,
+[1867.98s -> 1872.02s]  there's a better way to get around commuting by ebike isn't just great for your health.
+[1872.02s -> 1874.80s]  that can be a game changer for your wallet and your time.
+[1875.08s -> 1878.44s]  Here's a tip, head over to upway.co to find e-bikes
+[1878.44s -> 1880.84s]  from top tier brands like Specialized, Cannondale
+[1880.84s -> 1883.70s]  and Aventon up to 60% off retail.
+[1884.16s -> 1886.28s]  Whether you're into mountain bikes for weekend adventures
+[1886.28s -> 1889.04s]  or fast city e-bikes for your daily commute,
+[1889.18s -> 1890.18s]  Upway has you covered.
+[1890.40s -> 1892.00s]  You can join their community of fans
+[1892.00s -> 1893.44s]  and ride with confidence knowing
+[1893.44s -> 1895.64s]  that they've got your back every step of the way.
+[1895.64s -> 1899.24s]  So head over to upway.co and get $150
+[1899.24s -> 1901.12s]  off your first e-bike purchase
+[1901.12s -> 1904.38s]  of $1,000 or more with the code PIVOT150.
+[1904.92s -> 1908.40s]  That's upway.co, code PIVOT150.
+[1908.78s -> 1909.84s]  You can thank me later.
+[1917.62s -> 1919.38s]  Scott, we're back for a quick rundown
+[1919.38s -> 1921.36s]  of the latest news on terrorists, which is exhausting.
+[1921.94s -> 1925.10s]  He was supposed to do 90 deals in 90 days.
+[1925.10s -> 1927.20s]  90 deals in 90 days.
+[1927.30s -> 1928.96s]  Since we spoke, President Trump has, though,
+[1929.18s -> 1930.86s]  sent a letter to over 20 countries,
+[1930.86s -> 1932.26s]  including mostly countries
+[1932.26s -> 1934.70s]  that aren't really high on our list.
+[1934.82s -> 1936.62s]  And in some cases, we have surpluses with,
+[1936.68s -> 1938.86s]  he announced terrorist rates between 20 and 40%.
+[1939.40s -> 1941.66s]  I think like the Maldives or something.
+[1941.82s -> 1944.40s]  Like there's countries, Moldova, I think was in there.
+[1944.56s -> 1947.20s]  But anyway, Moldova, those rates might be adjusted.
+[1947.42s -> 1948.52s]  That's where Khan is.
+[1948.90s -> 1954.52s]  Khan, fine, I'll give in if you'll shut the fuck up.
+[1954.94s -> 1956.04s]  The rates may be adjusted
+[1956.04s -> 1958.74s]  according to each country's relationship with the U.S.
+[1958.74s -> 1960.82s]  Threatened 50% terrorist against Brazil.
+[1960.82s -> 1960.84s]  Threatened 50% terrorist against Brazil.
+[1960.86s -> 1963.32s]  suggesting the decision was partly in response,
+[1963.82s -> 1965.58s]  not partly, in response to the prosecution
+[1965.58s -> 1966.84s]  of former President Bolsonaro
+[1966.84s -> 1968.74s]  for his alleged role in the plot
+[1968.74s -> 1971.32s]  to overturn the 2022 election there.
+[1971.48s -> 1973.86s]  It feels like maybe he's trying to help a friend,
+[1974.60s -> 1975.32s]  a similar friend.
+[1975.70s -> 1978.58s]  He announced a new 50% tariff on all imported copper
+[1978.58s -> 1981.20s]  and threatened to impose up to 200% tariffs
+[1981.20s -> 1983.12s]  on imported pharmaceutical products.
+[1983.60s -> 1985.02s]  Markets have stayed relaxed at the news.
+[1985.06s -> 1986.68s]  They're just ignoring him, partly in part
+[1986.68s -> 1990.18s]  because President Trump labeled his August 1st deadline
+[1990.18s -> 1990.82s]  as a firm.
+[1990.82s -> 1992.56s]  But not 100% firm.
+[1993.18s -> 1995.56s]  Taco, taco, Trump always chickens out,
+[1995.64s -> 1997.44s]  is actually maybe working in his favor.
+[1997.88s -> 1999.70s]  He gets to continue with this nonsense
+[1999.70s -> 2002.18s]  and not worrying about the markets
+[2002.18s -> 2003.58s]  because nobody believes he's going to do anything
+[2003.58s -> 2004.48s]  because he doesn't do anything.
+[2004.68s -> 2006.90s]  And the Brazil one is just beyond.
+[2007.06s -> 2008.38s]  And they just sit and wait him out.
+[2008.50s -> 2010.72s]  They're not rushing to make deals, obviously.
+[2011.50s -> 2014.74s]  The Brazil thing, we are in a trade surplus with Brazil.
+[2015.02s -> 2016.08s]  It's so ridiculous.
+[2016.56s -> 2020.00s]  And at the same time, you know, in our own labor markets,
+[2020.16s -> 2020.78s]  they're telling us, you know, we're going to do this.
+[2020.78s -> 2022.30s]  They're telling Medicaid recipients
+[2022.30s -> 2024.78s]  to go work on a farm, I guess.
+[2025.18s -> 2025.58s]  Yeah, that's going to happen.
+[2025.84s -> 2027.04s]  I don't even know.
+[2027.06s -> 2028.74s]  That poor, I feel bad for them.
+[2028.74s -> 2030.30s]  Well, you have several policies we know.
+[2030.42s -> 2031.74s]  Pick crops, pick almonds.
+[2032.12s -> 2033.70s]  Like, the whole thing is insane.
+[2033.90s -> 2035.72s]  Just the way they're talking about it.
+[2035.80s -> 2037.40s]  Like, oh, we're going to replace them with Medicaid.
+[2037.68s -> 2041.48s]  Like, the fact that they merged Medicaid and farm workers,
+[2041.60s -> 2042.80s]  I just don't even understand.
+[2043.24s -> 2044.58s]  They must sit there in a room and go,
+[2044.66s -> 2046.24s]  yeah, yeah, let's get the Medicaid workers.
+[2046.62s -> 2047.70s]  Anyway, tariffs.
+[2047.82s -> 2048.58s]  Go for it, Scott.
+[2048.82s -> 2049.18s]  Tariffs.
+[2049.18s -> 2050.78s]  We are living in such a simulation.
+[2050.78s -> 2052.46s]  We are living in such a simulation of idiocracy
+[2052.46s -> 2055.26s]  that it just wouldn't shock me if I see a headline
+[2055.26s -> 2058.00s]  that Linda Yaccarino is the new secretary of commerce.
+[2058.60s -> 2063.68s]  I mean, you used the correct term with Brazil.
+[2063.98s -> 2066.72s]  We have a trade surplus with Brazil.
+[2067.06s -> 2068.56s]  Explain what that means for the people.
+[2068.74s -> 2069.28s]  Thank you, Scott.
+[2069.52s -> 2073.34s]  Meaning, first off, they buy more of our shit, right,
+[2073.44s -> 2074.62s]  than we buy of theirs.
+[2075.46s -> 2078.26s]  So if they do what they're going to do,
+[2078.26s -> 2080.26s]  and that is they'll say, okay, 50%,
+[2080.78s -> 2087.40s]  tariff on NVIDIA chips and on F-150s,
+[2087.62s -> 2089.86s]  then we're going to reciprocate.
+[2089.96s -> 2092.14s]  Or, I'm sorry, if you want to charge us for whatever,
+[2092.44s -> 2094.48s]  our Embraer planes or our bananas
+[2094.48s -> 2096.18s]  or whatever Brazil imports in,
+[2097.22s -> 2099.50s]  other than, like, can you tax supermodels?
+[2099.60s -> 2100.28s]  Jesus Christ.
+[2100.38s -> 2102.00s]  Have you been to the south of Brazil, Tara?
+[2102.30s -> 2104.26s]  I go surfing every year in Floripa,
+[2104.32s -> 2105.46s]  and it's not for the waves.
+[2105.46s -> 2107.86s]  It's not for the waves.
+[2108.10s -> 2110.42s]  The Argentinians and Brazilians are,
+[2110.78s -> 2112.08s]  it's for the handsome people.
+[2112.08s -> 2113.08s]  It's a handsome group of people.
+[2113.08s -> 2114.08s]  Oh, my God, scorching hot.
+[2114.26s -> 2115.64s]  The dudes, the women, hello.
+[2116.02s -> 2117.74s]  That's an export we should pay for.
+[2117.76s -> 2119.04s]  You know, it's like the world center
+[2119.04s -> 2120.46s]  for, like, plastic surgery anyway.
+[2120.88s -> 2121.48s]  Sorry, go ahead.
+[2121.56s -> 2124.56s]  Anyway, so they will reciprocate,
+[2124.62s -> 2125.98s]  they will have reciprocal tariffs,
+[2126.80s -> 2128.98s]  which means we'll be more fucked than them.
+[2129.06s -> 2132.34s]  And this is what this guy can't get his head around
+[2132.34s -> 2133.80s]  in terms of basic math.
+[2133.90s -> 2136.46s]  Let's talk about, and I'll weave in another story here.
+[2136.54s -> 2137.74s]  NVIDIA became the most valuable,
+[2137.74s -> 2138.80s]  the first company in history
+[2138.80s -> 2140.40s]  to hit a $4 trillion market cap.
+[2140.78s -> 2142.32s]  Let's take Mercedes.
+[2142.42s -> 2143.98s]  I think Mercedes is an incredible company
+[2143.98s -> 2145.16s]  with incredible products.
+[2146.48s -> 2148.76s]  Amazing brand, amazing manufacturing,
+[2149.10s -> 2152.06s]  amazing value proposition marketing products.
+[2153.36s -> 2155.50s]  You sell a $100,000 Mercedes
+[2155.50s -> 2157.74s]  and bring it into the U.S.
+[2157.84s -> 2161.16s]  They have an operating margin of about 9%.
+[2161.16s -> 2164.14s]  So they get about $9,000 to the bottom line.
+[2164.48s -> 2167.66s]  NVIDIA, Mercedes buys trying to figure out a way
+[2167.66s -> 2169.38s]  to have AI or autonomous driving, whatever.
+[2169.50s -> 2170.52s]  They buy $100,000.
+[2170.78s -> 2176.20s]  NVIDIA has approximately, what do they have?
+[2176.32s -> 2178.98s]  They have 60% operating margin.
+[2179.56s -> 2182.82s]  So they get 60,000 to the bottom line
+[2182.82s -> 2186.36s]  when Germany buys $100,000 of American technology products
+[2186.36s -> 2188.90s]  or NVIDIA does.
+[2189.00s -> 2191.18s]  They get, let's call it 10,000.
+[2191.52s -> 2193.66s]  NVIDIA trades at a PE of like 33.
+[2193.66s -> 2200.66s]  So that $60,000 ends up being approximately $1.9 million.
+[2200.78s -> 2205.56s]  Mercedes, when we buy $100,000 of their product,
+[2206.40s -> 2208.02s]  gets at a PE of say eight,
+[2208.46s -> 2211.54s]  gets about $80,000 in shareholder value.
+[2211.94s -> 2215.06s]  And that in a nutshell explains what has happened
+[2215.06s -> 2217.52s]  to America embracing global trade.
+[2217.88s -> 2219.70s]  We not only trade more,
+[2220.48s -> 2223.08s]  we get much greater shareholder value
+[2223.08s -> 2225.10s]  because the products we tend to export
+[2225.10s -> 2226.52s]  and other countries purchase-
+[2226.52s -> 2227.02s]  Are higher margins.
+[2227.28s -> 2230.76s]  Are much higher margin that then have this chaser effect
+[2230.78s -> 2233.40s]  of a higher multiple making Americans,
+[2234.18s -> 2237.16s]  making employees, investors, housing prices,
+[2237.66s -> 2240.64s]  new hires out of school, dramatic.
+[2240.86s -> 2242.22s]  It's a chaser effect.
+[2242.54s -> 2245.90s]  Global trade is like champagne.
+[2246.02s -> 2248.16s]  Then we speed ball it with cocaine
+[2248.16s -> 2251.52s]  for a fantastic high in America.
+[2251.52s -> 2254.76s]  And this guy wants to go,
+[2255.30s -> 2260.26s]  every reduction in trade hurts us more.
+[2260.46s -> 2260.72s]  Every,
+[2260.78s -> 2263.22s]  every increase in trade from free trade agreements
+[2263.22s -> 2265.84s]  benefits us more than the other party.
+[2265.96s -> 2266.42s]  One of the things,
+[2266.50s -> 2268.78s]  there are trade imbalances and tricks and everything else
+[2268.78s -> 2269.84s]  that should be reformed.
+[2269.86s -> 2270.80s]  That is one thing,
+[2270.88s -> 2272.00s]  which I think correctly,
+[2272.22s -> 2274.90s]  like there are all kinds of things
+[2274.90s -> 2277.62s]  that need to happen in terms of giving advantage,
+[2277.82s -> 2279.10s]  specifically with China,
+[2279.20s -> 2280.64s]  but all countries do that.
+[2280.72s -> 2281.80s]  They play the games that they do.
+[2282.18s -> 2284.42s]  And the U.S. should address that.
+[2284.52s -> 2285.62s]  But the way he's doing this,
+[2285.64s -> 2287.04s]  and especially focusing on both that,
+[2287.12s -> 2287.92s]  did you read that letter?
+[2287.92s -> 2289.74s]  It was insane on both.
+[2289.86s -> 2292.26s]  It said, stop the trial in Brazil.
+[2292.60s -> 2293.88s]  I was like, it's Brazil.
+[2294.02s -> 2294.64s]  It's their business.
+[2294.72s -> 2296.98s]  And that guy tried to take over the government illegally
+[2296.98s -> 2298.14s]  with a military.
+[2298.74s -> 2300.74s]  I mean, and he wasn't successful.
+[2300.92s -> 2301.88s]  And the fact that, well, of course,
+[2302.22s -> 2303.96s]  Trump would know a thing or two about that.
+[2304.50s -> 2306.60s]  Brazil has a stronger democracy than us right now.
+[2306.72s -> 2306.96s]  Right.
+[2307.04s -> 2307.38s]  I know.
+[2307.44s -> 2309.22s]  It's just crazy that he would demand another.
+[2309.22s -> 2312.00s]  Can you imagine, you must stop the trial of,
+[2312.08s -> 2314.14s]  I don't know, Diddy Combs,
+[2314.18s -> 2315.18s]  or we're not going to do a deal.
+[2315.24s -> 2316.32s]  It's just like nuts.
+[2316.98s -> 2318.04s]  The other thing is,
+[2318.24s -> 2319.62s]  what's fascinating to me is,
+[2319.74s -> 2321.76s]  how someone who I, what I,
+[2321.98s -> 2324.30s]  look, Howard Lutton is as dumb as a box of hammers.
+[2324.98s -> 2328.22s]  But Besant seems very smart.
+[2328.32s -> 2330.68s]  But now, because I think he wants to be the head of the Fed,
+[2331.00s -> 2332.62s]  he's been sucking up to him
+[2332.62s -> 2336.64s]  and pretending this is real and not plaguing.
+[2336.88s -> 2338.84s]  You know, it's really interesting.
+[2339.16s -> 2342.04s]  I'd love to actually understand the dynamics
+[2342.04s -> 2344.00s]  when they're not talking to him,
+[2344.06s -> 2345.42s]  when they're talking amongst themselves.
+[2345.60s -> 2347.44s]  Because, like, the whole Ukraine thing
+[2347.44s -> 2348.62s]  is another example where they,
+[2349.06s -> 2349.70s]  Pete Hague says,
+[2349.74s -> 2351.40s]  apparently stopped the things
+[2351.40s -> 2353.00s]  and then Trump restarted them
+[2353.00s -> 2354.40s]  or somehow got alerted to it.
+[2354.78s -> 2355.60s]  And to his credit,
+[2355.72s -> 2357.66s]  Sean McCreesh, who writes mostly features
+[2357.66s -> 2358.42s]  for the New York Times,
+[2358.50s -> 2358.94s]  asked,
+[2359.56s -> 2362.38s]  did you find out who did this
+[2362.38s -> 2364.80s]  stoppage of weapons to Ukraine?
+[2365.28s -> 2367.34s]  And he said, I don't know.
+[2367.42s -> 2368.32s]  Maybe you can find out.
+[2368.32s -> 2370.06s]  And he goes, well, doesn't that say something about you
+[2370.06s -> 2372.02s]  that you don't know how it happened?
+[2372.14s -> 2373.52s]  And he's like, I know everything.
+[2373.74s -> 2374.76s]  And the whole thing was,
+[2375.04s -> 2376.18s]  that was a moment where, like,
+[2376.22s -> 2378.44s]  someone actually said what is happening here,
+[2378.52s -> 2378.94s]  which is,
+[2378.94s -> 2381.14s]  this man doesn't know what's going on.
+[2381.30s -> 2385.22s]  Like, I don't know how these people internally do this.
+[2385.36s -> 2387.02s]  I mean, maybe you could explain.
+[2387.14s -> 2387.60s]  I don't know.
+[2387.68s -> 2389.82s]  I'm just, I can't believe this is going on.
+[2389.96s -> 2391.64s]  The legacy of this tariff war
+[2391.64s -> 2393.54s]  is that Trump's tariff war
+[2393.54s -> 2395.86s]  has, in fact, inspired
+[2395.86s -> 2398.26s]  a massive amount of dealmaking.
+[2398.78s -> 2400.00s]  But here's the issue.
+[2400.12s -> 2403.32s]  It's inspired dealmaking amongst other countries.
+[2404.20s -> 2406.06s]  The EU and Mercosur are talking.
+[2406.20s -> 2408.92s]  The EU and India, Japan, South Korea, and China,
+[2408.94s -> 2411.02s]  are having trade talks for the first time in a while.
+[2411.52s -> 2413.14s]  Europe is having very serious talks
+[2413.14s -> 2414.06s]  with countries in Brazil.
+[2414.18s -> 2414.70s]  They've all said,
+[2415.10s -> 2416.76s]  let's use this as an excuse
+[2416.76s -> 2419.46s]  to figure out how we can just basically,
+[2419.90s -> 2422.94s]  I mean, the way I would describe our trade talks right now
+[2422.94s -> 2424.86s]  is we're the drunk uncle
+[2424.86s -> 2426.78s]  shirtless at a barbecue
+[2426.78s -> 2429.02s]  trying to show off his karate moves.
+[2429.82s -> 2430.68s]  And the whole family,
+[2431.10s -> 2432.46s]  the whole family,
+[2432.52s -> 2434.96s]  the whole family has decided to get on a WhatsApp
+[2434.96s -> 2436.78s]  and not invite this guy.
+[2437.38s -> 2438.40s]  Let's be a family.
+[2438.40s -> 2438.92s]  Let's talk.
+[2438.94s -> 2439.46s]  Let's talk to each other
+[2439.46s -> 2441.64s]  and just don't invite the crazy fucking uncle.
+[2441.76s -> 2443.52s]  Yeah, at one point he had a lot of money.
+[2444.00s -> 2445.82s]  At one point we thought we could count on him.
+[2446.30s -> 2447.88s]  But he's gone batshit crazy.
+[2448.12s -> 2449.40s]  Why are the markets yawning?
+[2449.66s -> 2451.16s]  Why are the markets just yawning?
+[2451.16s -> 2453.78s]  Because, I mean, the reality is the U.S.
+[2454.22s -> 2456.96s]  is actually quite trade independent.
+[2457.10s -> 2458.46s]  We're actually quite self-sufficient.
+[2459.26s -> 2461.72s]  And that is other nations can hurt us,
+[2461.78s -> 2462.84s]  but we're energy independent,
+[2463.00s -> 2463.76s]  we're food independent.
+[2463.96s -> 2465.90s]  And also because of taco,
+[2466.34s -> 2467.38s]  the market has said,
+[2468.12s -> 2468.58s]  I mean, literally,
+[2468.58s -> 2468.92s]  when he,
+[2468.92s -> 2471.98s]  when he announced these 25% tariffs
+[2471.98s -> 2473.42s]  on Japan and South Korea saying,
+[2473.52s -> 2474.68s]  this will force him to the table,
+[2474.84s -> 2475.94s]  the market said,
+[2476.00s -> 2477.78s]  okay, let's look at the actual threat.
+[2477.92s -> 2479.72s]  They're excluding certain products
+[2479.72s -> 2482.20s]  because these guys don't have the balls
+[2482.20s -> 2483.94s]  to actually come after our real products.
+[2484.16s -> 2485.78s]  So the actual tariff rate
+[2485.78s -> 2487.78s]  was going to go from 15 to 16%.
+[2487.78s -> 2488.64s]  And guess what?
+[2489.04s -> 2490.40s]  The Cosby or whatever it's called
+[2490.40s -> 2492.82s]  and the Nikkei were both up that day
+[2492.82s -> 2493.96s]  because they said,
+[2494.02s -> 2495.28s]  if this is his biggest threat,
+[2495.40s -> 2496.70s]  one, it's not going to happen
+[2496.70s -> 2497.66s]  because he keeps,
+[2497.66s -> 2498.80s]  he keeps extending,
+[2498.92s -> 2499.54s]  the deadlines.
+[2500.18s -> 2500.86s]  This is literally,
+[2500.98s -> 2502.48s]  I'm leaving you this time.
+[2502.56s -> 2503.12s]  I mean it,
+[2503.44s -> 2503.72s]  you know,
+[2503.76s -> 2504.94s]  40 years into the marriage,
+[2505.02s -> 2505.30s]  right?
+[2505.64s -> 2506.38s]  I've had it.
+[2507.08s -> 2508.62s]  I'll be in my sister's.
+[2509.22s -> 2510.46s]  And what do you want for dinner?
+[2510.48s -> 2512.50s]  Just in case I swing by the grocery store
+[2512.50s -> 2513.14s]  on the way home.
+[2513.66s -> 2515.00s]  Nobody takes this guy seriously.
+[2515.14s -> 2516.98s]  The markets have basically said,
+[2517.14s -> 2517.80s]  just yawning,
+[2517.96s -> 2520.76s]  the world is going to continue to churn on.
+[2521.18s -> 2522.70s]  America will lose some business.
+[2523.24s -> 2525.20s]  American consumers will have some inflation
+[2525.20s -> 2526.64s]  that disproportionately hurts
+[2526.64s -> 2527.88s]  lower and middle income people.
+[2528.08s -> 2528.90s]  But the Dow,
+[2528.92s -> 2529.62s]  and the NASDAQ,
+[2529.66s -> 2530.84s]  which should become a wealth index
+[2530.84s -> 2531.78s]  for the top 10%,
+[2531.78s -> 2533.56s]  they are just fine.
+[2533.64s -> 2534.78s]  The markets are yawning.
+[2535.14s -> 2537.10s]  Yeah, and they did get the tax break they wanted.
+[2537.26s -> 2537.72s]  So that's,
+[2537.80s -> 2539.30s]  they're happy with that for sure.
+[2539.74s -> 2542.00s]  When does it start to really hurt?
+[2542.20s -> 2542.74s]  It doesn't,
+[2542.88s -> 2543.64s]  or doesn't it?
+[2543.72s -> 2544.08s]  Doesn't it?
+[2544.12s -> 2545.60s]  Because these farm workers thing
+[2545.60s -> 2546.90s]  just keeps me thinking is like
+[2546.90s -> 2548.72s]  hospitality farm workers
+[2548.72s -> 2550.78s]  with doing these crazy raids
+[2550.78s -> 2551.36s]  that they're doing.
+[2551.48s -> 2551.88s]  And by the way,
+[2551.92s -> 2552.84s]  there's new stories
+[2552.84s -> 2556.70s]  showing up that a lot of people inside ICE
+[2556.70s -> 2558.10s]  aren't happy with their jobs
+[2558.10s -> 2558.76s]  because they're hated.
+[2558.92s -> 2559.32s]  They don't,
+[2559.44s -> 2559.96s]  they think it's,
+[2560.24s -> 2561.86s]  they have the Trump people on their ass.
+[2562.06s -> 2564.02s]  They don't think they're doing a good job.
+[2564.14s -> 2565.76s]  They feel kind of sick to their stomach
+[2565.76s -> 2566.54s]  about what they're doing.
+[2566.62s -> 2567.00s]  Some of them,
+[2567.06s -> 2568.38s]  they'll find brutal people
+[2568.38s -> 2570.44s]  that continue their behaviors.
+[2571.10s -> 2572.84s]  But it's a really,
+[2573.16s -> 2573.34s]  I don't,
+[2573.42s -> 2575.14s]  when is it going to like crack?
+[2575.46s -> 2577.58s]  Or not necessarily.
+[2577.76s -> 2577.96s]  I mean,
+[2578.22s -> 2579.58s]  the only thing that seems certain
+[2579.58s -> 2581.34s]  every time one of these deals goes down
+[2581.34s -> 2581.92s]  or something else
+[2581.92s -> 2583.58s]  is that someone knows ahead of,
+[2583.66s -> 2585.36s]  knows about them ahead of the deal.
+[2585.76s -> 2586.26s]  Like someone,
+[2586.50s -> 2587.92s]  something happened with Brazil futures
+[2588.14s -> 2588.92s]  or something.
+[2589.44s -> 2590.54s]  And someone knew
+[2590.54s -> 2591.30s]  and made a ton of,
+[2591.34s -> 2591.80s]  an investor.
+[2591.94s -> 2592.98s]  All these investors
+[2592.98s -> 2594.36s]  seem to be getting information
+[2594.36s -> 2595.20s]  from the White House
+[2595.20s -> 2596.44s]  before things are announced
+[2596.44s -> 2598.72s]  and make money in the interim.
+[2599.12s -> 2600.50s]  But when does it crack?
+[2600.80s -> 2600.90s]  Besides,
+[2601.28s -> 2601.46s]  you know,
+[2601.48s -> 2602.26s]  when does it crack?
+[2602.52s -> 2603.52s]  Or maybe it doesn't.
+[2603.84s -> 2604.20s]  I don't know.
+[2604.44s -> 2604.76s]  When you say,
+[2604.84s -> 2605.44s]  when does it crack?
+[2605.54s -> 2605.96s]  The tariffs?
+[2606.20s -> 2606.52s]  No,
+[2606.62s -> 2608.24s]  when does it like count?
+[2608.36s -> 2610.68s]  When does the economy start saying no?
+[2610.90s -> 2611.90s]  Or it just doesn't.
+[2611.98s -> 2612.82s]  It just doesn't.
+[2612.88s -> 2613.98s]  Could the economy stay?
+[2614.26s -> 2614.42s]  Well,
+[2614.46s -> 2614.90s]  the economy,
+[2615.14s -> 2616.42s]  it appears to grind on.
+[2616.50s -> 2616.92s]  I think,
+[2617.24s -> 2617.76s]  unfortunately,
+[2617.76s -> 2618.90s]  a lot of these effects,
+[2619.64s -> 2620.76s]  when you're talking about
+[2620.76s -> 2621.80s]  turning off the tap
+[2621.80s -> 2623.50s]  of an inflow
+[2623.50s -> 2624.40s]  of the best and brightest
+[2624.40s -> 2624.92s]  through,
+[2625.14s -> 2626.02s]  through kind of
+[2626.02s -> 2627.90s]  new age Gestapos
+[2627.90s -> 2628.72s]  with Wi-Fi,
+[2628.90s -> 2629.26s]  ICE,
+[2629.76s -> 2630.68s]  when you're talking about
+[2630.68s -> 2631.38s]  not letting in
+[2631.38s -> 2632.62s]  the most talented young people
+[2632.62s -> 2632.92s]  in the world,
+[2633.00s -> 2633.92s]  our PhD students,
+[2634.02s -> 2634.90s]  when you're talking about
+[2634.90s -> 2635.98s]  reducing funding
+[2635.98s -> 2637.04s]  to universities
+[2637.04s -> 2637.74s]  that create everything
+[2637.74s -> 2638.26s]  from DARPA
+[2638.26s -> 2639.40s]  to diabetes medication.
+[2639.68s -> 2640.20s]  It's long term.
+[2640.36s -> 2640.48s]  Yeah,
+[2640.54s -> 2641.30s]  that starts,
+[2641.50s -> 2643.24s]  that starts to haunt you,
+[2643.38s -> 2644.44s]  but it's a poltergeist
+[2644.44s -> 2646.04s]  that kind of rises slowly.
+[2646.52s -> 2647.26s]  So unfortunately,
+[2647.96s -> 2648.68s]  he's the mother
+[2648.68s -> 2649.44s]  of all deficits,
+[2649.52s -> 2649.90s]  and that is
+[2649.90s -> 2651.16s]  the deficits right now,
+[2651.32s -> 2652.46s]  it's champagne and cocaine
+[2652.46s -> 2653.92s]  with the tax cuts this year
+[2653.92s -> 2654.60s]  because it will be
+[2654.60s -> 2655.62s]  stimulative to the economy.
+[2656.04s -> 2657.28s]  But then in 10,
+[2657.36s -> 2658.02s]  20 years,
+[2658.12s -> 2659.48s]  our kids have to pay it back.
+[2659.92s -> 2661.24s]  And he's doing exactly
+[2661.24s -> 2661.82s]  what the government
+[2661.82s -> 2662.66s]  is not supposed to do.
+[2662.66s -> 2663.40s]  The government is supposed
+[2663.40s -> 2664.52s]  to be making hard decisions
+[2664.52s -> 2666.32s]  to create long-term prosperity
+[2666.32s -> 2667.84s]  and emotional health
+[2667.84s -> 2668.44s]  for Americans.
+[2668.66s -> 2669.42s]  And they're doing
+[2669.42s -> 2670.36s]  exactly the opposite.
+[2670.50s -> 2671.90s]  They are planting landmines
+[2671.90s -> 2673.08s]  which will detonate
+[2673.08s -> 2673.42s]  10,
+[2673.50s -> 2674.44s]  20 years from now.
+[2674.74s -> 2676.06s]  Long after he's gone,
+[2676.24s -> 2676.38s]  right,
+[2676.44s -> 2677.04s]  also too,
+[2677.12s -> 2677.78s]  which is amazing,
+[2677.88s -> 2678.56s]  but the Trump family,
+[2678.56s -> 2678.98s]  we'll go on.
+[2679.10s -> 2679.34s]  All right,
+[2679.68s -> 2680.84s]  let's go on a quick break.
+[2680.92s -> 2681.46s]  When we come back,
+[2681.50s -> 2681.92s]  we'll talk about
+[2681.92s -> 2682.76s]  the shakeup at Apple
+[2682.76s -> 2683.54s]  and some other stuff.
+[2687.94s -> 2689.02s]  Support for this show
+[2689.02s -> 2689.62s]  comes from
+[2689.62s -> 2690.64s]  Intuit QuickBooks.
+[2691.12s -> 2692.26s]  Are you a business owner
+[2692.26s -> 2693.58s]  looking to grow your business?
+[2694.12s -> 2695.08s]  You did what most
+[2695.08s -> 2695.78s]  dream of doing,
+[2695.90s -> 2696.96s]  starting your own business.
+[2697.32s -> 2698.06s]  Now you're faced
+[2698.06s -> 2698.76s]  with the reality
+[2698.76s -> 2699.52s]  of how to make
+[2699.52s -> 2700.28s]  your small business
+[2700.28s -> 2700.98s]  run smoothly.
+[2701.58s -> 2702.96s]  Intuit QuickBooks can help.
+[2703.46s -> 2704.40s]  QuickBooks is a powerful
+[2704.40s -> 2705.16s]  AI-driven,
+[2705.30s -> 2706.60s]  all-in-one business solution.
+[2706.94s -> 2707.66s]  That means those
+[2707.66s -> 2708.54s]  day-to-day tasks,
+[2708.56s -> 2709.04s]  invoicing,
+[2709.18s -> 2709.60s]  expenses,
+[2709.76s -> 2710.58s]  taxes can be done
+[2710.58s -> 2711.22s]  effortlessly.
+[2711.76s -> 2712.38s]  But here's where
+[2712.38s -> 2713.24s]  it gets really good.
+[2713.52s -> 2714.22s]  You don't need to hire
+[2714.22s -> 2715.02s]  a team of analysts
+[2715.02s -> 2716.28s]  to find growth opportunities
+[2716.28s -> 2717.70s]  hiding in your business data.
+[2718.26s -> 2719.04s]  QuickBooks can help
+[2719.04s -> 2720.42s]  with cash flow optimization,
+[2720.72s -> 2721.76s]  profit and loss analysis,
+[2721.76s -> 2722.76s]  and it helps you see
+[2722.76s -> 2723.78s]  how your business is doing
+[2723.78s -> 2724.94s]  and uncover new ways
+[2724.94s -> 2725.98s]  to be more profitable.
+[2726.58s -> 2727.56s]  QuickBooks can help you
+[2727.56s -> 2728.40s]  unlock the growth
+[2728.40s -> 2728.90s]  in your business
+[2728.90s -> 2729.76s]  so you can get back
+[2729.76s -> 2730.94s]  to enjoying your business.
+[2731.44s -> 2732.04s]  Manage and grow
+[2732.04s -> 2732.56s]  your business
+[2732.56s -> 2733.82s]  all in one place.
+[2734.42s -> 2735.20s]  Intuit QuickBooks,
+[2735.52s -> 2736.54s]  your way to money.
+[2737.10s -> 2738.26s]  Get 90% off
+[2738.26s -> 2739.10s]  for three months.
+[2739.44s -> 2740.28s]  Limited time only.
+[2740.52s -> 2741.90s]  Terms and conditions apply.
+[2748.30s -> 2749.28s]  Commercial payments
+[2749.28s -> 2750.22s]  at Fifth Third Bank
+[2750.22s -> 2751.78s]  are experienced and reliable,
+[2752.10s -> 2753.00s]  but they're also
+[2753.00s -> 2754.16s]  constantly innovating.
+[2754.60s -> 2755.62s]  It might seem contradictory
+[2755.62s -> 2757.22s]  to have decades of experience,
+[2757.44s -> 2758.84s]  but also be on the cutting edge
+[2758.84s -> 2759.46s]  of the industry.
+[2760.14s -> 2761.70s]  But Fifth Third does just that.
+[2762.18s -> 2763.08s]  They don't believe in being
+[2763.08s -> 2764.60s]  just one way for your business,
+[2765.02s -> 2765.76s]  because your business
+[2765.76s -> 2767.14s]  has more than just one need,
+[2767.14s -> 2768.58s]  like needing your payments
+[2768.58s -> 2769.58s]  to be done on time,
+[2769.84s -> 2770.16s]  safely,
+[2770.36s -> 2771.82s]  and without any bumps today,
+[2772.42s -> 2773.34s]  but also needing to know
+[2773.34s -> 2773.98s]  you won't be hitting
+[2773.98s -> 2775.00s]  any bumps tomorrow.
+[2775.72s -> 2776.48s]  That's why they handle
+[2776.48s -> 2778.60s]  over $17 trillion in payments
+[2778.60s -> 2779.84s]  smoothly and effectively
+[2779.84s -> 2780.62s]  every year,
+[2781.06s -> 2781.82s]  and were also named
+[2781.82s -> 2782.56s]  one of America's
+[2782.56s -> 2783.68s]  most innovative companies
+[2783.68s -> 2784.76s]  by Fortune magazine.
+[2785.42s -> 2785.96s]  After all,
+[2786.08s -> 2787.02s]  that's what commercial payments
+[2787.02s -> 2787.68s]  are all about.
+[2788.24s -> 2789.60s]  Steady, reliable expertise
+[2789.60s -> 2790.94s]  that keeps money flowing
+[2790.94s -> 2792.36s]  in and out like clockwork.
+[2792.88s -> 2794.12s]  So Fifth Third does that.
+[2794.54s -> 2795.42s]  But commercial payments
+[2795.42s -> 2796.60s]  are also about building
+[2796.60s -> 2797.90s]  new and disruptive solutions.
+[2798.56s -> 2800.12s]  So Fifth Third does that too.
+[2800.68s -> 2802.04s]  That's your commercial payments
+[2802.04s -> 2803.36s]  a Fifth Third better.
+[2807.82s -> 2809.24s]  Support for this show
+[2809.24s -> 2810.30s]  comes from Salesforce.
+[2811.24s -> 2812.70s]  Today, every team
+[2812.70s -> 2813.90s]  has more work to do
+[2813.90s -> 2815.16s]  than resources available.
+[2815.62s -> 2816.64s]  But digital labor
+[2816.64s -> 2817.60s]  is here to help.
+[2818.10s -> 2818.74s]  AgentForce,
+[2818.90s -> 2820.68s]  the powerful AI from Salesforce,
+[2821.10s -> 2822.50s]  provides a limitless workforce
+[2822.50s -> 2823.38s]  of AI agents
+[2823.38s -> 2824.32s]  for every department.
+[2824.98s -> 2826.10s]  Built into your existing
+[2826.10s -> 2827.52s]  workflows and your trusted
+[2827.52s -> 2828.38s]  customer data,
+[2828.70s -> 2829.80s]  AgentForce can analyze,
+[2830.12s -> 2831.64s]  decide, and execute tasks
+[2831.64s -> 2832.40s]  autonomously,
+[2832.68s -> 2834.06s]  letting you and your employees
+[2834.06s -> 2835.14s]  save time and money
+[2835.14s -> 2836.76s]  to focus on the bigger picture,
+[2837.10s -> 2838.62s]  like moving your business forward.
+[2839.32s -> 2839.92s]  AgentForce,
+[2840.22s -> 2841.62s]  what AI was meant to be.
+[2842.08s -> 2842.88s]  Learn more at
+[2842.88s -> 2844.02s]  salesforce.com
+[2844.02s -> 2845.24s]  slash AgentForce.
+[2852.26s -> 2853.24s]  Scott, we're back
+[2853.24s -> 2853.98s]  with more news.
+[2854.12s -> 2855.54s]  Apple's COO Jeff Williams
+[2855.54s -> 2855.94s]  will retire from the job.
+[2855.94s -> 2855.98s]  He's going to retire from the job.
+[2855.98s -> 2856.52s]  He's going to retire from the company
+[2856.52s -> 2857.16s]  later this year.
+[2857.24s -> 2858.24s]  The company says the move
+[2858.24s -> 2859.98s]  is part of a long-planned succession.
+[2861.18s -> 2862.12s]  Sabi Khan,
+[2862.52s -> 2863.98s]  Apple's VP of Operations,
+[2864.08s -> 2865.26s]  will take over the COO
+[2865.26s -> 2866.82s]  role later this year.
+[2866.96s -> 2868.12s]  Well, Williams continues
+[2868.12s -> 2868.96s]  to oversee design
+[2868.96s -> 2869.72s]  and health initiatives
+[2869.72s -> 2870.54s]  until retirement.
+[2871.04s -> 2872.00s]  Williams first joined the company
+[2872.00s -> 2873.12s]  in 1998
+[2873.12s -> 2873.90s]  and had a hand
+[2873.90s -> 2874.38s]  in introduction
+[2874.38s -> 2875.52s]  of the iPod and iPhone
+[2875.52s -> 2876.70s]  and led the effort
+[2876.70s -> 2877.44s]  on the Apple Watch.
+[2877.54s -> 2878.50s]  The CEO was seen
+[2878.50s -> 2879.98s]  as a potential successor,
+[2880.24s -> 2881.76s]  I think one of the top ones,
+[2881.84s -> 2883.04s]  along with Craig Federici
+[2883.04s -> 2884.24s]  and John Ternes.
+[2884.34s -> 2885.64s]  And there's an outside chance
+[2885.64s -> 2885.96s]  there's a chance
+[2885.96s -> 2886.90s]  there's a woman candidate,
+[2887.42s -> 2888.34s]  Deirdre O'Brien,
+[2888.54s -> 2889.08s]  who's been doing
+[2889.08s -> 2889.68s]  a lot of the jobs.
+[2889.80s -> 2890.56s]  Tim Cook has been doing
+[2890.56s -> 2892.10s]  a very close associate of Cook.
+[2892.62s -> 2893.94s]  And nobody really pays attention
+[2893.94s -> 2897.20s]  to that issue at Apple,
+[2897.28s -> 2898.08s]  even though it's probably
+[2898.08s -> 2899.32s]  pending relatively soon.
+[2899.38s -> 2900.14s]  And the next CEO
+[2900.14s -> 2900.68s]  is going to have
+[2900.68s -> 2901.78s]  their hands full
+[2901.78s -> 2902.76s]  with a lot of challenges.
+[2903.30s -> 2904.18s]  Tim has sort of ridden
+[2904.18s -> 2905.22s]  this high, high up,
+[2905.28s -> 2906.04s]  but they've got
+[2906.04s -> 2906.80s]  a lot of challenges
+[2906.80s -> 2907.20s]  coming up,
+[2907.24s -> 2907.96s]  including in AI
+[2907.96s -> 2908.44s]  and elsewhere.
+[2908.54s -> 2909.72s]  They just lost an AI head
+[2909.72s -> 2910.88s]  to Meta.
+[2910.98s -> 2911.82s]  Any thoughts on this?
+[2912.26s -> 2912.68s]  I think, look,
+[2912.76s -> 2913.32s]  I think this is
+[2913.32s -> 2914.24s]  an incredible company.
+[2914.24s -> 2915.72s]  The announcement I saw
+[2915.72s -> 2916.66s]  that I wanted to get
+[2916.66s -> 2917.38s]  your viewpoint on
+[2917.38s -> 2918.18s]  is they say they're going
+[2918.18s -> 2919.54s]  to shift their production
+[2919.54s -> 2920.60s]  of iPhones from
+[2920.60s -> 2922.94s]  China to India.
+[2923.96s -> 2924.88s]  And they claim
+[2924.88s -> 2925.36s]  they could do it
+[2925.36s -> 2926.04s]  in like two years.
+[2926.14s -> 2926.38s]  And I'm like,
+[2926.42s -> 2926.86s]  that's going to take
+[2926.86s -> 2927.68s]  10 or 15 years.
+[2927.82s -> 2929.30s]  But to your specific point
+[2929.30s -> 2930.40s]  about succession planning,
+[2931.98s -> 2932.82s]  Apple has,
+[2933.16s -> 2934.76s]  Apple just has
+[2934.76s -> 2936.00s]  an incredible bench
+[2936.00s -> 2937.04s]  and really deep talent.
+[2937.22s -> 2938.62s]  And they don't have defections.
+[2938.70s -> 2939.76s]  It's not a revolving door.
+[2940.50s -> 2941.64s]  I think they are very good
+[2941.64s -> 2942.24s]  about,
+[2942.86s -> 2943.76s]  I just think they have
+[2943.76s -> 2944.92s]  just an incredibly
+[2944.92s -> 2945.70s]  deep talent.
+[2945.72s -> 2947.70s]  And I would imagine,
+[2948.24s -> 2949.02s]  you know,
+[2949.18s -> 2950.94s]  people go to,
+[2951.24s -> 2953.08s]  they have a pipeline
+[2953.08s -> 2954.66s]  of incredible human capital.
+[2954.86s -> 2956.00s]  And also Tim Cook,
+[2956.52s -> 2957.50s]  Tim Cook strikes me
+[2957.50s -> 2958.40s]  as the kind of CEO,
+[2959.24s -> 2960.84s]  kind of the first tell
+[2960.84s -> 2963.24s]  of a CEO from a board member,
+[2963.28s -> 2963.78s]  in my view,
+[2964.42s -> 2964.72s]  is you,
+[2965.62s -> 2966.76s]  a good public companies
+[2966.76s -> 2967.90s]  demand that once a year,
+[2968.06s -> 2969.14s]  they spend some time
+[2969.14s -> 2970.12s]  on succession planning.
+[2970.92s -> 2972.46s]  And if the CEO
+[2972.46s -> 2975.06s]  is obviously spending time
+[2975.06s -> 2975.70s]  trying to,
+[2975.72s -> 2976.72s]  trying to figure out
+[2976.72s -> 2978.58s]  how to mature,
+[2979.12s -> 2980.38s]  hold on and compensate
+[2980.38s -> 2982.96s]  and put in front of the board
+[2982.96s -> 2985.08s]  at least two or three people
+[2985.08s -> 2985.76s]  that could take,
+[2986.34s -> 2987.30s]  they could slip into
+[2987.30s -> 2988.18s]  his or her shoes.
+[2988.26s -> 2989.44s]  If they're not doing that,
+[2989.90s -> 2990.42s]  that means
+[2990.42s -> 2992.54s]  they're like many CEOs,
+[2992.62s -> 2993.08s]  you can understand,
+[2993.20s -> 2994.02s]  self-absorbed,
+[2994.16s -> 2994.74s]  a narcissist
+[2994.74s -> 2996.14s]  and not thinking about
+[2996.14s -> 2996.94s]  shareholder value.
+[2997.46s -> 2998.72s]  Really good CEOs.
+[2999.36s -> 2999.90s]  I mean, the CEO,
+[2999.98s -> 3000.72s]  I remember the first thing
+[3000.72s -> 3001.34s]  I thought the CEO
+[3001.34s -> 3002.54s]  at the New York Times
+[3002.54s -> 3003.30s]  when I was on the board there,
+[3003.30s -> 3003.66s]  I'm like,
+[3003.86s -> 3004.76s]  she's not a good CEO.
+[3004.88s -> 3005.20s]  She's not,
+[3005.20s -> 3006.40s]  she's shooting everyone
+[3006.40s -> 3007.72s]  that gets close to the iron ring.
+[3008.00s -> 3008.42s]  She's not,
+[3008.46s -> 3010.72s]  she's not maturing successor.
+[3011.06s -> 3012.44s]  And really good CEOs
+[3012.44s -> 3013.88s]  make an effort
+[3013.88s -> 3015.20s]  to bring in other people
+[3015.20s -> 3016.04s]  and give them exposure
+[3016.04s -> 3016.78s]  to the board
+[3016.78s -> 3017.94s]  such that
+[3017.94s -> 3019.52s]  there are like five,
+[3019.54s -> 3019.90s]  I bet,
+[3020.00s -> 3020.86s]  I bet at Apple
+[3020.86s -> 3021.64s]  there are literally
+[3021.64s -> 3022.64s]  five or six people
+[3022.64s -> 3023.94s]  that could do a reasonable job
+[3023.94s -> 3024.58s]  of being the CEO
+[3024.58s -> 3025.58s]  of that company right now.
+[3025.96s -> 3026.58s]  Let me go through them.
+[3026.68s -> 3027.80s]  Hardware engineering chief,
+[3027.88s -> 3028.14s]  John,
+[3028.22s -> 3029.44s]  I think it's Tarnas.
+[3029.78s -> 3030.76s]  He's a younger guy.
+[3030.82s -> 3031.94s]  He's apparently very dynamic.
+[3031.94s -> 3033.14s]  I've never met him actually,
+[3033.30s -> 3033.60s]  but he's,
+[3033.60s -> 3035.00s]  he's moved up pretty quickly.
+[3035.52s -> 3035.88s]  Obviously,
+[3036.02s -> 3036.74s]  Craig Federici
+[3036.74s -> 3037.66s]  has been around forever
+[3037.66s -> 3039.66s]  and very competent
+[3039.66s -> 3040.84s]  and you see him
+[3040.84s -> 3041.74s]  at a lot of the events.
+[3041.88s -> 3042.22s]  He's the head
+[3042.22s -> 3043.54s]  of software engineering.
+[3044.10s -> 3045.12s]  He's done a lot of jobs.
+[3045.54s -> 3046.52s]  This Deirdre O'Brien
+[3046.52s -> 3047.62s]  has run retail.
+[3047.90s -> 3048.42s]  She's done
+[3048.42s -> 3049.62s]  all kinds of things
+[3049.62s -> 3051.06s]  and a lot of logistical stuff
+[3051.06s -> 3051.34s]  that,
+[3051.34s -> 3052.28s]  that Cook did.
+[3052.40s -> 3052.62s]  She did,
+[3052.72s -> 3052.92s]  she's,
+[3053.00s -> 3054.44s]  she has the most similar pattern
+[3054.44s -> 3055.08s]  to Cook.
+[3055.44s -> 3056.04s]  And what was interesting
+[3056.04s -> 3056.58s]  about Jobs
+[3056.58s -> 3057.52s]  is nobody thought
+[3057.52s -> 3058.38s]  that it was Cook
+[3058.38s -> 3059.20s]  that was going to get it
+[3059.20s -> 3059.86s]  and Jobs was
+[3059.86s -> 3061.08s]  a very good CEO
+[3061.08s -> 3062.44s]  and was also bringing people along.
+[3062.54s -> 3063.00s]  There was another
+[3063.00s -> 3064.30s]  more flashy person
+[3064.30s -> 3064.72s]  they thought
+[3064.72s -> 3065.42s]  might get it,
+[3065.50s -> 3066.00s]  but Jobs
+[3066.00s -> 3067.24s]  anointed Cook,
+[3067.32s -> 3067.74s]  which I think
+[3067.74s -> 3068.52s]  has turned out to be
+[3068.52s -> 3069.70s]  one of the best decisions,
+[3069.90s -> 3070.50s]  speaking of which,
+[3070.56s -> 3071.18s]  from a CEO,
+[3071.84s -> 3073.26s]  from a CEO's point of view
+[3073.26s -> 3073.58s]  is really,
+[3073.64s -> 3074.30s]  he really set it
+[3074.30s -> 3074.78s]  on a course
+[3074.78s -> 3075.94s]  of real explosion
+[3075.94s -> 3076.90s]  and value
+[3076.90s -> 3078.06s]  and everything else.
+[3078.46s -> 3079.16s]  So there's a lot
+[3079.16s -> 3080.12s]  and then there's many others
+[3080.12s -> 3080.82s]  and one of the things
+[3080.82s -> 3081.36s]  that struck me
+[3081.36s -> 3081.84s]  when I was looking
+[3081.84s -> 3082.38s]  at this list
+[3082.38s -> 3083.62s]  is among the people
+[3083.62s -> 3083.98s]  on there,
+[3084.02s -> 3084.52s]  now a lot of them
+[3084.52s -> 3084.92s]  are older,
+[3085.02s -> 3085.94s]  but not all of them are,
+[3086.46s -> 3088.98s]  is that everyone
+[3088.98s -> 3089.96s]  on that list
+[3089.96s -> 3090.76s]  when people were,
+[3090.94s -> 3092.20s]  when Walt retired,
+[3092.82s -> 3093.42s]  the Apple
+[3093.42s -> 3093.98s]  who had been,
+[3094.24s -> 3094.54s]  who had,
+[3094.72s -> 3095.44s]  covered a lot,
+[3095.56s -> 3096.04s]  gave a little,
+[3096.60s -> 3097.84s]  his last Apple event
+[3097.84s -> 3098.54s]  gave him a little
+[3098.54s -> 3099.42s]  cocktail party.
+[3099.98s -> 3100.80s]  All those same people
+[3100.80s -> 3101.22s]  were there.
+[3101.50s -> 3101.68s]  Like,
+[3101.86s -> 3102.42s]  I just like,
+[3102.46s -> 3102.86s]  oh look,
+[3103.08s -> 3103.86s]  and I went
+[3103.86s -> 3104.32s]  and I don't,
+[3104.40s -> 3105.04s]  didn't really mix
+[3105.04s -> 3105.44s]  with Apple
+[3105.44s -> 3107.70s]  executives that much.
+[3107.80s -> 3107.96s]  I mean,
+[3107.96s -> 3108.44s]  I know them,
+[3108.88s -> 3110.32s]  but even among the ones
+[3110.32s -> 3111.40s]  that aren't on the top,
+[3111.52s -> 3112.68s]  they're all really competent,
+[3112.82s -> 3113.34s]  Eddie Q,
+[3113.60s -> 3113.98s]  et cetera,
+[3114.08s -> 3114.38s]  et cetera.
+[3114.82s -> 3115.32s]  So yeah,
+[3115.36s -> 3115.74s]  you're right.
+[3115.80s -> 3116.86s]  It's a very no drama
+[3116.86s -> 3118.26s]  kind of group of people.
+[3118.40s -> 3119.10s]  So we'll see.
+[3119.44s -> 3119.76s]  I don't know.
+[3119.82s -> 3120.20s]  What do they need
+[3120.20s -> 3121.26s]  to focus in on?
+[3121.34s -> 3122.52s]  The Apple,
+[3122.62s -> 3123.48s]  next Apple CEO,
+[3123.64s -> 3124.16s]  if you had to pick
+[3124.16s -> 3124.50s]  one,
+[3124.50s -> 3125.18s]  one critical thing
+[3125.18s -> 3125.76s]  going forward,
+[3125.86s -> 3127.58s]  say Tim retired tomorrow,
+[3127.74s -> 3128.40s]  what's the biggest,
+[3128.80s -> 3129.44s]  I guess AI
+[3129.44s -> 3130.66s]  would be my choice.
+[3131.28s -> 3131.70s]  That's a really
+[3131.70s -> 3132.54s]  interesting question.
+[3132.94s -> 3133.08s]  I,
+[3133.12s -> 3134.52s]  I think you invest
+[3134.52s -> 3134.98s]  in your,
+[3135.22s -> 3136.84s]  your opportunities
+[3136.84s -> 3138.38s]  and I've always thought
+[3138.38s -> 3139.78s]  Tim sort of,
+[3139.96s -> 3140.94s]  he'll be remembered,
+[3141.34s -> 3142.18s]  I think,
+[3142.26s -> 3142.72s]  as a guy
+[3142.72s -> 3143.36s]  who was able to,
+[3143.42s -> 3144.24s]  to take the innovation
+[3144.24s -> 3145.32s]  and the marketing genius
+[3145.32s -> 3146.82s]  of Steve Jobs
+[3146.82s -> 3147.76s]  and what he did was,
+[3148.14s -> 3148.84s]  so Steve Jobs
+[3148.84s -> 3149.74s]  kind of branded
+[3149.74s -> 3151.74s]  or set
+[3151.74s -> 3153.40s]  or lionized
+[3153.40s -> 3154.12s]  or canonized
+[3154.12s -> 3154.46s]  the great,
+[3154.50s -> 3155.26s]  the great marketing age.
+[3155.36s -> 3156.56s]  He was just such a showman,
+[3156.64s -> 3156.90s]  right?
+[3157.46s -> 3158.56s]  And also the decision
+[3158.56s -> 3159.44s]  to take $6 billion
+[3159.44s -> 3160.48s]  out of advertising
+[3160.48s -> 3161.92s]  and create 550 temples
+[3161.92s -> 3162.58s]  to the brand
+[3162.58s -> 3163.54s]  called Apple stores
+[3163.54s -> 3164.18s]  and go vertical.
+[3164.86s -> 3165.38s]  That was,
+[3165.60s -> 3166.16s]  in my opinion,
+[3166.24s -> 3166.72s]  that was almost
+[3166.72s -> 3167.82s]  the same level of genius
+[3167.82s -> 3168.56s]  as the iPhone
+[3168.56s -> 3169.26s]  because other people
+[3169.26s -> 3170.22s]  had as good iPhone.
+[3170.34s -> 3171.42s]  No one has Apple stores.
+[3171.64s -> 3172.12s]  There's just no,
+[3172.56s -> 3173.48s]  what distribution
+[3173.48s -> 3174.04s]  in tech,
+[3174.94s -> 3175.32s]  Microsoft,
+[3175.56s -> 3176.48s]  do you want to go hang out
+[3176.48s -> 3177.46s]  in a Microsoft store?
+[3177.62s -> 3178.26s]  Let me tell you,
+[3178.32s -> 3179.26s]  people laughed at Jobs
+[3179.26s -> 3180.28s]  back then if you remember.
+[3180.50s -> 3181.28s]  Do you remember that?
+[3181.40s -> 3181.96s]  People don't,
+[3182.24s -> 3183.30s]  although it was a big opening.
+[3183.48s -> 3184.26s]  I was there actually.
+[3184.50s -> 3185.78s]  But people laughed at him
+[3185.78s -> 3186.38s]  for doing it.
+[3186.38s -> 3186.90s]  They're incredible.
+[3187.28s -> 3187.56s]  I mean,
+[3187.74s -> 3189.40s]  it really is going vertical.
+[3189.70s -> 3191.52s]  He revolutionized technology
+[3191.52s -> 3192.66s]  and what it meant
+[3192.66s -> 3193.72s]  to spend money on marketing
+[3193.72s -> 3194.26s]  by going,
+[3194.44s -> 3195.08s]  by controlling
+[3195.08s -> 3195.90s]  your distribution.
+[3196.12s -> 3197.36s]  You go buy an Android phone,
+[3197.44s -> 3198.22s]  you walk into a place
+[3198.22s -> 3199.10s]  with bad carpeting
+[3199.10s -> 3199.72s]  and a guy living
+[3199.72s -> 3200.60s]  in his parents' basement
+[3200.60s -> 3201.68s]  with a name tag
+[3201.68s -> 3202.14s]  and you think,
+[3202.26s -> 3202.74s]  Jesus Christ.
+[3202.76s -> 3203.20s]  And then you go into
+[3203.20s -> 3203.72s]  an Apple store
+[3203.72s -> 3203.98s]  and you're like,
+[3204.48s -> 3205.72s]  do they serve lattes here?
+[3205.76s -> 3206.10s]  Because I'd like
+[3206.10s -> 3207.12s]  to take a date here.
+[3207.12s -> 3208.44s]  I mean,
+[3208.50s -> 3209.48s]  think about those places,
+[3209.62s -> 3209.78s]  right?
+[3210.72s -> 3211.82s]  So he kind of marked
+[3211.82s -> 3212.78s]  the branding age.
+[3213.78s -> 3214.08s]  Really,
+[3214.18s -> 3214.36s]  Tim,
+[3214.36s -> 3215.16s]  Cook marked
+[3215.16s -> 3216.44s]  the supply chain age
+[3216.44s -> 3217.80s]  and that is he built
+[3217.80s -> 3219.02s]  the most complicated,
+[3219.26s -> 3220.48s]  robust supply chain
+[3220.48s -> 3220.88s]  in the world
+[3220.88s -> 3221.78s]  and basically said,
+[3222.00s -> 3222.68s]  I can give you
+[3222.68s -> 3224.54s]  what would have cost you
+[3224.54s -> 3225.88s]  a million dollars
+[3225.88s -> 3227.30s]  10 or 15 years ago.
+[3227.44s -> 3228.18s]  I can produce it
+[3228.18s -> 3229.24s]  for a thousand bucks
+[3229.24s -> 3231.12s]  using the most complex,
+[3231.32s -> 3232.22s]  robust supply chain,
+[3232.30s -> 3233.00s]  mostly out of China
+[3233.00s -> 3233.66s]  that brings together
+[3233.66s -> 3234.84s]  1,600 parts
+[3234.84s -> 3235.86s]  and produces a million
+[3235.86s -> 3236.88s]  of these things a day.
+[3237.14s -> 3237.66s]  With a downside,
+[3237.90s -> 3238.84s]  they trained up China.
+[3239.08s -> 3239.48s]  But go ahead.
+[3239.60s -> 3239.76s]  Yeah,
+[3239.80s -> 3240.32s]  and also,
+[3240.62s -> 3241.02s]  quite frankly,
+[3241.06s -> 3241.94s]  became very subject
+[3241.94s -> 3242.88s]  to sort of the political
+[3242.88s -> 3243.60s]  machinations
+[3243.60s -> 3244.04s]  of a,
+[3244.04s -> 3244.30s]  you know,
+[3244.36s -> 3245.14s]  fucking weirdo
+[3245.14s -> 3246.08s]  with his head up his ass
+[3246.08s -> 3246.84s]  called the president.
+[3247.68s -> 3248.76s]  So the question is,
+[3248.94s -> 3250.06s]  when they think
+[3250.06s -> 3250.92s]  of the next CEO,
+[3251.08s -> 3251.56s]  I don't think it's going
+[3251.56s -> 3252.42s]  to be a branding person.
+[3252.50s -> 3252.90s]  I don't think it's going
+[3252.90s -> 3253.46s]  to be a CMO.
+[3254.20s -> 3255.16s]  Is it going to be someone
+[3255.16s -> 3256.34s]  who tries to take them
+[3256.34s -> 3257.26s]  into the AI future
+[3257.26s -> 3257.96s]  or do they say,
+[3258.10s -> 3259.04s]  we're still a hardware company
+[3259.04s -> 3260.18s]  and it's about supply chain?
+[3260.30s -> 3260.78s]  I don't know.
+[3260.82s -> 3261.42s]  What do you think?
+[3261.56s -> 3262.00s]  I don't know.
+[3262.10s -> 3263.06s]  I think they're all qualified.
+[3263.16s -> 3263.48s]  They're different.
+[3263.58s -> 3264.10s]  I think they have,
+[3264.44s -> 3265.58s]  if I had to guess,
+[3265.74s -> 3267.62s]  this hardware engineering chief,
+[3267.70s -> 3268.20s]  he's younger.
+[3268.70s -> 3269.48s]  I think they need
+[3269.48s -> 3270.10s]  to go younger
+[3270.10s -> 3272.06s]  and I know it sounds dumb,
+[3272.20s -> 3273.06s]  but these guys,
+[3273.24s -> 3273.44s]  like,
+[3273.68s -> 3274.14s]  I think,
+[3274.14s -> 3275.32s]  I think the world
+[3275.32s -> 3275.84s]  of someone like
+[3275.84s -> 3276.50s]  Craig Federici,
+[3276.84s -> 3278.18s]  but he's almost too old,
+[3278.22s -> 3278.44s]  right?
+[3278.62s -> 3278.90s]  You know,
+[3278.98s -> 3280.06s]  you just saw a departure
+[3280.06s -> 3281.94s]  from Amazon, too,
+[3281.98s -> 3282.62s]  of someone who'd been
+[3282.62s -> 3283.66s]  there 17 years.
+[3283.78s -> 3283.92s]  I mean,
+[3283.94s -> 3284.52s]  at some point,
+[3285.46s -> 3285.76s]  a lot,
+[3285.88s -> 3286.68s]  Apple reminds me
+[3286.68s -> 3287.78s]  of like the Rolling Stones.
+[3287.92s -> 3288.90s]  They still can really
+[3288.90s -> 3290.48s]  do a really good concert,
+[3290.66s -> 3291.32s]  but at some point,
+[3291.38s -> 3291.72s]  you're like,
+[3291.78s -> 3292.08s]  okay,
+[3292.44s -> 3293.10s]  like it's enough,
+[3293.22s -> 3293.38s]  right?
+[3293.42s -> 3293.98s]  At some point,
+[3294.04s -> 3294.50s]  you're J-Lo?
+[3294.84s -> 3295.62s]  Yeah, exactly.
+[3295.92s -> 3296.52s]  Like, stop.
+[3296.70s -> 3297.14s]  It's okay.
+[3297.14s -> 3298.12s]  You know,
+[3298.18s -> 3299.16s]  it's kudos to you.
+[3299.34s -> 3300.20s]  I think about that a lot
+[3300.20s -> 3300.40s]  because,
+[3300.90s -> 3302.22s]  you know,
+[3302.32s -> 3303.24s]  we don't think about
+[3303.24s -> 3304.00s]  leaving right now,
+[3304.00s -> 3304.70s]  but at some point,
+[3304.76s -> 3305.06s]  it's like,
+[3305.12s -> 3305.98s]  I've done enough.
+[3306.08s -> 3307.36s]  Now everything else is great.
+[3307.56s -> 3308.38s]  And I think this group
+[3308.38s -> 3309.48s]  of people is like that.
+[3309.72s -> 3310.06s]  I think,
+[3310.12s -> 3310.74s]  I think probably
+[3310.74s -> 3311.66s]  how to deal with AI
+[3311.66s -> 3312.98s]  and more software
+[3312.98s -> 3313.50s]  and services
+[3313.50s -> 3314.44s]  is where I would focus.
+[3314.60s -> 3314.94s]  Typically,
+[3315.10s -> 3315.86s]  the person who gets
+[3315.86s -> 3316.86s]  the CEO role
+[3316.86s -> 3318.12s]  is not
+[3318.12s -> 3320.08s]  the best person.
+[3320.18s -> 3321.00s]  It's the person
+[3321.00s -> 3322.28s]  who happened to oversee
+[3322.28s -> 3323.56s]  the unit that at that moment
+[3323.56s -> 3324.44s]  is growing the fastest.
+[3325.10s -> 3325.78s]  And that's not to say,
+[3325.78s -> 3326.00s]  like,
+[3326.10s -> 3326.72s]  Andy Jassy
+[3326.72s -> 3327.58s]  is,
+[3327.78s -> 3328.32s]  in my sense,
+[3328.36s -> 3329.44s]  a very competent person,
+[3329.66s -> 3330.56s]  but you just knew
+[3330.56s -> 3331.78s]  the head of AWS
+[3331.78s -> 3332.50s]  was going to be
+[3332.50s -> 3333.36s]  the new head of Amazon.
+[3333.48s -> 3333.96s]  Yes, absolutely.
+[3334.00s -> 3334.32s]  Yeah.
+[3334.44s -> 3335.52s]  So I remember
+[3335.52s -> 3336.94s]  when I was at Levi Strauss & Co
+[3336.94s -> 3338.08s]  and talking to the CEO
+[3338.08s -> 3339.34s]  then about succession planning
+[3339.34s -> 3340.34s]  when I was a consultant there
+[3340.34s -> 3341.54s]  and I'm like,
+[3341.60s -> 3341.70s]  well,
+[3341.72s -> 3342.76s]  I know who the next CEO is.
+[3342.82s -> 3343.02s]  I'm like,
+[3343.08s -> 3343.96s]  which region is growing
+[3343.96s -> 3344.52s]  the fastest?
+[3345.00s -> 3346.02s]  That'll be your next CEO.
+[3346.40s -> 3348.78s]  So if you looked at
+[3348.78s -> 3350.22s]  which part of Apple,
+[3350.40s -> 3351.74s]  whether it's their services unit,
+[3352.10s -> 3352.46s]  I don't know,
+[3352.52s -> 3352.88s]  their lab,
+[3352.98s -> 3353.74s]  whatever it is,
+[3353.86s -> 3354.70s]  maybe the person
+[3354.70s -> 3355.52s]  in charge of the iPhone,
+[3356.28s -> 3356.58s]  they will,
+[3356.84s -> 3357.88s]  the person who's usually
+[3357.88s -> 3358.34s]  the CEO
+[3358.34s -> 3358.94s]  is the person
+[3358.94s -> 3359.98s]  who is lucky enough.
+[3360.10s -> 3360.86s]  And also the fact
+[3360.86s -> 3361.44s]  that they're appointed
+[3361.44s -> 3362.96s]  to the most important region
+[3362.96s -> 3363.96s]  or group in the company
+[3363.96s -> 3365.18s]  says they're very good.
+[3365.90s -> 3366.56s]  But it's easy.
+[3367.34s -> 3367.74s]  I mean,
+[3367.98s -> 3368.28s]  it,
+[3368.72s -> 3369.92s]  I'm going way back
+[3369.92s -> 3370.18s]  to my,
+[3370.26s -> 3370.78s]  in the 90s
+[3370.78s -> 3371.58s]  when I was consulting
+[3371.58s -> 3372.28s]  at Levi Strauss & Co,
+[3372.40s -> 3373.96s]  when you were
+[3373.96s -> 3375.06s]  the head of Levi's
+[3375.06s -> 3375.54s]  in Europe
+[3375.54s -> 3376.76s]  and you got to get,
+[3376.88s -> 3378.12s]  you got to charge $140
+[3378.12s -> 3379.44s]  for a pair of 501s
+[3379.44s -> 3379.90s]  in Germany
+[3379.90s -> 3380.36s]  that you were only
+[3380.36s -> 3381.38s]  getting 30 bucks for
+[3381.38s -> 3382.24s]  in the US,
+[3382.30s -> 3383.22s]  it was really easy
+[3383.22s -> 3384.52s]  to look really fucking smart.
+[3384.70s -> 3385.18s]  Yeah, yeah.
+[3385.52s -> 3386.16s]  True, true.
+[3386.22s -> 3386.96s]  So which group,
+[3387.02s -> 3387.98s]  which group at Apple
+[3387.98s -> 3388.86s]  is growing the fastest?
+[3389.06s -> 3390.02s]  That's what I'd want to know.
+[3390.12s -> 3390.82s]  Probably software
+[3390.82s -> 3391.86s]  and services software.
+[3392.00s -> 3392.34s]  That would be
+[3392.34s -> 3393.02s]  Craig Federici.
+[3393.28s -> 3393.44s]  I mean,
+[3393.62s -> 3393.94s]  it just,
+[3394.00s -> 3394.30s]  would be,
+[3394.46s -> 3395.54s]  it wouldn't be the new era.
+[3395.64s -> 3396.30s]  That's all I'm saying.
+[3396.36s -> 3396.78s]  And again,
+[3397.00s -> 3397.74s]  totally competent
+[3397.74s -> 3399.00s]  and probably do a great job.
+[3399.50s -> 3399.76s]  Anyway,
+[3399.92s -> 3400.42s]  we'll move on.
+[3400.46s -> 3401.16s]  One last thing.
+[3401.66s -> 3402.06s]  Shein,
+[3402.26s -> 3402.42s]  your,
+[3402.64s -> 3403.56s]  one of your favorite companies
+[3403.56s -> 3404.64s]  has confidentially filed
+[3404.64s -> 3406.22s]  an IPO in Hong Kong
+[3406.22s -> 3407.34s]  18 months after filing
+[3407.34s -> 3407.88s]  to go public
+[3407.88s -> 3409.36s]  on the London Stock Exchange.
+[3409.66s -> 3410.46s]  The company has struggled
+[3410.46s -> 3411.90s]  to receive regulatory approval
+[3411.90s -> 3412.38s]  in London
+[3412.38s -> 3412.96s]  and is attempting
+[3412.96s -> 3414.16s]  to put pressure on the UK.
+[3414.56s -> 3415.80s]  The company's been pushing back
+[3415.80s -> 3416.80s]  against UK regulators
+[3416.80s -> 3417.94s]  who want more transparency
+[3417.94s -> 3419.14s]  about its labor practices
+[3419.14s -> 3419.70s]  in China,
+[3419.90s -> 3420.96s]  which is no surprise.
+[3421.56s -> 3422.32s]  Shein was valued
+[3422.32s -> 3423.00s]  at $100 billion
+[3423.00s -> 3423.94s]  in 2022.
+[3423.96s -> 3424.70s]  But that dropped
+[3424.70s -> 3425.68s]  to $66 billion
+[3425.68s -> 3426.58s]  in 2023.
+[3428.64s -> 3429.46s]  Any predictions?
+[3429.68s -> 3430.22s]  I'd love to hear
+[3430.22s -> 3430.62s]  what you think.
+[3430.70s -> 3431.36s]  I know you think
+[3431.36s -> 3432.16s]  the world of this,
+[3432.34s -> 3432.58s]  well,
+[3432.66s -> 3433.54s]  a lot of people don't,
+[3433.60s -> 3434.04s]  by the way,
+[3434.14s -> 3434.90s]  this sort of
+[3434.90s -> 3435.84s]  fashion thing,
+[3436.88s -> 3437.44s]  et cetera.
+[3437.86s -> 3438.98s]  But what do you,
+[3439.08s -> 3440.18s]  what should happen here?
+[3440.24s -> 3440.70s]  What do you imagine?
+[3440.78s -> 3441.32s]  It'll just go public
+[3441.32s -> 3441.88s]  in Hong Kong,
+[3442.08s -> 3442.34s]  correct?
+[3442.54s -> 3442.70s]  I mean,
+[3442.72s -> 3443.68s]  that would be my guess.
+[3443.90s -> 3444.74s]  What this reflects
+[3444.74s -> 3445.48s]  is the following.
+[3446.06s -> 3446.60s]  200 companies
+[3446.60s -> 3447.50s]  have filed for an IPO
+[3447.50s -> 3448.00s]  this year.
+[3448.12s -> 3448.58s]  The bottom line
+[3448.58s -> 3449.48s]  is the Hong Kong market
+[3449.48s -> 3450.16s]  is on fire.
+[3450.88s -> 3452.30s]  The London IPO market
+[3452.30s -> 3452.98s]  with the loss
+[3452.98s -> 3453.76s]  of this IPO
+[3453.76s -> 3454.22s]  I mean,
+[3454.52s -> 3455.36s]  I love,
+[3455.58s -> 3456.42s]  I really have,
+[3456.48s -> 3457.16s]  I'm starting to get sentimental
+[3457.16s -> 3458.28s]  about the UK
+[3458.28s -> 3460.24s]  because I've been there
+[3460.24s -> 3460.72s]  three years
+[3460.72s -> 3461.60s]  and I'm going to
+[3461.60s -> 3462.88s]  move back to the US.
+[3463.88s -> 3465.04s]  And I love it there
+[3465.04s -> 3465.54s]  and they have
+[3465.54s -> 3466.94s]  all of the underpinnings
+[3466.94s -> 3468.42s]  of an economy
+[3468.42s -> 3469.28s]  that should be booming.
+[3469.72s -> 3471.52s]  Great intellectual property,
+[3471.80s -> 3472.92s]  an incredible culture
+[3472.92s -> 3474.04s]  that attracts
+[3474.04s -> 3474.62s]  some of the best
+[3474.62s -> 3475.02s]  and brightest
+[3475.02s -> 3475.68s]  in capital.
+[3476.54s -> 3477.02s]  Really,
+[3477.16s -> 3478.42s]  really aggressive,
+[3478.74s -> 3479.40s]  smart people.
+[3479.64s -> 3480.66s]  They can't get out
+[3480.66s -> 3481.80s]  of their own damn way.
+[3482.60s -> 3483.00s]  And
+[3483.00s -> 3483.42s]  they're not
+[3483.76s -> 3484.90s]  for them to have
+[3484.90s -> 3485.72s]  she and I will probably
+[3485.72s -> 3486.46s]  be one of the biggest
+[3486.46s -> 3487.20s]  IPOs of the year.
+[3487.28s -> 3487.92s]  They should have done
+[3487.92s -> 3489.14s]  anything they could
+[3489.14s -> 3490.00s]  to try and breathe
+[3490.00s -> 3491.52s]  new life
+[3491.52s -> 3492.60s]  into their IPO market
+[3492.60s -> 3493.60s]  because as of now
+[3493.60s -> 3494.66s]  the
+[3494.66s -> 3496.20s]  is it the LSE
+[3496.20s -> 3497.04s]  or whatever it is
+[3497.04s -> 3498.22s]  is basically done.
+[3498.32s -> 3498.98s]  It's out of business.
+[3499.12s -> 3499.94s]  The UK might as well
+[3499.94s -> 3500.62s]  close shop
+[3500.62s -> 3501.70s]  in terms of IPOs.
+[3502.40s -> 3502.98s]  And what's interesting
+[3502.98s -> 3503.58s]  is actually
+[3503.58s -> 3505.36s]  the London exchange
+[3505.36s -> 3505.66s]  would say
+[3505.66s -> 3506.32s]  it wasn't our fault
+[3506.32s -> 3507.06s]  they couldn't get
+[3507.06s -> 3507.82s]  Chinese approval.
+[3507.94s -> 3508.30s]  But anyways,
+[3508.38s -> 3509.82s]  that's another talk show.
+[3510.28s -> 3510.60s]  Meanwhile,
+[3510.60s -> 3512.02s]  while you were sleeping
+[3512.02s -> 3513.06s]  the Hong Kong market
+[3513.06s -> 3513.60s]  is on fire.
+[3513.76s -> 3515.38s]  And so
+[3515.38s -> 3516.32s]  she and is just going
+[3516.32s -> 3517.42s]  to where the money is.
+[3517.60s -> 3518.24s]  They're going to where
+[3518.24s -> 3519.12s]  they can a have
+[3519.12s -> 3520.30s]  the most seamless path
+[3520.30s -> 3521.22s]  right without being
+[3521.22s -> 3522.26s]  asked too many questions
+[3522.26s -> 3522.84s]  too many
+[3522.84s -> 3524.24s]  thorny questions.
+[3524.64s -> 3524.80s]  Sure.
+[3524.98s -> 3525.50s]  And so
+[3525.50s -> 3526.40s]  one,
+[3526.52s -> 3527.46s]  they deserve to have
+[3527.46s -> 3528.62s]  scrutiny fast fashion
+[3528.62s -> 3529.44s]  raises a lot of
+[3529.44s -> 3530.74s]  very troubling questions.
+[3530.96s -> 3532.22s]  But to what she
+[3532.22s -> 3533.06s]  and would say is
+[3533.06s -> 3534.44s]  okay now do Nike
+[3534.44s -> 3535.72s]  now to Apple
+[3535.72s -> 3536.96s]  and a lot of the
+[3536.96s -> 3538.02s]  a lot of the people
+[3538.02s -> 3538.80s]  pushing back
+[3538.80s -> 3539.68s]  on this
+[3539.68s -> 3540.46s]  this company
+[3540.46s -> 3541.14s]  are people
+[3541.14s -> 3542.42s]  are organizations
+[3542.42s -> 3543.28s]  sponsored by
+[3543.28s -> 3543.60s]  incumbent
+[3543.60s -> 3544.54s]  retailers who would
+[3544.54s -> 3545.24s]  rather just keep
+[3545.24s -> 3546.10s]  selling you cashmere
+[3546.10s -> 3547.06s]  sweaters for $200
+[3547.06s -> 3548.30s]  versus 40.
+[3548.88s -> 3550.28s]  So but I do think
+[3550.28s -> 3550.92s]  they're going to get out
+[3550.92s -> 3551.66s]  in Hong Kong
+[3551.66s -> 3552.86s]  but they're just going
+[3552.86s -> 3553.60s]  to where they're
+[3553.60s -> 3554.40s]  where there's
+[3554.40s -> 3555.12s]  where it's a seamless
+[3555.12s -> 3555.82s]  route to an IPO
+[3555.82s -> 3557.36s]  and the Hong Kong market
+[3557.36s -> 3558.12s]  who would have guessed
+[3558.12s -> 3560.24s]  it is on fire
+[3560.24s -> 3560.84s]  right now.
+[3561.02s -> 3561.12s]  Yeah.
+[3561.32s -> 3562.30s]  Well, that's interesting.
+[3562.64s -> 3563.36s]  You're sad about
+[3563.36s -> 3563.90s]  London.
+[3564.16s -> 3564.72s]  How cute.
+[3564.88s -> 3565.50s]  It is true.
+[3565.68s -> 3566.24s]  When I go to London
+[3566.24s -> 3566.98s]  I think look at all
+[3566.98s -> 3567.66s]  this creativity.
+[3567.96s -> 3568.96s]  Why isn't it more
+[3568.96s -> 3569.84s]  dynamic?
+[3570.12s -> 3570.92s]  Like, you know what I mean?
+[3571.04s -> 3572.06s]  70% of the companies
+[3572.06s -> 3572.58s]  have gone public
+[3572.58s -> 3573.28s]  in the last 10 years
+[3573.28s -> 3573.76s]  are below their
+[3573.76s -> 3574.50s]  offering price.
+[3574.84s -> 3575.32s]  I know.
+[3575.46s -> 3576.46s]  It's really fascinating
+[3576.46s -> 3576.86s]  to me.
+[3577.00s -> 3577.16s]  Anyway.
+[3577.52s -> 3578.26s]  Name an important
+[3578.26s -> 3579.22s]  tech company in the UK.
+[3579.44s -> 3579.84s]  You can't.
+[3579.94s -> 3581.60s]  I have had this debate
+[3581.60s -> 3582.76s]  with people in England
+[3582.76s -> 3583.14s]  a lot.
+[3583.36s -> 3584.58s]  I told you this years ago.
+[3585.08s -> 3585.72s]  Reid Hoffman and I
+[3585.72s -> 3587.00s]  did a debate there
+[3587.00s -> 3587.74s]  and I think it was
+[3587.74s -> 3588.30s]  at Cambridge
+[3588.30s -> 3590.00s]  and we debated
+[3590.00s -> 3591.02s]  and Reid and I
+[3591.02s -> 3591.70s]  had to argue
+[3591.70s -> 3593.22s]  in the next
+[3593.22s -> 3593.82s]  and this was
+[3593.82s -> 3594.88s]  20 years ago
+[3594.88s -> 3595.52s]  at this point
+[3595.52s -> 3596.80s]  in the next
+[3596.80s -> 3597.78s]  five years
+[3597.78s -> 3598.88s]  which country
+[3598.88s -> 3599.44s]  was going to have
+[3599.44s -> 3600.64s]  the most billion dollar
+[3600.64s -> 3601.28s]  companies
+[3601.28s -> 3602.12s]  and Reid and I
+[3602.12s -> 3602.62s]  had to argue
+[3602.62s -> 3603.16s]  US.
+[3603.76s -> 3604.86s]  And the British people
+[3604.86s -> 3605.56s]  had to argue
+[3605.56s -> 3606.06s]  London.
+[3606.56s -> 3607.46s]  And we gave all these
+[3607.46s -> 3608.88s]  we did a really good job
+[3608.88s -> 3609.54s]  but we lost
+[3609.54s -> 3610.12s]  because it was
+[3610.12s -> 3611.08s]  a British audience
+[3611.08s -> 3613.56s]  but I remember thinking
+[3613.56s -> 3614.76s]  there's no friggin way
+[3614.76s -> 3615.52s]  this group of people
+[3615.52s -> 3616.14s]  is going to be able
+[3616.14s -> 3616.88s]  to be as dynamic
+[3616.88s -> 3617.88s]  and at the time
+[3617.88s -> 3618.26s]  we said
+[3618.26s -> 3619.30s]  Google
+[3619.30s -> 3620.40s]  da da da da da
+[3620.40s -> 3621.84s]  and I said
+[3621.84s -> 3622.64s]  and we were like
+[3622.64s -> 3623.32s]  England?
+[3624.14s -> 3624.54s]  Zero.
+[3624.76s -> 3625.18s]  It was like
+[3625.18s -> 3625.94s]  there was one company
+[3625.94s -> 3626.26s]  the one
+[3626.26s -> 3626.96s]  the guy who died
+[3626.96s -> 3628.00s]  in that sailing accident
+[3628.00s -> 3628.54s]  that guy
+[3628.54s -> 3629.38s]  he had a company
+[3629.38s -> 3630.64s]  that got all
+[3630.64s -> 3631.34s]  messed up
+[3631.34s -> 3632.00s]  and controversy
+[3632.00s -> 3632.78s]  but that was
+[3632.78s -> 3633.70s]  there was one
+[3633.70s -> 3634.96s]  UK company
+[3634.96s -> 3636.02s]  that had dynamism
+[3636.02s -> 3636.78s]  and it was just
+[3636.78s -> 3637.08s]  interesting.
+[3637.16s -> 3637.34s]  Anyway,
+[3637.84s -> 3638.82s]  I would be sad
+[3638.82s -> 3639.34s]  you're leaving there.
+[3639.42s -> 3640.04s]  I didn't come
+[3640.04s -> 3641.20s]  and stay with you there.
+[3641.50s -> 3641.70s]  Hmm.
+[3642.10s -> 3643.22s]  I need to do that quickly.
+[3643.44s -> 3643.98s]  Oh, trust me,
+[3644.00s -> 3644.30s]  you will.
+[3644.40s -> 3645.12s]  The house will be there.
+[3645.34s -> 3646.02s]  I know,
+[3646.12s -> 3646.56s]  you'll be away
+[3646.56s -> 3647.24s]  pretty soon.
+[3647.50s -> 3648.14s]  Pretty soon
+[3648.14s -> 3648.88s]  you'll be on podcast
+[3648.88s -> 3649.74s]  drinking tea
+[3649.74s -> 3651.30s]  like yelling
+[3651.30s -> 3652.14s]  at my dogs
+[3652.14s -> 3654.14s]  your socks off.
+[3654.56s -> 3655.12s]  Yeah, yeah,
+[3655.26s -> 3655.86s]  yeah, I will.
+[3655.98s -> 3656.74s]  I'm going to plan on it.
+[3657.02s -> 3657.46s]  All right, Scott,
+[3657.56s -> 3658.58s]  one more quick break.
+[3658.64s -> 3659.32s]  We'll be back
+[3659.32s -> 3660.14s]  for predictions.
+[3662.78s -> 3666.06s]  Avoiding your
+[3666.06s -> 3667.26s]  unfinished home projects
+[3667.26s -> 3668.16s]  because you're not sure
+[3668.16s -> 3668.84s]  where to start.
+[3669.52s -> 3670.70s]  Thumbtack knows homes
+[3670.70s -> 3671.96s]  so you don't have to
+[3671.96s -> 3673.40s]  don't know the difference
+[3673.40s -> 3674.74s]  between matte paint finish
+[3674.74s -> 3675.48s]  and satin
+[3675.48s -> 3676.90s]  or what that clunking
+[3676.90s -> 3678.24s]  sound from your dryer is
+[3678.24s -> 3679.50s]  with Thumbtack.
+[3679.64s -> 3680.54s]  You don't have to be
+[3680.54s -> 3681.16s]  a home pro.
+[3681.40s -> 3682.58s]  You just have to hire one.
+[3683.16s -> 3684.64s]  You can hire top rated pros
+[3684.64s -> 3685.98s]  see price estimates
+[3685.98s -> 3687.14s]  and read reviews
+[3687.14s -> 3688.26s]  all on the app.
+[3688.68s -> 3689.28s]  Download today.
+[3690.66s -> 3692.44s]  This episode is brought to you
+[3692.44s -> 3693.74s]  by San Pellegrino Chow.
+[3694.30s -> 3695.80s]  A new kind of flavor
+[3695.80s -> 3696.76s]  sparkling water.
+[3697.26s -> 3698.22s]  The kind made with
+[3698.22s -> 3699.30s]  real fruit juice,
+[3699.90s -> 3701.48s]  a pinch of Sicilian salt
+[3701.48s -> 3702.84s]  and the sparkle
+[3702.84s -> 3703.94s]  of the Italian sun
+[3703.94s -> 3705.74s]  with no added sugar
+[3705.74s -> 3707.02s]  and just 10 or less
+[3707.02s -> 3708.00s]  calories per can.
+[3708.48s -> 3710.40s]  Enjoy with love
+[3710.40s -> 3711.66s]  from Italy
+[3711.66s -> 3713.68s]  by San Pellegrino Chow
+[3713.68s -> 3714.24s]  now.
+[3716.32s -> 3717.90s]  The Red Hot Clarence event
+[3717.90s -> 3718.98s]  is on right now
+[3718.98s -> 3719.60s]  at Burlington
+[3719.60s -> 3720.56s]  and I'm excited
+[3720.56s -> 3721.52s]  for the markdowns.
+[3721.62s -> 3722.28s]  It's all about
+[3722.28s -> 3723.26s]  savings on top of
+[3723.26s -> 3724.48s]  savings throughout the store.
+[3724.74s -> 3725.94s]  This is when I stock up
+[3725.94s -> 3726.94s]  on styles from my closet,
+[3727.16s -> 3727.56s]  home decor
+[3727.56s -> 3728.72s]  and much more
+[3728.72s -> 3730.26s]  because there's up to 70%
+[3730.26s -> 3731.18s]  off other retailers
+[3731.18s -> 3732.32s]  prices on clearance.
+[3732.78s -> 3733.00s]  I mean,
+[3733.14s -> 3733.92s]  I'm going every day
+[3733.92s -> 3734.86s]  because these prices
+[3734.86s -> 3735.88s]  too hot to miss.
+[3736.44s -> 3736.78s]  Burlington.
+[3737.18s -> 3737.52s]  Deals.
+[3737.74s -> 3738.26s]  Brands.
+[3738.36s -> 3738.70s]  Wow.
+[3739.10s -> 3739.80s]  Styles and selections
+[3739.80s -> 3740.84s]  may vary by location.
+[3745.88s -> 3746.72s]  Okay, Scott,
+[3746.80s -> 3747.48s]  let's hear a prediction.
+[3747.68s -> 3748.36s]  Actually, can I do one
+[3748.36s -> 3748.86s]  really quickly?
+[3748.96s -> 3749.30s]  Of course.
+[3749.44s -> 3749.60s]  Okay.
+[3749.98s -> 3751.06s]  So OpenAI is getting
+[3751.06s -> 3751.78s]  close to releasing
+[3751.78s -> 3753.14s]  an AI-powered web browser.
+[3753.30s -> 3753.96s]  According to Reuters,
+[3754.06s -> 3754.84s]  the browser is slated
+[3754.84s -> 3756.24s]  to launch in the next few weeks
+[3756.24s -> 3756.90s]  and will be competing
+[3756.90s -> 3757.44s]  with Chrome,
+[3757.62s -> 3758.62s]  giving OpenAI
+[3758.62s -> 3759.60s]  a way to access
+[3759.60s -> 3761.32s]  user data.
+[3761.54s -> 3762.58s]  Perplexity just launched
+[3762.58s -> 3764.08s]  its AI-powered browser,
+[3764.24s -> 3765.22s]  Comet, this week.
+[3765.62s -> 3766.28s]  I don't know
+[3766.28s -> 3766.86s]  who the winner
+[3766.86s -> 3767.94s]  of the browser wars
+[3767.94s -> 3768.32s]  could be,
+[3768.40s -> 3769.82s]  but I couldn't be more delighted
+[3769.82s -> 3771.00s]  that there is now
+[3771.00s -> 3772.48s]  competition in this area.
+[3773.00s -> 3774.70s]  Microsoft tried very hard.
+[3775.72s -> 3777.06s]  Netscape was the original one.
+[3777.10s -> 3777.86s]  It got ran over
+[3777.86s -> 3778.70s]  by Microsoft,
+[3778.92s -> 3780.00s]  which then got ran over
+[3780.00s -> 3781.40s]  by Google.
+[3781.78s -> 3783.58s]  And I'd love to see
+[3783.58s -> 3784.60s]  what the next generation
+[3784.60s -> 3785.40s]  of browsers brings.
+[3785.48s -> 3786.52s]  Not that I use a browser
+[3786.52s -> 3787.32s]  that much anymore,
+[3787.94s -> 3789.68s]  but it should be smarter.
+[3789.80s -> 3790.56s]  It's so dumb
+[3790.56s -> 3791.46s]  when I use it.
+[3791.64s -> 3793.04s]  And so I think it's,
+[3793.28s -> 3795.10s]  I suspect OpenAI
+[3795.10s -> 3796.66s]  will have the most popular one
+[3796.66s -> 3797.96s]  given they're the most popular.
+[3798.30s -> 3799.24s]  Everyone I talk to
+[3799.24s -> 3800.50s]  uses ChatGPT.
+[3800.66s -> 3801.52s]  It is the Kleenex.
+[3801.68s -> 3802.26s]  It's the Google
+[3802.26s -> 3803.12s]  of the situation.
+[3803.54s -> 3804.06s]  That doesn't mean
+[3804.06s -> 3804.98s]  it's going to last forever
+[3804.98s -> 3805.48s]  because I think
+[3805.48s -> 3806.42s]  Claude is considered
+[3806.42s -> 3807.68s]  better by many people.
+[3807.86s -> 3808.48s]  Perplexity has
+[3808.48s -> 3809.22s]  interesting things.
+[3809.62s -> 3810.76s]  But I'm really excited
+[3810.76s -> 3811.76s]  about this thing.
+[3811.78s -> 3812.78s]  And I suspect
+[3812.78s -> 3813.80s]  the winner is going,
+[3814.02s -> 3814.98s]  I predict the winner
+[3814.98s -> 3816.16s]  will be OpenAI
+[3816.16s -> 3817.42s]  and not Google
+[3817.42s -> 3819.32s]  because they haven't
+[3819.32s -> 3820.64s]  innovated enough on this.
+[3820.72s -> 3821.44s]  And so the people
+[3821.44s -> 3822.76s]  with an interest in winning
+[3822.76s -> 3823.86s]  are the most innovative.
+[3824.18s -> 3825.32s]  I think that's interesting.
+[3825.76s -> 3827.14s]  But I'll be quick.
+[3827.40s -> 3828.82s]  These new tariff threats,
+[3829.00s -> 3829.92s]  90 deals in 90 days,
+[3830.06s -> 3830.68s]  it's going to be,
+[3830.98s -> 3831.60s]  what I'm predicting
+[3831.60s -> 3833.14s]  is the mother of all Rebovans.
+[3833.40s -> 3834.22s]  Remember when...
+[3834.22s -> 3834.56s]  What's that?
+[3835.20s -> 3836.12s]  Well, the Rebovan
+[3836.12s -> 3837.42s]  was that ridiculous van
+[3837.42s -> 3838.30s]  and distraction
+[3838.30s -> 3839.98s]  when Tesla had their
+[3839.98s -> 3840.42s]  quote-unquote
+[3840.42s -> 3841.56s]  last autonomous car.
+[3841.78s -> 3842.68s]  vehicle launch.
+[3842.68s -> 3843.14s]  They're like,
+[3843.20s -> 3843.66s]  oh shit,
+[3843.74s -> 3844.72s]  we have nothing here.
+[3844.86s -> 3847.98s]  Let's drive up a big bus
+[3847.98s -> 3848.86s]  and say that we're
+[3848.86s -> 3849.80s]  launching a van
+[3849.80s -> 3850.70s]  and let's have
+[3850.70s -> 3852.50s]  robot,
+[3852.72s -> 3853.62s]  let's create distractions.
+[3854.16s -> 3854.96s]  You're about to see
+[3854.96s -> 3855.82s]  the Trump administration
+[3855.82s -> 3857.00s]  go into panic mode
+[3857.00s -> 3858.70s]  when all of these countries
+[3858.70s -> 3859.62s]  that they keep extending
+[3859.62s -> 3860.12s]  the deadline
+[3860.12s -> 3860.86s]  and keep sending out
+[3860.86s -> 3861.48s]  threatening letters
+[3861.48s -> 3862.08s]  just say,
+[3862.30s -> 3863.40s]  sorry boss,
+[3863.60s -> 3865.64s]  we're not showing up.
+[3865.88s -> 3866.24s]  We're not,
+[3866.68s -> 3866.82s]  you know,
+[3866.84s -> 3867.38s]  you can threaten us
+[3867.38s -> 3868.08s]  all you want.
+[3869.42s -> 3870.32s]  You're going to see
+[3870.32s -> 3871.42s]  the most ridiculous,
+[3871.78s -> 3872.68s]  the jazz hands
+[3872.68s -> 3873.88s]  in the next three weeks
+[3873.88s -> 3875.50s]  claiming victories.
+[3875.70s -> 3876.02s]  First off,
+[3876.08s -> 3877.06s]  these two quote-unquote
+[3877.06s -> 3877.66s]  trade deals
+[3877.66s -> 3878.60s]  between the UK
+[3878.60s -> 3879.30s]  and Vietnam
+[3879.30s -> 3880.44s]  aren't even deals.
+[3880.64s -> 3881.12s]  They're agreements
+[3881.12s -> 3881.96s]  to talk about
+[3881.96s -> 3883.22s]  a new deal.
+[3883.42s -> 3884.52s]  And you're going to see them
+[3884.52s -> 3885.36s]  start to announce
+[3885.36s -> 3886.70s]  the most ridiculous
+[3886.70s -> 3888.72s]  hollow victories
+[3888.72s -> 3890.54s]  to try and,
+[3890.60s -> 3890.84s]  you know,
+[3890.84s -> 3891.66s]  turn chicken shit
+[3891.66s -> 3892.54s]  into chicken salad,
+[3892.66s -> 3893.84s]  put lipstick on a pig.
+[3894.64s -> 3894.88s]  I mean,
+[3894.92s -> 3895.72s]  this is just,
+[3896.10s -> 3897.26s]  it is just so,
+[3898.22s -> 3899.92s]  it is going to start
+[3899.92s -> 3900.96s]  to get comical,
+[3901.10s -> 3901.46s]  the shit.
+[3901.46s -> 3902.50s]  They're going to announce
+[3902.50s -> 3903.80s]  and pretend as a victory.
+[3904.00s -> 3904.60s]  It's incredible.
+[3904.88s -> 3905.96s]  It is an incredible thing.
+[3906.00s -> 3907.20s]  It doesn't really work either.
+[3907.40s -> 3908.26s]  That's what's interesting
+[3908.26s -> 3908.76s]  about it,
+[3908.80s -> 3909.18s]  does it?
+[3909.30s -> 3909.58s]  Well,
+[3909.80s -> 3911.08s]  what,
+[3911.16s -> 3911.84s]  what this,
+[3912.38s -> 3913.52s]  what they would never do
+[3913.52s -> 3915.04s]  is admit defeat
+[3915.04s -> 3916.42s]  or just move on.
+[3916.52s -> 3917.04s]  They're going to,
+[3917.34s -> 3918.00s]  they're going to say,
+[3918.06s -> 3918.48s]  okay,
+[3919.06s -> 3920.86s]  Paraguay has said
+[3920.86s -> 3922.02s]  that they're going to
+[3922.02s -> 3923.78s]  talk to us about
+[3923.78s -> 3925.96s]  a new tax credit
+[3925.96s -> 3926.76s]  if Ford
+[3926.76s -> 3929.34s]  opens more dealerships here.
+[3929.40s -> 3929.70s]  And they're like,
+[3929.78s -> 3929.94s]  okay,
+[3929.94s -> 3930.76s]  put out a press release
+[3930.76s -> 3931.36s]  that we have a new deal
+[3931.36s -> 3931.46s]  with a new dealer.
+[3931.46s -> 3931.52s]  Put out a new deal
+[3931.52s -> 3932.24s]  with Paraguay.
+[3932.88s -> 3933.64s]  You're going to see
+[3933.64s -> 3934.60s]  the most ridiculous
+[3934.60s -> 3935.38s]  announcements
+[3935.38s -> 3936.62s]  claiming victory
+[3936.62s -> 3938.80s]  in the next few weeks.
+[3939.04s -> 3939.56s]  Like Moldova
+[3939.56s -> 3940.16s]  is sending us
+[3940.16s -> 3941.04s]  a box of nuts.
+[3941.50s -> 3942.22s]  It's going to be great.
+[3942.40s -> 3943.50s]  I do have a number
+[3943.50s -> 3944.00s]  of friends
+[3944.00s -> 3944.68s]  who work in
+[3944.68s -> 3946.02s]  the State Department
+[3946.02s -> 3946.92s]  or work in
+[3946.92s -> 3947.76s]  the equivalent
+[3947.76s -> 3948.42s]  of the State Department
+[3948.42s -> 3949.18s]  in other countries.
+[3949.38s -> 3949.84s]  And they're like,
+[3950.02s -> 3950.24s]  yeah,
+[3950.32s -> 3951.52s]  we're not doing anything.
+[3951.88s -> 3952.72s]  We don't,
+[3952.74s -> 3953.98s]  we're not responding.
+[3954.50s -> 3954.70s]  We're,
+[3954.76s -> 3955.14s]  you know,
+[3955.60s -> 3956.56s]  we're being polite,
+[3956.66s -> 3957.70s]  but we're not doing anything.
+[3958.14s -> 3958.40s]  They're like,
+[3958.40s -> 3959.46s]  we don't want to piss the guy off,
+[3959.46s -> 3960.02s]  but we're not,
+[3960.04s -> 3960.96s]  we're not coming to the table.
+[3960.96s -> 3961.40s]  Yeah,
+[3961.50s -> 3962.42s]  but it's so interesting.
+[3962.68s -> 3963.32s]  When is the point
+[3963.32s -> 3963.86s]  where they're like,
+[3963.94s -> 3964.64s]  they don't care about
+[3964.64s -> 3965.22s]  pissing him off?
+[3965.32s -> 3966.46s]  Because the lying is really,
+[3966.54s -> 3967.44s]  one of my favorite lies,
+[3967.62s -> 3967.78s]  well,
+[3968.00s -> 3968.30s]  okay,
+[3968.34s -> 3968.76s]  I'm going to say,
+[3968.96s -> 3970.10s]  I don't know what she's doing,
+[3970.18s -> 3971.24s]  but Susie Wiles
+[3971.24s -> 3972.00s]  gave this interview.
+[3972.10s -> 3973.22s]  She doesn't usually come out
+[3973.22s -> 3974.18s]  behind the woodwork
+[3974.18s -> 3975.36s]  where she is usually living
+[3975.36s -> 3976.42s]  at the White House
+[3976.42s -> 3977.36s]  where she runs things
+[3977.36s -> 3978.16s]  and was like,
+[3978.36s -> 3979.42s]  I don't know what happened
+[3979.42s -> 3979.88s]  to Elon
+[3979.88s -> 3981.50s]  and how the falling out happened.
+[3981.62s -> 3982.06s]  I'm like,
+[3982.18s -> 3983.68s]  there's a knife in your hand,
+[3983.86s -> 3984.20s]  honey.
+[3984.44s -> 3984.74s]  Like,
+[3984.74s -> 3985.96s]  it was really kind of funny.
+[3986.26s -> 3986.56s]  But they,
+[3986.60s -> 3987.56s]  they do manage
+[3987.56s -> 3988.34s]  to just
+[3988.34s -> 3989.82s]  prevaricate
+[3989.82s -> 3990.86s]  almost all
+[3990.86s -> 3990.94s]  the,
+[3990.96s -> 3991.48s]  all the time.
+[3991.76s -> 3992.78s]  It's really something
+[3992.78s -> 3994.10s]  and everyone knows
+[3994.10s -> 3994.62s]  they're doing it.
+[3994.70s -> 3994.92s]  Anyway,
+[3995.56s -> 3996.60s]  hopefully it won't hurt
+[3996.60s -> 3997.44s]  the economy too much
+[3997.44s -> 3999.08s]  or people's livelihoods.
+[3999.50s -> 3999.90s]  Anyway,
+[4000.66s -> 4002.04s]  those are really good predictions,
+[4002.16s -> 4002.24s]  Scott.
+[4002.26s -> 4003.30s]  I think you're 100% right.
+[4003.84s -> 4004.82s]  We want to hear from you.
+[4004.92s -> 4005.66s]  Send us your questions
+[4005.66s -> 4006.18s]  about business,
+[4006.26s -> 4006.40s]  tech,
+[4006.42s -> 4007.44s]  or whatever's on your mind.
+[4007.50s -> 4008.64s]  Go to nymag.com
+[4008.64s -> 4009.22s]  slash pivot
+[4009.22s -> 4009.92s]  to submit a question
+[4009.92s -> 4010.42s]  for the show
+[4010.42s -> 4012.12s]  or call 855-51-PIVOT.
+[4012.52s -> 4013.44s]  Elsewhere in the
+[4013.44s -> 4014.52s]  Kara and Scott universe
+[4014.52s -> 4015.02s]  this week,
+[4015.20s -> 4016.52s]  on Prof G Conversations,
+[4016.64s -> 4017.50s]  Scott spoke with
+[4017.50s -> 4018.74s]  Heather Cox Richardson.
+[4019.00s -> 4020.32s]  Fantastic for you
+[4020.32s -> 4020.76s]  to talk to her.
+[4020.76s -> 4021.96s]  She's a historian
+[4021.96s -> 4022.68s]  and author of
+[4022.68s -> 4024.04s]  Letters from an American.
+[4024.42s -> 4025.94s]  Let's listen to a clip.
+[4026.60s -> 4027.86s]  But that idea
+[4027.86s -> 4028.92s]  that patriotism
+[4028.92s -> 4030.42s]  belongs to a certain party
+[4030.42s -> 4031.44s]  has turned out to be,
+[4031.52s -> 4031.76s]  you know,
+[4031.80s -> 4032.76s]  really quite poisonous.
+[4032.76s -> 4033.94s]  And you see now
+[4033.94s -> 4034.62s]  the elevation
+[4034.62s -> 4036.00s]  of partisanship
+[4036.00s -> 4037.06s]  over a country,
+[4037.20s -> 4037.80s]  even in things
+[4037.80s -> 4038.64s]  as recently
+[4038.64s -> 4039.86s]  as the budget
+[4039.86s -> 4040.82s]  reconciliation bill.
+[4040.98s -> 4042.42s]  So there's a perversion
+[4042.42s -> 4043.78s]  of patriotism
+[4043.78s -> 4044.24s]  that we see
+[4044.24s -> 4045.12s]  going on around us.
+[4045.12s -> 4046.04s]  But reclaiming
+[4046.04s -> 4046.76s]  a broader patriotism
+[4047.48s -> 4048.30s]  that shows
+[4048.30s -> 4048.74s]  an allegiance
+[4048.74s -> 4049.54s]  to the country
+[4049.54s -> 4050.20s]  rather than
+[4050.20s -> 4050.72s]  to a political
+[4050.72s -> 4051.18s]  party.
+[4051.30s -> 4051.42s]  You know,
+[4051.42s -> 4052.00s]  we've done that
+[4052.00s -> 4053.30s]  repeatedly in the past.
+[4053.36s -> 4054.18s]  And the answer to that
+[4054.18s -> 4055.10s]  is simply to return
+[4055.10s -> 4055.92s]  to the foundational
+[4055.92s -> 4057.12s]  principles of
+[4057.12s -> 4058.32s]  the American democracy.
+[4058.32s -> 4059.16s]  The idea that we should
+[4059.16s -> 4059.86s]  be treated equally
+[4059.86s -> 4060.70s]  before the law.
+[4060.84s -> 4061.38s]  We have a right
+[4061.38s -> 4062.38s]  to a say in our government.
+[4062.66s -> 4063.40s]  And we have a right
+[4063.40s -> 4064.00s]  to equal access
+[4064.00s -> 4064.68s]  to resources.
+[4065.62s -> 4065.98s]  Good.
+[4066.24s -> 4066.80s]  She's great.
+[4066.94s -> 4067.60s]  Did you enjoy that?
+[4067.88s -> 4068.34s]  It's funny,
+[4068.40s -> 4069.28s]  the emotion I felt,
+[4069.66s -> 4070.82s]  it was a really,
+[4071.16s -> 4072.10s]  in addition to her
+[4072.10s -> 4073.60s]  being so impressive,
+[4074.40s -> 4075.26s]  it was a nice lesson
+[4075.26s -> 4076.04s]  for me because
+[4076.04s -> 4076.64s]  I am,
+[4076.76s -> 4077.22s]  I was actually
+[4077.22s -> 4077.84s]  quite insecure
+[4077.84s -> 4078.82s]  during our conversation
+[4078.82s -> 4079.46s]  because she kept
+[4079.46s -> 4080.10s]  putting questions
+[4080.10s -> 4080.70s]  back to me.
+[4080.72s -> 4081.64s]  And it was quite humbling
+[4081.64s -> 4082.44s]  because what I recognized
+[4082.44s -> 4083.08s]  is that
+[4083.08s -> 4085.46s]  she gave me the sense
+[4085.46s -> 4086.12s]  that this is important.
+[4087.00s -> 4087.92s]  She helped me know
+[4087.92s -> 4088.62s]  how little I know
+[4088.62s -> 4089.46s]  about certain topics.
+[4089.78s -> 4090.50s]  She has such deep
+[4090.50s -> 4091.24s]  domain expertise.
+[4091.52s -> 4092.08s]  She is so
+[4092.08s -> 4094.06s]  forceful yet dignified.
+[4094.34s -> 4094.94s]  And I thought,
+[4095.30s -> 4095.88s]  you know,
+[4095.92s -> 4096.88s]  I really should be
+[4096.88s -> 4097.44s]  more measured
+[4097.44s -> 4098.24s]  about some of the shit
+[4098.24s -> 4098.98s]  I speak about
+[4098.98s -> 4099.70s]  because this is
+[4099.70s -> 4101.02s]  what a real expert
+[4101.02s -> 4101.60s]  feels like.
+[4101.66s -> 4102.26s]  And I asked her
+[4102.26s -> 4103.04s]  to talk about,
+[4103.40s -> 4104.18s]  to equate
+[4104.18s -> 4106.02s]  30s Germany
+[4106.02s -> 4107.02s]  and what's going on there
+[4107.02s -> 4108.06s]  to some of the attacks
+[4108.06s -> 4109.50s]  on democracy here.
+[4109.50s -> 4109.94s]  And she said,
+[4110.00s -> 4110.18s]  you know,
+[4110.24s -> 4110.70s]  that's not my
+[4110.70s -> 4111.66s]  area of expertise.
+[4111.88s -> 4112.92s]  And I remember thinking,
+[4113.08s -> 4114.68s]  she has more knowledge
+[4114.68s -> 4115.22s]  about that
+[4115.22s -> 4116.56s]  in her fucking finger
+[4116.56s -> 4117.28s]  than I have,
+[4117.34s -> 4117.92s]  but she doesn't want
+[4117.92s -> 4118.76s]  to talk about it
+[4118.76s -> 4119.66s]  because she takes
+[4119.66s -> 4120.98s]  her role
+[4120.98s -> 4121.90s]  and her expertise
+[4121.90s -> 4122.66s]  and where she has
+[4122.66s -> 4123.66s]  expertise seriously
+[4123.66s -> 4124.70s]  enough to say,
+[4124.84s -> 4125.52s]  I don't know enough
+[4125.52s -> 4126.74s]  about that to comment on it.
+[4126.78s -> 4127.26s]  And I thought,
+[4127.38s -> 4128.64s]  that is a good lesson
+[4128.64s -> 4129.80s]  for a lot of us.
+[4129.86s -> 4130.10s]  Yes, it's true.
+[4130.30s -> 4130.64s]  It's true.
+[4130.78s -> 4131.22s]  But she is,
+[4131.32s -> 4132.44s]  she is really
+[4132.44s -> 4133.20s]  impressive.
+[4133.64s -> 4134.44s]  Oh my gosh.
+[4134.46s -> 4134.62s]  You know,
+[4134.68s -> 4135.68s]  she lives in Maine.
+[4135.96s -> 4136.68s]  I think she's married
+[4136.68s -> 4137.50s]  to a lobsterman.
+[4137.80s -> 4138.40s]  There's some like
+[4138.40s -> 4139.24s]  really interesting
+[4139.24s -> 4140.14s]  personal story
+[4140.14s -> 4140.98s]  that she told me.
+[4141.44s -> 4142.18s]  Something like that.
+[4142.42s -> 4143.16s]  So impressive.
+[4143.56s -> 4144.46s]  So humble.
+[4144.74s -> 4145.66s]  I love an academic
+[4145.66s -> 4146.52s]  like that.
+[4146.62s -> 4148.16s]  Yeah, really good.
+[4148.74s -> 4149.36s]  I've always said
+[4149.36s -> 4150.54s]  that I work
+[4150.54s -> 4150.98s]  with one of the best
+[4150.98s -> 4151.92s]  faculties in the world.
+[4152.16s -> 4152.70s]  Half of them
+[4152.70s -> 4153.10s]  should be put
+[4153.10s -> 4154.12s]  on a fucking ice floe.
+[4154.22s -> 4154.94s]  They're doing nothing
+[4154.94s -> 4156.18s]  but causing problems.
+[4156.46s -> 4157.40s]  Well, focus on the ones
+[4157.40s -> 4158.02s]  that shouldn't be.
+[4158.02s -> 4158.94s]  Yeah, in a guild,
+[4159.02s -> 4159.48s]  in a union
+[4159.48s -> 4160.56s]  that translates
+[4160.56s -> 4161.52s]  to student debt.
+[4161.86s -> 4162.24s]  Something positive.
+[4162.24s -> 4163.32s]  30 or 40% of them
+[4163.32s -> 4164.20s]  are doing their job
+[4164.20s -> 4165.64s]  and a good 10%
+[4165.64s -> 4166.32s]  of academics
+[4166.32s -> 4167.24s]  are literally
+[4167.24s -> 4167.74s]  some of the most
+[4167.74s -> 4168.32s]  impressive people
+[4168.32s -> 4169.10s]  you're ever going to meet.
+[4169.10s -> 4169.58s]  Okay.
+[4169.98s -> 4170.92s]  And she's one of them.
+[4171.10s -> 4171.70s]  Yeah, she is.
+[4172.32s -> 4172.68s]  Okay.
+[4172.86s -> 4173.90s]  And you are too, Scott.
+[4173.96s -> 4174.82s]  You're a very good teacher.
+[4174.86s -> 4175.38s]  Go on.
+[4175.86s -> 4176.90s]  I think students
+[4176.90s -> 4177.36s]  would really like
+[4177.36s -> 4178.50s]  to see you back in that room.
+[4178.56s -> 4179.30s]  And when you go to New York,
+[4179.34s -> 4180.14s]  I think you should do a class.
+[4180.22s -> 4181.04s]  That's my opinion.
+[4181.30s -> 4182.18s]  You're an excellent teacher.
+[4182.28s -> 4182.86s]  That's what I'm saying.
+[4183.22s -> 4184.06s]  Okay, that's the show.
+[4184.28s -> 4185.32s]  Thanks for listening to Pivot
+[4185.32s -> 4186.32s]  and be sure to like
+[4186.32s -> 4186.76s]  and subscribe
+[4186.76s -> 4188.10s]  to our YouTube channel.
+[4188.22s -> 4189.50s]  We'll be back next week.
+[4189.58s -> 4190.50s]  Scott, read us out.
+[4190.50s -> 4191.34s]  Today's show was produced
+[4191.34s -> 4192.02s]  by Lara Naiman,
+[4192.08s -> 4192.54s]  Zoe Marcus,
+[4192.68s -> 4193.08s]  Taylor Griffin,
+[4193.16s -> 4193.80s]  and Kevin Oliver.
+[4194.04s -> 4194.54s]  Ernie Entretat
+[4194.54s -> 4195.46s]  engineered this episode.
+[4195.60s -> 4196.58s]  Thanks also to Drew Burrows,
+[4196.66s -> 4197.12s]  Miss Averio,
+[4199.10s -> 4199.96s]  who's executive producer
+[4199.96s -> 4200.64s]  of our podcast.
+[4200.98s -> 4201.96s]  Make sure to follow Pivot
+[4201.96s -> 4203.72s]  on your favorite podcast platform.
+[4204.44s -> 4205.40s]  Thanks for listening to Pivot
+[4205.40s -> 4206.24s]  from New York Magazine
+[4206.24s -> 4206.86s]  and Vox Media.
+[4207.14s -> 4207.72s]  You can subscribe
+[4207.72s -> 4208.32s]  to the magazine
+[4208.32s -> 4210.54s]  at nymag.com slash pod.
+[4210.64s -> 4211.50s]  We'll be back next week
+[4211.50s -> 4212.16s]  for another breakdown
+[4212.16s -> 4214.22s]  of all things tech and business.
+[4222.52s -> 4223.40s]  Support for the show
+[4223.40s -> 4224.88s]  comes from Intuit QuickBooks.
+[4224.98s -> 4225.70s]  Do you own a business
+[4225.70s -> 4226.72s]  that's ready to thrive?
+[4226.90s -> 4227.62s]  It's time to let
+[4227.62s -> 4228.54s]  Intuit QuickBooks
+[4228.54s -> 4229.08s]  take things
+[4229.08s -> 4230.06s]  like unpaid invoices
+[4230.06s -> 4231.12s]  and tracking expenses
+[4231.12s -> 4231.98s]  off your plate
+[4231.98s -> 4232.74s]  so you can take things
+[4232.74s -> 4233.52s]  to the next level.
+[4233.84s -> 4234.54s]  Intuit QuickBooks
+[4234.54s -> 4236.04s]  is a powerful AI-driven
+[4236.04s -> 4237.42s]  all-in-one business solution
+[4237.42s -> 4238.62s]  that can help
+[4238.62s -> 4239.54s]  with day-to-day tasks
+[4239.54s -> 4240.68s]  like invoicing expenses
+[4240.68s -> 4241.78s]  and taxes.
+[4242.40s -> 4243.30s]  QuickBooks can help you
+[4243.30s -> 4244.08s]  unlock the growth
+[4244.08s -> 4244.64s]  in your business
+[4244.64s -> 4245.22s]  so you can get back
+[4245.22s -> 4246.22s]  to enjoying your business.
+[4246.46s -> 4247.62s]  Manage and grow your business
+[4247.62s -> 4248.68s]  all in one place.
+[4249.18s -> 4250.16s]  Intuit QuickBooks.
+[4250.42s -> 4251.42s]  Your way to money.
+[4251.76s -> 4252.66s]  Get 90% off
+[4252.66s -> 4253.38s]  for three months.
+[4253.54s -> 4254.28s]  Limited time only.
+[4254.44s -> 4255.52s]  Terms and conditions apply.
+[4259.08s -> 4289.06s]  www.intuitquickbooks.com
