@@ -103,6 +103,23 @@ class OnboardingFlowTest(unittest.IsolatedAsyncioTestCase):
             self.assertIn("Executive Visibility", titles)
             self.assertIn("Reputation & Risk", titles)
 
+    async def test_intake_schema_accepts_csv_strings_for_list_fields(self) -> None:
+        payload = OnboardingIntakeIn.model_validate(
+            {
+                "company_name": "Acme Bio",
+                "competitors": "Beta Therapeutics, Gamma Labs",
+                "executives": "Jane Doe, John Smith",
+                "products": "OncoMap",
+                "geographies": "US, EU",
+                "monitoring_goals": "brand visibility, competitive monitoring",
+            }
+        )
+        self.assertEqual(payload.competitors, ["Beta Therapeutics", "Gamma Labs"])
+        self.assertEqual(payload.executives, ["Jane Doe", "John Smith"])
+        self.assertEqual(payload.products, ["OncoMap"])
+        self.assertEqual(payload.geographies, ["US", "EU"])
+        self.assertEqual(payload.monitoring_goals, ["brand visibility", "competitive monitoring"])
+
     async def test_materialization_creates_client_topics_and_subscriptions(self) -> None:
         async with self.session_factory() as session:
             detail = await create_onboarding_session(

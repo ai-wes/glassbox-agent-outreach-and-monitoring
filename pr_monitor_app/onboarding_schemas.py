@@ -4,7 +4,7 @@ import uuid
 from datetime import datetime
 from typing import Any, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class OnboardingIntakeIn(BaseModel):
@@ -20,6 +20,15 @@ class OnboardingIntakeIn(BaseModel):
     geographies: list[str] = Field(default_factory=list)
     monitoring_goals: list[str] = Field(default_factory=list)
     created_by: Optional[str] = None
+
+    @field_validator("competitors", "executives", "products", "geographies", "monitoring_goals", mode="before")
+    @classmethod
+    def parse_csv_or_list(cls, value: Any) -> list[str]:
+        if value is None:
+            return []
+        if isinstance(value, list):
+            return [str(item).strip() for item in value if str(item).strip()]
+        return [item.strip() for item in str(value).split(",") if item.strip()]
 
 
 class OnboardingSessionOut(BaseModel):

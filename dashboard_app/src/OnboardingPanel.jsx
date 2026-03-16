@@ -18,8 +18,18 @@ async function fetchJson(path, options = {}) {
     ? await response.json()
     : await response.text();
   if (!response.ok) {
+    let message = "Request failed";
+    if (typeof data === "string") {
+      message = data;
+    } else if (Array.isArray(data?.detail)) {
+      message = data.detail
+        .map((item) => item.msg || JSON.stringify(item))
+        .join("; ");
+    } else if (typeof data?.detail === "string") {
+      message = data.detail;
+    }
     throw new Error(
-      typeof data === "string" ? data : data.detail || "Request failed",
+      message,
     );
   }
   return data;
