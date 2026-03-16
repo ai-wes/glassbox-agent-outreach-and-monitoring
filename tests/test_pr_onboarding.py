@@ -11,6 +11,7 @@ import pr_monitor_app.models_onboarding as _onboarding_models  # noqa: F401
 from pr_monitor_app.models_onboarding import (
     CategoryProposalStatus,
     CompanyResolutionCandidate,
+    MonitoringBlueprintProposal,
     OnboardingSession,
     OnboardingStatus,
     ResolvedCompanyProfile,
@@ -200,6 +201,99 @@ class OnboardingFlowTest(unittest.IsolatedAsyncioTestCase):
                 )
             ).scalars().all()
             self.assertGreater(len(approved_categories), 0)
+
+    async def test_request_revision_creates_new_blueprint_version_and_waits_for_final_approval(self) -> None:
+        async with self.session_factory() as session:
+            detail = await create_onboarding_session(
+                session,
+                OnboardingIntakeIn(
+                    company_name="Acme Bio",
+                    competitors=["Beta Therapeutics"],
+                    executives=["Jane Doe"],
+                    products=["OncoMap"],
+                ),
+            )
+            row = await session.get(OnboardingSession, detail.session.id)
+            session.add(
+                CompanyResolutionCandidate(
+                    onboarding_session_id=row.id,
+                    display_name="Acme Bio",
+                    canonical_name="Acme Bio, Inc.",
+                    website="https://acmebio.example",
+                    linkedin_url="https://www.linkedin.com/company/acmebio",
+                    summary="Biotech company focused on AI-enabled oncology discovery.",
+                    confidence_score=0.95,
+                    source_evidence_json={"source": "test"},
+                    is_selected=True,
+                    rationale="Strong test candidate.",
+                )
+            )
+            session.add(
+                ResolvedCompanyProfile(
+                    onboarding_session_id=row.id,
+                    canonical_name="Acme Bio, Inc.",
+                    website="https://acmebio.example",
+                    linkedin_url="https://www.linkedin.com/company/acmebio",
+                    summary="Biotech company focused on AI-enabled oncology discovery.",
+                    industry="Biotech",
+                    subindustry="Life Sciences",
+                    products_json=["OncoMap"],
+                    executives_json=["Jane Doe"],
+                    competitors_json=["Beta Therapeutics"],
+                    channels_json={
+                        "official_pages": ["https://acmebio.example"],
+                        "press_pages": ["https://acmebio.example/news"],
+                        "blog_pages": ["https://acmebio.example/blog"],
+                        "social_profiles": ["https://www.linkedin.com/company/acmebio"],
+                        "trade_publications": ["https://example-trade.com/biotech"],
+                        "competitor_urls": ["https://betatherapeutics.example"],
+                    },
+                    themes_json=["oncology narrative", "product narrative"],
+                    risk_themes_json=["regulatory scrutiny"],
+                    opportunity_themes_json=["scientific credibility"],
+                    source_evidence_json={"source": "test"},
+                    confidence_json={"resolution_confidence": 0.95},
+                )
+            )
+            await session.commit()
+
+            detail = await generate_onboarding_blueprint(session, row.id)
+            original_blueprint_id = detail.blueprint.id
+            detail = await review_onboarding_blueprint(
+                session,
+                row.id,
+                BlueprintReviewDecisionIn(
+                    action_type="request_revision",
+                    target_type="blueprint",
+                    notes="Tighten the risk coverage and emphasize executive visibility.",
+                    created_by="test",
+                    diff_json={
+                        "summary": "Refined operator summary",
+                        "company_profile": {"summary": "Updated operator summary"},
+                        "categories": [
+                            {
+                                **detail.blueprint.categories[0].model_dump(),
+                                "title": "Direct Company Signals",
+                                "status": "proposed",
+                            }
+                        ],
+                    },
+                ),
+            )
+
+            self.assertEqual(detail.session.status, OnboardingStatus.awaiting_final_approval.value)
+            self.assertIsNotNone(detail.blueprint)
+            self.assertNotEqual(detail.blueprint.id, original_blueprint_id)
+            self.assertEqual(detail.blueprint.proposal_version, 2)
+
+            blueprints = (
+                await session.execute(
+                    select(MonitoringBlueprintProposal).where(
+                        MonitoringBlueprintProposal.onboarding_session_id == row.id
+                    )
+                )
+            ).scalars().all()
+            self.assertEqual(len(blueprints), 2)
 
 
 if __name__ == "__main__":

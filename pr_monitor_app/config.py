@@ -99,10 +99,25 @@ class Settings(BaseSettings):
     # LLM (optional)
     llm_enabled: bool = Field(default=False, alias="LLM_ENABLED")
     llm_provider: str = Field(default="openai_compat", alias="LLM_PROVIDER")
-    llm_base_url: str = Field(default="https://api.openai.com/v1", alias="LLM_BASE_URL")
-    llm_api_key: str | None = Field(default=None, alias="LLM_API_KEY")
-    llm_model: str = Field(default="gpt-4.1-mini", alias="LLM_MODEL")
+    llm_base_url: str = Field(
+        default="https://api.openai.com/v1",
+        validation_alias=AliasChoices("LLM_BASE_URL", "OPENAI_API_BASE", "OPENAI_BASE_URL"),
+    )
+    llm_api_key: str | None = Field(
+        default=None,
+        validation_alias=AliasChoices("LLM_API_KEY", "OPENAI_API_KEY"),
+    )
+    llm_model: str = Field(
+        default="gpt-4.1-mini",
+        validation_alias=AliasChoices("LLM_MODEL", "OPENAI_LLM_MODEL"),
+    )
     llm_timeout_seconds: int = Field(default=45, alias="LLM_TIMEOUT_SECONDS")
+    onboarding_agent_enabled: bool = Field(default=True, alias="ONBOARDING_AGENT_ENABLED")
+    onboarding_agent_model: str = Field(
+        default="gpt-4.1",
+        validation_alias=AliasChoices("ONBOARDING_AGENT_MODEL", "OPENAI_LLM_MODEL"),
+    )
+    onboarding_agent_max_sources: int = Field(default=5, alias="ONBOARDING_AGENT_MAX_SOURCES")
 
     # Clustering / windows
     cluster_window_hours: int = Field(default=24, alias="CLUSTER_WINDOW_HOURS")
@@ -142,7 +157,10 @@ class Settings(BaseSettings):
     analytics_embedding_provider: str | None = Field(default=None, alias="ANALYTICS_EMBEDDING_PROVIDER")
     analytics_embedding_model: str = Field(default="text-embedding-3-small", alias="ANALYTICS_EMBEDDING_MODEL")
     openai_api_key: str | None = Field(default=None, alias="OPENAI_API_KEY")
-    openai_base_url: str = Field(default="https://api.openai.com/v1", alias="OPENAI_BASE_URL")
+    openai_base_url: str = Field(
+        default="https://api.openai.com/v1",
+        validation_alias=AliasChoices("OPENAI_BASE_URL", "OPENAI_API_BASE", "LLM_BASE_URL"),
+    )
 
     # AI PR measurement (optional module set from pr_monitor_app/new_modules.md integration)
     ai_pr_measurement_enabled: bool = Field(default=True, alias="AI_PR_MEASUREMENT_ENABLED")

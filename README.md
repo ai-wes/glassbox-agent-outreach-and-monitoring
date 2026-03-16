@@ -159,6 +159,39 @@ And you can download a zip:
 
 - `GET /runs/{run_id}/evidence/download`
 
+### OpenAI onboarding env vars
+
+Layer 0 onboarding now accepts these env vars directly:
+
+```bash
+OPENAI_API_KEY=your_api_key_here
+OPENAI_API_BASE=https://api.openai.com/v1
+OPENAI_LLM_MODEL=gpt-4.1
+ONBOARDING_AGENT_ENABLED=true
+```
+
+Usage:
+
+- `OPENAI_API_KEY`: used by the Python OpenAI Agents SDK onboarding flow.
+- `OPENAI_API_BASE`: optional base URL for OpenAI-compatible providers. If unset, defaults to `https://api.openai.com/v1`.
+- `OPENAI_LLM_MODEL`: model used for Layer 0 onboarding agent runs. It is also accepted by the fallback LLM path.
+
+If you want a different model only for onboarding, set:
+
+```bash
+ONBOARDING_AGENT_MODEL=gpt-4.1
+```
+
+Typical local run:
+
+```bash
+export OPENAI_API_KEY=...
+export OPENAI_API_BASE=https://api.openai.com/v1
+export OPENAI_LLM_MODEL=gpt-4.1
+export ONBOARDING_AGENT_ENABLED=true
+docker compose up -d --build
+```
+
 ---
 
 ## The exact API endpoints you asked for

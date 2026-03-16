@@ -247,6 +247,7 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
   const [profileDraft, setProfileDraft] = useState(null);
   const [blueprintDraft, setBlueprintDraft] = useState(null);
   const [categoriesDraft, setCategoriesDraft] = useState([]);
+  const [revisionNotes, setRevisionNotes] = useState("");
 
   async function loadSessions(preferredId = null) {
     const rows = await fetchJson(`${baseUrl}/onboarding/sessions?limit=20`);
@@ -292,6 +293,7 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
       setProfileDraft(null);
       setBlueprintDraft(null);
       setCategoriesDraft([]);
+      setRevisionNotes("");
       return;
     }
     setProfileDraft(
@@ -320,6 +322,7 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
         : null,
     );
     setCategoriesDraft(sessionDetail.blueprint?.categories || []);
+    setRevisionNotes("");
   }, [sessionDetail]);
 
   const currentStep = useMemo(() => {
@@ -357,9 +360,9 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
     }
   }
 
-  async function createSession(autoMode) {
-    await performAction(autoMode ? "auto" : "create", async () => {
-      const endpoint = autoMode
+  async function createSession(resolveMode) {
+    await performAction(resolveMode ? "resolve-intake" : "create", async () => {
+      const endpoint = resolveMode
         ? `${baseUrl}/onboarding/auto`
         : `${baseUrl}/onboarding/sessions`;
       const response = await fetchJson(endpoint, {
@@ -367,13 +370,13 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(intakePayload()),
       });
-      const detail = autoMode ? response.session : response;
+      const detail = resolveMode ? response.session : response;
       setSessionDetail(detail);
       setSelectedSessionId(detail.session.id);
       await refresh(detail.session.id);
       onStatus(
-        autoMode
-          ? `Auto onboarding stopped at ${response.stopped_at}.`
+        resolveMode
+          ? `Company resolution complete. Waiting for company confirmation.`
           : "Onboarding session created.",
       );
     });
@@ -400,20 +403,21 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
 
   async function approveBlueprint() {
     await postSessionAction("/review", "Approve blueprint", {
-      action_type: "approve_all",
+      action_type: "approve_final",
       target_type: "blueprint",
       created_by: "dashboard",
     });
   }
 
-  async function saveEditsAndApprove() {
+  async function requestRevision() {
     if (!profileDraft || !blueprintDraft) {
       return;
     }
-    await postSessionAction("/review", "Save edits", {
-      action_type: "approve_with_edits",
+    await postSessionAction("/review", "Request revision", {
+      action_type: "request_revision",
       target_type: "blueprint",
       created_by: "dashboard",
+      notes: revisionNotes || null,
       diff_json: {
         summary: blueprintDraft.summary,
         rationale: blueprintDraft.rationale,
@@ -432,6 +436,35 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
         },
         categories: categoriesDraft,
       },
+    });
+  }
+
+  async function rejectBlueprint() {
+    await postSessionAction("/review", "Reject blueprint", {
+      action_type: "reject_blueprint",
+      target_type: "blueprint",
+      created_by: "dashboard",
+      notes: revisionNotes || null,
+    });
+  }
+
+  async function runResearchAndProposal() {
+    if (!selectedSessionId) {
+      return;
+    }
+    await performAction("research-plan", async () => {
+      const enriched = await fetchJson(
+        `${baseUrl}/onboarding/sessions/${selectedSessionId}/enrich`,
+        { method: "POST" },
+      );
+      setSessionDetail(enriched);
+      const detailed = await fetchJson(
+        `${baseUrl}/onboarding/sessions/${selectedSessionId}/generate-blueprint`,
+        { method: "POST" },
+      );
+      setSessionDetail(detailed);
+      await refresh(selectedSessionId);
+      onStatus("Agent research and monitoring proposal are ready for review.");
     });
   }
 
@@ -633,7 +666,7 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
               onClick={() => void createSession(true)}
               disabled={!intakeForm.company_name || busyAction !== ""}
             >
-              {busyAction === "auto" ? "Researching..." : "Run Auto Flow"}
+              {busyAction === "resolve-intake" ? "Resolving..." : "Create + Resolve Company"}
             </button>
           </div>
         </div>
@@ -685,28 +718,15 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
                 onClick={() => void postSessionAction("/resolve", "Resolve company")}
                 disabled={!selectedSessionId || busyAction !== ""}
               >
-                Resolve
+                Resolve Company
               </button>
               <button
                 type="button"
-                className="btn-outline"
-                onClick={() => void postSessionAction("/enrich", "Enrich company")}
-                disabled={!selectedSessionId || busyAction !== ""}
+                className="btn-primary"
+                onClick={() => void runResearchAndProposal()}
+                disabled={!selectedSessionId || !sessionDetail?.selected_candidate || busyAction !== ""}
               >
-                Enrich
-              </button>
-              <button
-                type="button"
-                className="btn-outline"
-                onClick={() =>
-                  void postSessionAction(
-                    "/generate-blueprint",
-                    "Generate blueprint",
-                  )
-                }
-                disabled={!selectedSessionId || busyAction !== ""}
-              >
-                Blueprint
+                Research + Draft Proposal
               </button>
             </div>
           </div>
@@ -906,7 +926,7 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
                 <div className="detail-head">
                   <div>
                     <h3>Monitoring Blueprint</h3>
-                    <span>Review, edit, approve, then materialize</span>
+                    <span>Review the proposal, request revisions, then approve activation</span>
                   </div>
                   <div className="detail-actions">
                     <button
@@ -925,18 +945,26 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
                     <button
                       type="button"
                       className="btn-outline"
-                      onClick={() => void approveBlueprint()}
+                      onClick={() => void requestRevision()}
                       disabled={!sessionDetail.blueprint || busyAction !== ""}
                     >
-                      Approve All
+                      Request Revision
                     </button>
                     <button
                       type="button"
                       className="btn-primary"
-                      onClick={() => void saveEditsAndApprove()}
+                      onClick={() => void approveBlueprint()}
                       disabled={!sessionDetail.blueprint || busyAction !== ""}
                     >
-                      Save Edits & Approve
+                      Final Approve
+                    </button>
+                    <button
+                      type="button"
+                      className="btn-outline"
+                      onClick={() => void rejectBlueprint()}
+                      disabled={!sessionDetail.blueprint || busyAction !== ""}
+                    >
+                      Reject
                     </button>
                     <button
                       type="button"
@@ -988,6 +1016,16 @@ export default function OnboardingPanel({ baseUrl, onStatus }) {
                         />
                       </label>
                     </div>
+
+                    <label className="field">
+                      <span>Revision Notes For Agent</span>
+                      <textarea
+                        rows={3}
+                        value={revisionNotes}
+                        onChange={(event) => setRevisionNotes(event.target.value)}
+                        placeholder="Tell the agent what to change, what is wrong, what to emphasize, or what to remove."
+                      />
+                    </label>
 
                     <div className="category-stack">
                       {categoriesDraft.map((category, index) => (

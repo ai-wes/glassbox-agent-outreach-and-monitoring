@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import re
 import uuid
+from datetime import date, datetime
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 from typing import Any, Iterable, Optional
@@ -27,6 +28,7 @@ from pr_monitor_app.models_onboarding import (
     OnboardingStatus,
     ResolvedCompanyProfile,
 )
+from pr_monitor_app.onboarding_agent import OnboardingResearchAgent
 from pr_monitor_app.onboarding_schemas import (
     BlueprintReviewDecisionIn,
     CompanyResolutionCandidateOut,
@@ -329,15 +331,26 @@ async def resolve_onboarding_session(
     await session.flush()
 
     intake = row.raw_intake_json or {}
+    candidate_payloads: list[dict[str, Any]] = []
+    agent_error: Optional[str] = None
+    agent = OnboardingResearchAgent()
+    ready, _ = agent.ready()
+    if ready:
+        try:
+            candidate_payloads = await agent.resolve_company(row)
+        except Exception as exc:  # pragma: no cover - external SDK failures vary
+            agent_error = str(exc)
+
     researcher = PublicWebResearcher()
     try:
-        company_name = row.company_name_input
-        hits = await researcher.search_web(f"{company_name} official website", limit=6)
-        linkedin_hits = await researcher.search_web(f"{company_name} linkedin company", limit=4)
-        candidate_payloads = _build_resolution_candidates(row=row, search_hits=hits, linkedin_hits=linkedin_hits)
+        if not candidate_payloads:
+            company_name = row.company_name_input
+            hits = await researcher.search_web(f"{company_name} official website", limit=6)
+            linkedin_hits = await researcher.search_web(f"{company_name} linkedin company", limit=4)
+            candidate_payloads = _build_resolution_candidates(row=row, search_hits=hits, linkedin_hits=linkedin_hits)
     except Exception as exc:  # pragma: no cover - network failures vary
         row.status = OnboardingStatus.error.value
-        row.last_error = str(exc)
+        row.last_error = agent_error or str(exc)
         await session.commit()
         raise
     finally:
@@ -362,6 +375,9 @@ async def resolve_onboarding_session(
             "rationale": "Used operator-provided identity hints because public resolution was incomplete.",
         }
         candidate_payloads = [fallback]
+
+    if agent_error and candidate_payloads and all(payload.get("source_evidence_json", {}).get("agent") != "openai_agents_sdk" for payload in candidate_payloads):
+        row.last_error = f"Onboarding agent fallback: {agent_error}"
 
     for index, payload in enumerate(candidate_payloads):
         if index == 0 and len(candidate_payloads) == 1 and payload.get("is_selected") is False:
@@ -440,17 +456,32 @@ async def enrich_onboarding_session(
     await session.flush()
 
     intake = row.raw_intake_json or {}
+    profile_data: Optional[dict[str, Any]] = None
+    agent_error: Optional[str] = None
+    agent = OnboardingResearchAgent()
+    ready, _ = agent.ready()
+    if ready:
+        try:
+            profile_data = await agent.enrich_company(
+                row=row,
+                candidate=selected_candidate,
+                intake=intake,
+            )
+        except Exception as exc:  # pragma: no cover - external SDK failures vary
+            agent_error = str(exc)
+
     researcher = PublicWebResearcher()
     try:
-        profile_data = await _build_resolved_company_profile(
-            researcher=researcher,
-            row=row,
-            candidate=selected_candidate,
-            intake=intake,
-        )
+        if profile_data is None:
+            profile_data = await _build_resolved_company_profile(
+                researcher=researcher,
+                row=row,
+                candidate=selected_candidate,
+                intake=intake,
+            )
     except Exception as exc:  # pragma: no cover - network failures vary
         row.status = OnboardingStatus.error.value
-        row.last_error = str(exc)
+        row.last_error = agent_error or str(exc)
         await session.commit()
         raise
     finally:
@@ -467,6 +498,8 @@ async def enrich_onboarding_session(
     else:
         for key, value in profile_data.items():
             setattr(existing, key, value)
+    if agent_error and profile_data.get("source_evidence_json", {}).get("agent") != "openai_agents_sdk":
+        row.last_error = f"Onboarding agent fallback: {agent_error}"
     await session.commit()
     return await get_onboarding_session_detail(session, onboarding_session_id)
 
@@ -488,30 +521,56 @@ async def generate_onboarding_blueprint(
     await session.flush()
 
     intake = row.raw_intake_json or {}
-    category_payloads = _build_category_proposals(row=row, profile=profile, intake=intake)
-    proposal_json = _build_proposal_json(row=row, profile=profile, categories=category_payloads, intake=intake)
-    llm_overlay = await _maybe_llm_blueprint_overlay(row=row, profile=profile, proposal_json=proposal_json)
-    if llm_overlay:
-        proposal_json = _merge_dicts(proposal_json, llm_overlay.get("proposal_json", {}))
+    agent = OnboardingResearchAgent()
+    category_payloads: list[dict[str, Any]]
+    proposal_json: dict[str, Any]
+    blueprint_summary: str
+    blueprint_rationale: str
+    overall_confidence: float
+    llm_overlay: dict[str, Any] = {}
+    agent_error: Optional[str] = None
+    ready, _ = agent.ready()
+    if ready:
+        try:
+            agent_blueprint = await agent.generate_blueprint(row=row, profile=profile, intake=intake)
+            category_payloads = agent_blueprint["category_payloads"]
+            proposal_json = agent_blueprint["proposal_json"]
+            blueprint_summary = agent_blueprint["summary"]
+            blueprint_rationale = agent_blueprint["rationale"]
+            overall_confidence = float(agent_blueprint["overall_confidence"])
+        except Exception as exc:  # pragma: no cover - external SDK failures vary
+            agent_error = str(exc)
+            category_payloads = _build_category_proposals(row=row, profile=profile, intake=intake)
+            proposal_json = _build_proposal_json(row=row, profile=profile, categories=category_payloads, intake=intake)
+            llm_overlay = await _maybe_llm_blueprint_overlay(row=row, profile=profile, proposal_json=proposal_json)
+            if llm_overlay:
+                proposal_json = _merge_dicts(proposal_json, llm_overlay.get("proposal_json", {}))
+            blueprint_summary = str(llm_overlay.get("summary") or proposal_json["recommended_monitoring_strategy"]["summary"])
+            blueprint_rationale = str(llm_overlay.get("rationale") or proposal_json["recommended_monitoring_strategy"]["rationale"])
+            overall_confidence = float(proposal_json.get("overall_confidence", 0.0))
+    else:
+        category_payloads = _build_category_proposals(row=row, profile=profile, intake=intake)
+        proposal_json = _build_proposal_json(row=row, profile=profile, categories=category_payloads, intake=intake)
+        llm_overlay = await _maybe_llm_blueprint_overlay(row=row, profile=profile, proposal_json=proposal_json)
+        if llm_overlay:
+            proposal_json = _merge_dicts(proposal_json, llm_overlay.get("proposal_json", {}))
+        blueprint_summary = str(llm_overlay.get("summary") or proposal_json["recommended_monitoring_strategy"]["summary"])
+        blueprint_rationale = str(llm_overlay.get("rationale") or proposal_json["recommended_monitoring_strategy"]["rationale"])
+        overall_confidence = float(proposal_json.get("overall_confidence", 0.0))
 
-    latest = await _load_latest_blueprint(session, onboarding_session_id)
-    version = 1 if latest is None else latest.proposal_version + 1
-    blueprint = MonitoringBlueprintProposal(
+    await _create_blueprint_version(
+        session,
         onboarding_session_id=onboarding_session_id,
         company_profile_id=profile.id,
-        proposal_version=version,
-        summary=str(llm_overlay.get("summary") or proposal_json["recommended_monitoring_strategy"]["summary"]),
-        overall_confidence=float(proposal_json.get("overall_confidence", 0.0)),
-        rationale=str(llm_overlay.get("rationale") or proposal_json["recommended_monitoring_strategy"]["rationale"]),
+        summary=blueprint_summary,
+        rationale=blueprint_rationale,
+        overall_confidence=overall_confidence,
         proposal_json=proposal_json,
+        category_payloads=category_payloads,
     )
-    session.add(blueprint)
-    await session.flush()
-
-    for category in category_payloads:
-        session.add(MonitoringCategoryProposal(blueprint_id=blueprint.id, **category))
-
     row.status = OnboardingStatus.awaiting_user_review.value
+    if agent_error:
+        row.last_error = f"Onboarding agent fallback: {agent_error}"
     await session.commit()
     return await get_onboarding_session_detail(session, onboarding_session_id)
 
@@ -542,24 +601,25 @@ async def review_onboarding_blueprint(
         target_type=payload.target_type.strip(),
         target_id=payload.target_id,
         notes=payload.notes,
-        diff_json=payload.diff_json or {},
+        diff_json=_json_safe(payload.diff_json or {}),
         created_by=payload.created_by,
     )
     session.add(decision)
 
     if payload.action_type == "reject_blueprint":
         row.status = OnboardingStatus.rejected.value
-    elif payload.action_type == "approve_all":
+    elif payload.action_type in {"approve_all", "approve_final"}:
         await _set_category_statuses(session, blueprint.id, approved=True)
         row.status = OnboardingStatus.approved.value
     elif payload.action_type == "remove_category" and payload.target_id:
         await _set_single_category_status(session, payload.target_id, CategoryProposalStatus.removed.value)
     elif payload.action_type == "reject_category" and payload.target_id:
         await _set_single_category_status(session, payload.target_id, CategoryProposalStatus.rejected.value)
-    elif payload.action_type == "approve_with_edits":
-        await _apply_blueprint_edits(session, blueprint=blueprint, diff_json=payload.diff_json or {})
-        await _set_category_statuses(session, blueprint.id, approved=True)
-        row.status = OnboardingStatus.approved.value
+    elif payload.action_type in {"request_revision", "approve_with_edits"}:
+        row.status = OnboardingStatus.revising_blueprint.value
+        await session.flush()
+        await _revise_blueprint(session, row=row, blueprint=blueprint, payload=payload)
+        row.status = OnboardingStatus.awaiting_final_approval.value
     elif payload.action_type == "add_category":
         patch = MonitoringCategoryProposalPatch.model_validate((payload.diff_json or {}).get("category") or {})
         session.add(
@@ -802,27 +862,7 @@ async def auto_onboard(
 ) -> OnboardingAutoOut:
     detail = await create_onboarding_session(session, payload)
     detail = await resolve_onboarding_session(session, detail.session.id)
-    if detail.recommended_candidate is None:
-        return OnboardingAutoOut(session=detail, stopped_at=OnboardingStatus.awaiting_company_confirmation.value)
-
-    candidate_gap = 1.0
-    if len(detail.candidates) > 1:
-        candidate_gap = detail.candidates[0].confidence_score - detail.candidates[1].confidence_score
-    auto_confident = (
-        detail.recommended_candidate.confidence_score >= 0.72
-        and candidate_gap >= 0.12
-    )
-    if not auto_confident:
-        return OnboardingAutoOut(session=detail, stopped_at=OnboardingStatus.awaiting_company_confirmation.value)
-
-    await confirm_resolution_candidate(
-        session,
-        detail.session.id,
-        ConfirmCandidateIn(candidate_id=detail.recommended_candidate.id),
-    )
-    detail = await enrich_onboarding_session(session, detail.session.id)
-    detail = await generate_onboarding_blueprint(session, detail.session.id)
-    return OnboardingAutoOut(session=detail, stopped_at=OnboardingStatus.awaiting_user_review.value)
+    return OnboardingAutoOut(session=detail, stopped_at=OnboardingStatus.awaiting_company_confirmation.value)
 
 
 def _build_resolution_candidates(
@@ -1339,6 +1379,185 @@ def _build_proposal_json(
     }
 
 
+async def _create_blueprint_version(
+    session: AsyncSession,
+    *,
+    onboarding_session_id: uuid.UUID,
+    company_profile_id: uuid.UUID,
+    summary: str,
+    rationale: str,
+    overall_confidence: float,
+    proposal_json: dict[str, Any],
+    category_payloads: list[dict[str, Any]],
+) -> MonitoringBlueprintProposal:
+    latest = await _load_latest_blueprint(session, onboarding_session_id)
+    version = 1 if latest is None else latest.proposal_version + 1
+    blueprint = MonitoringBlueprintProposal(
+        onboarding_session_id=onboarding_session_id,
+        company_profile_id=company_profile_id,
+        proposal_version=version,
+        summary=summary,
+        overall_confidence=overall_confidence,
+        rationale=rationale,
+        proposal_json=proposal_json,
+    )
+    session.add(blueprint)
+    await session.flush()
+    for category in category_payloads:
+        session.add(MonitoringCategoryProposal(blueprint_id=blueprint.id, **category))
+    return blueprint
+
+
+def _profile_dict_from_row(profile: ResolvedCompanyProfile) -> dict[str, Any]:
+    return {
+        "canonical_name": profile.canonical_name,
+        "website": profile.website,
+        "linkedin_url": profile.linkedin_url,
+        "summary": profile.summary,
+        "industry": profile.industry,
+        "subindustry": profile.subindustry,
+        "products_json": list(profile.products_json or []),
+        "executives_json": list(profile.executives_json or []),
+        "competitors_json": list(profile.competitors_json or []),
+        "channels_json": dict(profile.channels_json or {}),
+        "themes_json": list(profile.themes_json or []),
+        "risk_themes_json": list(profile.risk_themes_json or []),
+        "opportunity_themes_json": list(profile.opportunity_themes_json or []),
+        "source_evidence_json": dict(profile.source_evidence_json or {}),
+        "confidence_json": dict(profile.confidence_json or {}),
+    }
+
+
+def _apply_profile_patch(profile_data: dict[str, Any], patch: dict[str, Any]) -> dict[str, Any]:
+    for key, value in patch.items():
+        if key not in profile_data:
+            continue
+        profile_data[key] = value
+    return profile_data
+
+
+async def _blueprint_categories_as_dicts(
+    session: AsyncSession,
+    blueprint_id: uuid.UUID,
+) -> list[dict[str, Any]]:
+    categories = (
+        await session.execute(
+            select(MonitoringCategoryProposal)
+            .where(MonitoringCategoryProposal.blueprint_id == blueprint_id)
+            .order_by(MonitoringCategoryProposal.created_at.asc())
+        )
+    ).scalars().all()
+    return [
+        {
+            "id": str(category.id),
+            "title": category.title,
+            "description": category.description,
+            "priority": category.priority,
+            "rationale": category.rationale,
+            "sensitivity": category.sensitivity,
+            "recommended_sources_json": list(category.recommended_sources_json or []),
+            "entities_json": list(category.entities_json or []),
+            "keywords_json": list(category.keywords_json or []),
+            "negative_keywords_json": list(category.negative_keywords_json or []),
+            "sample_queries_json": list(category.sample_queries_json or []),
+            "status": category.status,
+        }
+        for category in categories
+    ]
+
+
+async def _revise_blueprint(
+    session: AsyncSession,
+    *,
+    row: OnboardingSession,
+    blueprint: MonitoringBlueprintProposal,
+    payload: BlueprintReviewDecisionIn,
+) -> None:
+    profile = await session.get(ResolvedCompanyProfile, blueprint.company_profile_id)
+    if profile is None:
+        raise ValueError("Resolved company profile not found for revision")
+
+    diff_json = payload.diff_json or {}
+    profile_patch = diff_json.get("company_profile")
+    if isinstance(profile_patch, dict):
+        for key, value in profile_patch.items():
+            if hasattr(profile, key):
+                setattr(profile, key, value)
+
+    intake = row.raw_intake_json or {}
+    current_categories = await _blueprint_categories_as_dicts(session, blueprint.id)
+    persisted_current_categories = [
+        {key: value for key, value in category.items() if key != "id"}
+        for category in current_categories
+    ]
+    agent = OnboardingResearchAgent()
+    revision_result: Optional[dict[str, Any]] = None
+    ready, _ = agent.ready()
+    if ready:
+        try:
+            revision_result = await agent.generate_blueprint(
+                row=row,
+                profile=profile,
+                intake=intake,
+                current_blueprint=blueprint,
+                current_categories=current_categories,
+                operator_feedback={
+                    "notes": payload.notes or "",
+                    "diff_json": diff_json,
+                    "review_history": [
+                        {
+                            "action_type": decision.action_type,
+                            "notes": decision.notes,
+                            "diff_json": decision.diff_json,
+                            "created_at": decision.created_at.isoformat(),
+                        }
+                        for decision in (
+                            await session.execute(
+                                select(BlueprintReviewDecision)
+                                .where(BlueprintReviewDecision.blueprint_id == blueprint.id)
+                                .order_by(BlueprintReviewDecision.created_at.asc())
+                            )
+                        ).scalars().all()
+                    ],
+                },
+            )
+        except Exception as exc:  # pragma: no cover - external SDK failures vary
+            row.last_error = f"Onboarding agent fallback: {exc}"
+
+    if revision_result is None:
+        profile_data = _profile_dict_from_row(profile)
+        category_payloads = persisted_current_categories
+        proposal_json = dict(blueprint.proposal_json or {})
+        summary = str(diff_json.get("summary") or blueprint.summary)
+        rationale = str(diff_json.get("rationale") or blueprint.rationale)
+        if profile_patch and isinstance(profile_patch, dict):
+            profile_data = _apply_profile_patch(profile_data, profile_patch)
+        categories_patch = diff_json.get("categories")
+        if isinstance(categories_patch, list):
+            category_payloads = [
+                MonitoringCategoryProposalPatch.model_validate(item).model_dump(exclude={"id"})
+                for item in categories_patch
+            ]
+        revision_result = {
+            "category_payloads": category_payloads,
+            "proposal_json": proposal_json,
+            "summary": summary,
+            "rationale": rationale,
+            "overall_confidence": float(proposal_json.get("overall_confidence", blueprint.overall_confidence)),
+        }
+
+    await _create_blueprint_version(
+        session,
+        onboarding_session_id=row.id,
+        company_profile_id=profile.id,
+        summary=revision_result["summary"],
+        rationale=revision_result["rationale"],
+        overall_confidence=float(revision_result["overall_confidence"]),
+        proposal_json=revision_result["proposal_json"],
+        category_payloads=revision_result["category_payloads"],
+    )
+
+
 async def _apply_blueprint_edits(
     session: AsyncSession,
     *,
@@ -1717,6 +1936,22 @@ def _build_disambiguation_prompt(candidates: list[CompanyResolutionCandidateOut]
         descriptor = candidate.website or candidate.linkedin_url or candidate.summary or "no public reference"
         labels.append(f"{candidate.display_name} ({descriptor})")
     return "Confirm the intended company: " + "; ".join(labels)
+
+
+def _json_safe(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, tuple):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, set):
+        return [_json_safe(item) for item in sorted(value, key=str)]
+    if isinstance(value, uuid.UUID):
+        return str(value)
+    if isinstance(value, (datetime, date)):
+        return value.isoformat()
+    return value
 
 
 def _decision_out(decision: BlueprintReviewDecision) -> Any:

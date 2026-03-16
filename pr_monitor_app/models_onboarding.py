@@ -23,6 +23,8 @@ class OnboardingStatus(str, enum.Enum):
     enriching_company = "enriching_company"
     generating_blueprint = "generating_blueprint"
     awaiting_user_review = "awaiting_user_review"
+    revising_blueprint = "revising_blueprint"
+    awaiting_final_approval = "awaiting_final_approval"
     approved = "approved"
     materialized = "materialized"
     rejected = "rejected"
