@@ -11,6 +11,7 @@ _ROUTE_MODULES = [
     "health",
     "agent",
     "clients",
+    "onboarding",
     "topics",
     "subscriptions",
     "sources",
@@ -25,9 +26,11 @@ _ROUTE_MODULES = [
 ]
 
 
-def build_router() -> APIRouter:
+def build_router(*, include_health: bool = True) -> APIRouter:
     r = APIRouter()
     for module_name in _ROUTE_MODULES:
+        if not include_health and module_name == "health":
+            continue
         try:
             module = importlib.import_module(f"pr_monitor_app.api.routes.{module_name}")
             router = getattr(module, "router")

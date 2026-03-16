@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     env: str = "development"
     database_url: str = "sqlite+aiosqlite:///./radar.db"
     dossiers_dir: Path = Path("./data/dossiers")
-    watchlist_path: Path = Path("./watchlists/sample_watchlist.yaml")
+    watchlist_path: Path = Path("./watchlists/watchlist.yaml")
     api_token: str | None = None
     auto_create_tables: bool = True
     export_to_sheets: bool = False

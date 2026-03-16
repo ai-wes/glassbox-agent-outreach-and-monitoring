@@ -13,6 +13,12 @@ class SequenceQueueRequest(BaseModel):
     start_immediately: bool = False
 
 
+class MessageApprovalRequest(BaseModel):
+    approved_by: str = "user"
+    notes: str | None = None
+    send_immediately: bool = True
+
+
 class GeneratedMessage(BaseModel):
     step_number: int
     channel: str

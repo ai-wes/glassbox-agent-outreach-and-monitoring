@@ -35,13 +35,19 @@ class SheetsCRMService:
         "updated_at",
         "company_id",
         "company_name",
+        "firm",
         "company_domain",
         "company_website",
+        "official_url",
         "company_industry",
+        "firm_type",
         "contact_id",
         "contact_name",
+        "person",
         "contact_email",
         "contact_title",
+        "priority_bucket",
+        "priority_score",
         "lead_status",
         "lead_grade",
         "total_score",
@@ -50,6 +56,22 @@ class SheetsCRMService:
         "persona_class",
         "icp_class",
         "why_now",
+        "why_relevant_for_glassbox",
+        "public_signal",
+        "best_entry_route",
+        "last_verified",
+        "stage_fit",
+        "public_focus",
+        "selected_public_examples",
+        "firm_signal",
+        "why_fit_for_glassbox",
+        "suggested_pitch_angle",
+        "intro_path_recommendation",
+        "cold_outbound_viability",
+        "official_profile_url",
+        "crm_status",
+        "next_step",
+        "internal_notes",
         "source_labels",
     ]
     LEAD_HEADER_ALIASES = {
@@ -59,11 +81,15 @@ class SheetsCRMService:
         "source": {"source", "lead_source", "lead source"},
         "company_id": {"company_id", "company id"},
         "company_name": {"company_name", "company name", "account_name", "account name", "company"},
+        "firm": {"firm", "company_name", "company name", "account_name", "account name"},
         "company_domain": {"company_domain", "company domain", "domain", "website_domain", "website domain"},
         "company_website": {"company_website", "company website", "website", "company_url", "company url"},
+        "official_url": {"official_url", "official url", "company_website", "company website", "website"},
         "company_industry": {"company_industry", "company industry", "industry"},
+        "firm_type": {"firm_type", "firm type", "company_industry", "company industry"},
         "contact_id": {"contact_id", "contact id", "person_id", "person id"},
         "contact_name": {"contact_name", "contact name", "full_name", "full name", "name"},
+        "person": {"person", "contact_name", "contact name", "full_name", "full name", "name"},
         "first_name": {"first_name", "first name"},
         "last_name": {"last_name", "last name"},
         "contact_email": {"contact_email", "contact email", "email", "email_address", "email address", "work_email", "work email"},
@@ -76,6 +102,7 @@ class SheetsCRMService:
         "intent_score": {"intent_score", "intent score"},
         "timing_score": {"timing_score", "timing score"},
         "priority_score": {"priority_score", "priority score"},
+        "priority_bucket": {"priority_bucket", "priority bucket"},
         "lead_status": {"lead_status", "lead status", "status"},
         "lead_grade": {"lead_grade", "lead grade", "grade"},
         "total_score": {"total_score", "total score", "score"},
@@ -84,8 +111,24 @@ class SheetsCRMService:
         "persona_class": {"persona_class", "persona class", "persona"},
         "icp_class": {"icp_class", "icp class", "icp"},
         "why_now": {"why_now", "why now", "trigger", "trigger reason"},
+        "why_relevant_for_glassbox": {"why_relevant_for_glassbox", "why relevant for glassbox"},
+        "public_signal": {"public_signal", "public signal"},
+        "best_entry_route": {"best_entry_route", "best entry route"},
+        "last_verified": {"last_verified", "last verified"},
+        "stage_fit": {"stage_fit", "stage fit"},
+        "public_focus": {"public_focus", "public focus"},
+        "selected_public_examples": {"selected_public_examples", "selected public examples"},
+        "firm_signal": {"firm_signal", "firm signal"},
+        "why_fit_for_glassbox": {"why_fit_for_glassbox", "why fit for glassbox"},
+        "suggested_pitch_angle": {"suggested_pitch_angle", "suggested pitch angle"},
+        "intro_path_recommendation": {"intro_path_recommendation", "intro path recommendation"},
+        "cold_outbound_viability": {"cold_outbound_viability", "cold outbound viability"},
+        "official_profile_url": {"official_profile_url", "official profile url"},
+        "crm_status": {"crm_status", "crm status"},
+        "next_step": {"next_step", "next step"},
+        "internal_notes": {"internal_notes", "internal notes"},
         "source_labels": {"source_labels", "source labels", "source", "sources", "lead_source", "lead source"},
-        "next_action": {"next_action", "next action"},
+        "next_action": {"next_action", "next action", "next_step", "next step"},
         "next_action_due": {"next_action_due", "next action due"},
         "last_touch_at": {"last_touch_at", "last touch at"},
         "last_ai_hash": {"last_ai_hash", "last ai hash"},
@@ -276,6 +319,7 @@ class SheetsCRMService:
     def __init__(self, settings: Settings) -> None:
         self.settings = settings
         self._service = None
+        self._sheet_titles: set[str] | None = None
 
     async def close(self) -> None:
         self._service = None
@@ -526,10 +570,10 @@ class SheetsCRMService:
         deliveries = list((await session.execute(delivery_stmt)).scalars().unique().all())
         conversions = list((await session.execute(conversion_stmt)).scalars().unique().all())
 
-        lead_headers = self._existing_headers(self.settings.crm_sheet_range_a1) or self.LEAD_HEADERS
-        account_headers = self._existing_headers(self.settings.crm_sheet_accounts_range_a1) or self.ACCOUNT_HEADERS
-        contact_headers = self._existing_headers(self.settings.crm_sheet_contacts_range_a1) or self.CONTACT_HEADERS
-        deal_headers = self._existing_headers(self.settings.crm_sheet_deals_range_a1) or self.DEAL_HEADERS
+        lead_headers = self._merge_headers(self._existing_headers(self.settings.crm_sheet_range_a1), self.LEAD_HEADERS)
+        account_headers = self._merge_headers(self._existing_headers(self.settings.crm_sheet_accounts_range_a1), self.ACCOUNT_HEADERS)
+        contact_headers = self._merge_headers(self._existing_headers(self.settings.crm_sheet_contacts_range_a1), self.CONTACT_HEADERS)
+        deal_headers = self._merge_headers(self._existing_headers(self.settings.crm_sheet_deals_range_a1), self.DEAL_HEADERS)
         lead_rows = [lead_headers]
         account_rows = [account_headers]
         contact_rows = [contact_headers]
@@ -697,6 +741,13 @@ class SheetsCRMService:
         source_labels = self._source_labels(company)
         latest_signal = self._latest_signal(company)
         first_name, last_name = self._contact_name_parts(contact)
+        if contact is not None:
+            latest_signal = self._latest_signal_for_contact(company, contact.id) or latest_signal
+        company_meta = dict(company.cloud_signals or {}) if company else {}
+        signal_meta = dict(latest_signal.metadata_json or {}) if latest_signal else {}
+        priority_score = company_meta.get("priority_score")
+        if priority_score in ("", None):
+            priority_score = score.total_score if score else ""
         next_action = lead.recommended_sequence or lead.recommended_offer or ""
         return {
             "lead_id": lead.id,
@@ -705,11 +756,15 @@ class SheetsCRMService:
             "source": source_labels[0] if source_labels else "",
             "company_id": company.id if company else "",
             "company_name": company.name if company else "",
+            "firm": company.name if company else "",
             "company_domain": company.domain if company and company.domain else "",
             "company_website": company.website if company and company.website else "",
+            "official_url": company.website if company and company.website else "",
             "company_industry": company.industry if company and company.industry else "",
+            "firm_type": company_meta.get("firm_type", company.industry if company else ""),
             "contact_id": contact.id if contact else "",
             "contact_name": contact.full_name if contact and contact.full_name else "",
+            "person": contact.full_name if contact and contact.full_name else "",
             "first_name": first_name,
             "last_name": last_name,
             "contact_email": contact.email if contact and contact.email else "",
@@ -721,7 +776,8 @@ class SheetsCRMService:
             "fit_score": score.company_fit if score else "",
             "intent_score": score.trigger_strength if score else "",
             "timing_score": score.pain_fit if score else "",
-            "priority_score": score.total_score if score else "",
+            "priority_score": priority_score,
+            "priority_bucket": company_meta.get("priority_bucket", ""),
             "lead_status": lead.status.value,
             "lead_grade": score.lead_grade if score else "",
             "total_score": score.total_score if score else "",
@@ -730,6 +786,22 @@ class SheetsCRMService:
             "persona_class": lead.persona_class or "",
             "icp_class": lead.icp_class or "",
             "why_now": " | ".join(lead.why_now or []),
+            "why_relevant_for_glassbox": company_meta.get("why_relevant_for_glassbox", ""),
+            "public_signal": company_meta.get("public_signal", ""),
+            "best_entry_route": company_meta.get("best_entry_route", ""),
+            "last_verified": company_meta.get("last_verified", ""),
+            "stage_fit": signal_meta.get("stage_fit", ""),
+            "public_focus": signal_meta.get("public_focus", ""),
+            "selected_public_examples": signal_meta.get("selected_public_examples", ""),
+            "firm_signal": signal_meta.get("firm_signal", company_meta.get("public_signal", "")),
+            "why_fit_for_glassbox": signal_meta.get("why_fit_for_glassbox", ""),
+            "suggested_pitch_angle": signal_meta.get("suggested_pitch_angle", ""),
+            "intro_path_recommendation": signal_meta.get("intro_path_recommendation", ""),
+            "cold_outbound_viability": signal_meta.get("cold_outbound_viability", ""),
+            "official_profile_url": signal_meta.get("official_profile_url", ""),
+            "crm_status": signal_meta.get("crm_status", ""),
+            "next_step": signal_meta.get("next_step", next_action),
+            "internal_notes": signal_meta.get("internal_notes", ""),
             "source_labels": " | ".join(source_labels),
             "next_action": next_action,
             "next_action_due": "",
@@ -1166,6 +1238,16 @@ class SheetsCRMService:
         first_row = [str(cell).strip() for cell in rows[0] if str(cell).strip()]
         return first_row or None
 
+    def _merge_headers(self, existing: list[str] | None, defaults: list[str]) -> list[str]:
+        if not existing:
+            return list(defaults)
+        merged = list(existing)
+        normalized = {self._normalize_header(header) for header in existing}
+        for header in defaults:
+            if self._normalize_header(header) not in normalized:
+                merged.append(header)
+        return merged
+
     def _find_existing_record_row(
         self,
         *,
@@ -1226,6 +1308,7 @@ class SheetsCRMService:
         return [header, *ordered.values()]
 
     def _get_values(self, range_a1: str) -> list[list[Any]]:
+        self._ensure_sheet_exists(range_a1)
         response = self._client().spreadsheets().values().get(
             spreadsheetId=self.settings.crm_sheet_spreadsheet_id,
             range=range_a1,
@@ -1234,6 +1317,7 @@ class SheetsCRMService:
         return response.get("values", [])
 
     def _append_values(self, range_a1: str, values: list[list[Any]]) -> dict[str, Any]:
+        self._ensure_sheet_exists(range_a1)
         return (
             self._client()
             .spreadsheets()
@@ -1249,6 +1333,7 @@ class SheetsCRMService:
         )
 
     def _update_values(self, range_a1: str, values: list[list[Any]]) -> dict[str, Any]:
+        self._ensure_sheet_exists(range_a1)
         return (
             self._client()
             .spreadsheets()
@@ -1263,6 +1348,7 @@ class SheetsCRMService:
         )
 
     def _clear_range(self, range_a1: str) -> dict[str, Any]:
+        self._ensure_sheet_exists(range_a1)
         return (
             self._client()
             .spreadsheets()
@@ -1295,7 +1381,10 @@ class SheetsCRMService:
         return f"{self._sheet_name(range_a1)}!A1:{self._column_letter(width)}"
 
     def _sheet_name(self, range_a1: str) -> str:
-        return range_a1.split("!", 1)[0] if "!" in range_a1 else range_a1
+        sheet_name = range_a1.split("!", 1)[0] if "!" in range_a1 else range_a1
+        if len(sheet_name) >= 2 and sheet_name[0] == "'" and sheet_name[-1] == "'":
+            return sheet_name[1:-1]
+        return sheet_name
 
     def _column_letter(self, index: int) -> str:
         result = ""
@@ -1322,6 +1411,20 @@ class SheetsCRMService:
             return None
         return max(
             company.signals,
+            key=lambda signal: (
+                signal.occurred_at or datetime.min.replace(tzinfo=timezone.utc),
+                signal.created_at,
+            ),
+        )
+
+    def _latest_signal_for_contact(self, company: Company | None, contact_id: str):
+        if company is None or not company.signals:
+            return None
+        scoped = [signal for signal in company.signals if signal.contact_id == contact_id]
+        if not scoped:
+            return None
+        return max(
+            scoped,
             key=lambda signal: (
                 signal.occurred_at or datetime.min.replace(tzinfo=timezone.utc),
                 signal.created_at,
@@ -1444,3 +1547,40 @@ class SheetsCRMService:
         except HttpError as exc:  # pragma: no cover
             raise RuntimeError("Failed to initialize Google Sheets client") from exc
         return self._service
+
+    def _ensure_sheet_exists(self, range_a1: str) -> None:
+        sheet_name = self._sheet_name(range_a1)
+        if not sheet_name:
+            return
+        titles = self._sheet_titles_cache()
+        if sheet_name in titles:
+            return
+        (
+            self._client()
+            .spreadsheets()
+            .batchUpdate(
+                spreadsheetId=self.settings.crm_sheet_spreadsheet_id,
+                body={"requests": [{"addSheet": {"properties": {"title": sheet_name}}}]},
+            )
+            .execute()
+        )
+        titles.add(sheet_name)
+
+    def _sheet_titles_cache(self) -> set[str]:
+        if self._sheet_titles is not None:
+            return self._sheet_titles
+        response = (
+            self._client()
+            .spreadsheets()
+            .get(
+                spreadsheetId=self.settings.crm_sheet_spreadsheet_id,
+                fields="sheets(properties(title))",
+            )
+            .execute()
+        )
+        self._sheet_titles = {
+            str(sheet.get("properties", {}).get("title") or "").strip()
+            for sheet in response.get("sheets", [])
+            if str(sheet.get("properties", {}).get("title") or "").strip()
+        }
+        return self._sheet_titles

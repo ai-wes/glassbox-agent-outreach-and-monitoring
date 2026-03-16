@@ -12,11 +12,13 @@ from pr_monitor_app.db import engine, session_scope
 from pr_monitor_app.logging import configure_logging
 from pr_monitor_app.models import Base
 from pr_monitor_app.radar_integration import install_radar_routes, shutdown_radar, startup_radar
+from pr_monitor_app.runtime_status import log_pr_runtime_warnings
 from pr_monitor_app.scheduler import start_scheduler
 
 # Ensure all model modules are imported so Base.metadata knows every table
 import pr_monitor_app.models_analytics as _ma  # noqa: F401
 import pr_monitor_app.models_agent as _mag  # noqa: F401
+import pr_monitor_app.models_onboarding as _monb  # noqa: F401
 
 configure_logging(settings.log_level)
 
@@ -30,6 +32,9 @@ async def lifespan(app: FastAPI):
     if settings.rss_source_bootstrap_enabled:
         async with session_scope() as session:
             await sync_rss_sources(session)
+
+    async with session_scope() as session:
+        await log_pr_runtime_warnings(session)
 
     await startup_radar(app)
 

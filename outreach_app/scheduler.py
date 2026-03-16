@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 from datetime import datetime
+from threading import Lock
 
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
@@ -17,6 +18,8 @@ from app.tools.factory import build_registry
 logger = logging.getLogger(__name__)
 
 _scheduler: BackgroundScheduler | None = None
+_scheduler_paused = False
+_state_lock = Lock()
 _JOB_ID = "outreach_run_queued_tasks"
 
 _tools = build_registry()
@@ -25,6 +28,19 @@ _orchestrator = Orchestrator(_tools, _planner)
 
 
 def run_scheduled_tasks_once() -> dict[str, int]:
+    with _state_lock:
+        paused = _scheduler_paused
+    if paused:
+        summary = {
+            "selected": 0,
+            "processed": 0,
+            "challenges": 0,
+            "failures": 0,
+            "skipped": 1,
+        }
+        logger.info("outreach_scheduler_tick_skipped", extra={"reason": "paused", **summary})
+        return summary
+
     now = datetime.utcnow()
     processed = 0
     challenges = 0
@@ -130,3 +146,34 @@ def stop_scheduler() -> None:
     _scheduler.shutdown(wait=False)
     _scheduler = None
     logger.info("outreach_scheduler_stopped")
+
+
+def set_scheduler_paused(paused: bool) -> dict[str, object]:
+    global _scheduler_paused
+    with _state_lock:
+        _scheduler_paused = bool(paused)
+    logger.info("outreach_scheduler_pause_updated", extra={"paused": _scheduler_paused})
+    return get_scheduler_status()
+
+
+def get_scheduler_status() -> dict[str, object]:
+    running = _scheduler is not None
+    next_run_at = None
+    if _scheduler is not None:
+        job = _scheduler.get_job(_JOB_ID)
+        if job is not None and job.next_run_time is not None:
+            next_run_at = job.next_run_time.isoformat()
+
+    with _state_lock:
+        paused = _scheduler_paused
+
+    return {
+        "enabled": bool(settings.schedule_enable_runner),
+        "running": running,
+        "paused": paused,
+        "job_id": _JOB_ID,
+        "poll_seconds": int(settings.schedule_poll_seconds),
+        "batch_size": int(settings.schedule_batch_size),
+        "requested_by": settings.schedule_requested_by,
+        "next_run_at": next_run_at,
+    }

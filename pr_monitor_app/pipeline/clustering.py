@@ -5,7 +5,7 @@ from typing import Any, Optional
 
 import numpy as np
 import structlog
-from sqlalchemy import and_, select
+from sqlalchemy import and_, delete, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from pr_monitor_app.embedding import cosine_sim
@@ -107,4 +107,24 @@ async def cluster_new_events(session: AsyncSession, *, limit: int = 500) -> dict
         clustered += 1
 
     log.info("clustering_done", clustered=clustered, new_clusters=new_clusters)
+    return {"clustered": clustered, "new_clusters": new_clusters}
+
+
+async def rebuild_all_clusters(session: AsyncSession, *, batch_size: int = 500) -> dict[str, Any]:
+    await session.execute(delete(EventClusterMap))
+    await session.execute(delete(EventCluster))
+    await session.flush()
+
+    clustered = 0
+    new_clusters = 0
+    max_passes = 20
+    for _ in range(max_passes):
+        result = await cluster_new_events(session, limit=batch_size)
+        current_clustered = int(result.get("clustered", 0))
+        clustered += current_clustered
+        new_clusters += int(result.get("new_clusters", 0))
+        if current_clustered == 0 or current_clustered < batch_size:
+            break
+
+    log.info("rebuild_all_clusters_done", clustered=clustered, new_clusters=new_clusters)
     return {"clustered": clustered, "new_clusters": new_clusters}

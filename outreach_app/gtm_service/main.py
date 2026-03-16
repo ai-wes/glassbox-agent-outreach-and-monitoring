@@ -21,9 +21,9 @@ def create_app() -> FastAPI:
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):
-        app.state.settings = settings
-        app.state.container = container
-        app.state.scheduler = scheduler
+        app.state.gtm_settings = settings
+        app.state.gtm_container = container
+        app.state.gtm_scheduler = scheduler
         await init_db()
 
         async def run_due_job() -> None:

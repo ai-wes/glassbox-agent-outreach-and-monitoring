@@ -7,8 +7,10 @@ from outreach_app.gtm_service.services.llm import LLMClient
 from outreach_app.gtm_service.services.mailer import EmailDeliveryService, LinkedInDispatchService
 from outreach_app.gtm_service.services.metrics import MetricsService
 from outreach_app.gtm_service.services.outreach import OutreachGenerator
+from outreach_app.gtm_service.services.prospecting import ProspectingService
 from outreach_app.gtm_service.services.research import ResearchAgent
 from outreach_app.gtm_service.services.router import LeadRouter
+from outreach_app.gtm_service.services.scraper import ProspectingScraper
 from outreach_app.gtm_service.services.scoring import LeadScoringService
 from outreach_app.gtm_service.services.sequencer import SequenceService
 
@@ -18,6 +20,7 @@ class ServiceContainer:
         self.settings = settings
         self.llm_client = LLMClient(settings) if settings.llm_ready else None
         self.source_service = SourceIngestionService(settings)
+        self.scraper = ProspectingScraper(settings)
         self.research_agent = ResearchAgent(settings, self.llm_client)
         self.scoring_service = LeadScoringService(settings, self.llm_client)
         self.router = LeadRouter()
@@ -33,8 +36,20 @@ class ServiceContainer:
             self.crm_sync_service,
         )
         self.metrics_service = MetricsService()
+        self.prospecting_service = ProspectingService(
+            settings=settings,
+            source_service=self.source_service,
+            scraper=self.scraper,
+            research_agent=self.research_agent,
+            scoring_service=self.scoring_service,
+            router=self.router,
+            sequence_service=self.sequence_service,
+            crm_sync_service=self.crm_sync_service,
+            metrics_service=self.metrics_service,
+        )
 
     async def aclose(self) -> None:
+        await self.scraper.close()
         await self.source_service.close()
         await self.linkedin_dispatch.close()
         await self.crm_sync_service.close()

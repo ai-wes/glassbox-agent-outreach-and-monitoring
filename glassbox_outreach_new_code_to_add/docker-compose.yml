@@ -1,0 +1,58 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: outreach
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@db:5432/outreach
+      REDIS_BROKER_URL: redis://redis:6379/0
+      GOOGLE_SHEETS_SPREADSHEET_ID: ${GOOGLE_SHEETS_SPREADSHEET_ID:-}
+      GOOGLE_SERVICE_ACCOUNT_FILE: /app/.secrets/credentials.json
+    depends_on:
+      - db
+      - redis
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api/app:/app/app
+      - ./api/.secrets:/app/.secrets:ro
+
+  worker:
+    build:
+      context: ./worker
+      dockerfile: Dockerfile
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@db:5432/outreach
+      REDIS_BROKER_URL: redis://redis:6379/0
+      GOOGLE_SHEETS_SPREADSHEET_ID: ${GOOGLE_SHEETS_SPREADSHEET_ID:-}
+      GOOGLE_SERVICE_ACCOUNT_FILE: /app/.secrets/credentials.json
+      PLAYWRIGHT_BROWSERS_PATH: /ms-playwright
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./api/app:/app/app
+      - ./api/.secrets:/app/.secrets:ro
+      - /ms-playwright
+    entrypoint: ["bash", "-lc", "celery -A app.celery_app.celery_app worker --loglevel=info"]
+
+volumes:
+  db_data:

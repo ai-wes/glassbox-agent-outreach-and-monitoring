@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from typing import Any
 
 from fastapi import APIRouter, Depends, HTTPException, Request
 from pydantic import BaseModel
@@ -17,7 +18,9 @@ from outreach_app.gtm_service.db.models import (
     Lead,
     LeadScore,
     LeadStatus,
+    MessageStatus,
     OutreachMessage,
+    OutreachSequence,
     ReplyEvent,
     ReplyType,
 )
@@ -32,7 +35,17 @@ from outreach_app.gtm_service.schemas.lead import (
     ReplyEventRead,
     SignalRead,
 )
-from outreach_app.gtm_service.schemas.outreach import SequencePreview, SequenceQueueRequest
+from outreach_app.gtm_service.schemas.outreach import (
+    MessageApprovalRequest,
+    OutreachMessageRead,
+    SequencePreview,
+    SequenceQueueRequest,
+)
+from outreach_app.gtm_service.schemas.prospecting import (
+    DomainDiscoveryRequest,
+    LimitedRunRequest,
+    ProspectingRunRead,
+)
 from outreach_app.gtm_service.schemas.telemetry import (
     AttributionPerformanceRead,
     ConversionEventCreate,
@@ -114,10 +127,19 @@ async def import_rss(payload: RSSImportRequest, session: AsyncSession = Depends(
 
 
 @router.get('/leads', response_model=list[LeadRead])
-async def list_leads(session: AsyncSession = Depends(get_db_session)) -> list[LeadRead]:
+@router.get('/api/leads', response_model=list[LeadRead], include_in_schema=False)
+async def list_leads(
+    status: str | None = None,
+    limit: int = 100,
+    session: AsyncSession = Depends(get_db_session),
+) -> list[LeadRead]:
+    stmt = select(Lead)
+    if status:
+        stmt = stmt.where(Lead.status == _coerce_lead_status(status))
     stmt = (
-        select(Lead)
+        stmt
         .order_by(Lead.updated_at.desc())
+        .limit(min(max(limit, 1), 500))
         .options(
             selectinload(Lead.company).selectinload(Company.signals),
             selectinload(Lead.contact),
@@ -126,6 +148,64 @@ async def list_leads(session: AsyncSession = Depends(get_db_session)) -> list[Le
     )
     leads = list((await session.execute(stmt)).scalars().unique().all())
     return [_lead_read(lead) for lead in leads]
+
+
+@router.post("/discovery", response_model=ProspectingRunRead)
+@router.post("/api/discovery", response_model=ProspectingRunRead, include_in_schema=False)
+async def trigger_discovery(
+    payload: DomainDiscoveryRequest,
+    session: AsyncSession = Depends(get_db_session),
+    container: ServiceContainer = Depends(get_container),
+) -> ProspectingRunRead:
+    if not payload.domains:
+        raise HTTPException(status_code=400, detail="domains list cannot be empty")
+    result = await container.prospecting_service.discover_from_domains(session, payload.domains)
+    return ProspectingRunRead.model_validate(result)
+
+
+@router.post("/enrich", response_model=ProspectingRunRead)
+@router.post("/api/enrich", response_model=ProspectingRunRead, include_in_schema=False)
+async def trigger_enrichment(
+    payload: LimitedRunRequest | None = None,
+    session: AsyncSession = Depends(get_db_session),
+    container: ServiceContainer = Depends(get_container),
+) -> ProspectingRunRead:
+    result = await container.prospecting_service.enrich_leads(session, limit=(payload.limit if payload else 100))
+    return ProspectingRunRead.model_validate(result)
+
+
+@router.post("/verify", response_model=ProspectingRunRead)
+@router.post("/api/verify", response_model=ProspectingRunRead, include_in_schema=False)
+async def trigger_verification(
+    payload: LimitedRunRequest | None = None,
+    session: AsyncSession = Depends(get_db_session),
+    container: ServiceContainer = Depends(get_container),
+) -> ProspectingRunRead:
+    result = await container.prospecting_service.verify_leads(session, limit=(payload.limit if payload else 100))
+    return ProspectingRunRead.model_validate(result)
+
+
+@router.post("/score", response_model=ProspectingRunRead)
+@router.post("/api/score", response_model=ProspectingRunRead, include_in_schema=False)
+async def trigger_scoring(
+    payload: LimitedRunRequest | None = None,
+    session: AsyncSession = Depends(get_db_session),
+    container: ServiceContainer = Depends(get_container),
+) -> ProspectingRunRead:
+    result = await container.prospecting_service.score_leads(session, limit=(payload.limit if payload else 100))
+    return ProspectingRunRead.model_validate(result)
+
+
+@router.post("/sync", response_model=ProspectingRunRead)
+@router.post("/api/sync", response_model=ProspectingRunRead, include_in_schema=False)
+async def trigger_sync(
+    session: AsyncSession = Depends(get_db_session),
+    container: ServiceContainer = Depends(get_container),
+) -> ProspectingRunRead:
+    if not container.crm_sync_service.enabled:
+        raise HTTPException(status_code=503, detail="Google Sheets CRM sync is not configured")
+    result = await container.prospecting_service.sync_to_crm(session)
+    return ProspectingRunRead.model_validate(result)
 
 
 @router.get('/leads/{lead_id}', response_model=LeadRead)
@@ -180,6 +260,60 @@ async def queue_lead(lead_id: str, payload: SequenceQueueRequest, session: Async
 @router.post('/sequences/run-due')
 async def run_due(session: AsyncSession = Depends(get_db_session), container: ServiceContainer = Depends(get_container)):
     return await container.sequence_service.run_due_messages(session)
+
+
+@router.get("/messages/pending-approval", response_model=list[OutreachMessageRead])
+async def list_pending_message_approvals(
+    limit: int = 100,
+    session: AsyncSession = Depends(get_db_session),
+) -> list[OutreachMessageRead]:
+    stmt = (
+        select(OutreachMessage)
+        .where(OutreachMessage.status == MessageStatus.AWAITING_MANUAL)
+        .order_by(OutreachMessage.scheduled_for.asc(), OutreachMessage.created_at.asc())
+        .limit(min(max(limit, 1), 500))
+    )
+    messages = list((await session.execute(stmt)).scalars().all())
+    return [OutreachMessageRead.model_validate(message) for message in messages]
+
+
+@router.post("/messages/{message_id}/approve", response_model=OutreachMessageRead)
+async def approve_message(
+    message_id: str,
+    payload: MessageApprovalRequest,
+    session: AsyncSession = Depends(get_db_session),
+    container: ServiceContainer = Depends(get_container),
+) -> OutreachMessageRead:
+    try:
+        message = await container.sequence_service.approve_message(
+            session,
+            message_id=message_id,
+            approved_by=payload.approved_by,
+            notes=payload.notes,
+            send_immediately=payload.send_immediately,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    return OutreachMessageRead.model_validate(message)
+
+
+@router.post("/messages/{message_id}/reject", response_model=OutreachMessageRead)
+async def reject_message(
+    message_id: str,
+    payload: MessageApprovalRequest,
+    session: AsyncSession = Depends(get_db_session),
+    container: ServiceContainer = Depends(get_container),
+) -> OutreachMessageRead:
+    try:
+        message = await container.sequence_service.reject_message(
+            session,
+            message_id=message_id,
+            rejected_by=payload.approved_by,
+            notes=payload.notes,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    return OutreachMessageRead.model_validate(message)
 
 
 @router.post('/replies')
@@ -508,3 +642,13 @@ def _coerce_conversion_event_type(value: str) -> ConversionEventType:
         return ConversionEventType(value)
     except ValueError as exc:
         raise HTTPException(status_code=400, detail="Invalid conversion event type") from exc
+
+
+def _coerce_lead_status(value: str) -> LeadStatus:
+    try:
+        return LeadStatus(value)
+    except ValueError:
+        try:
+            return LeadStatus(value.lower())
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail="Invalid lead status") from exc

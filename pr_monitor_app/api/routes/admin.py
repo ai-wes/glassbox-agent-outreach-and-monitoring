@@ -14,6 +14,7 @@ from pr_monitor_app.api.deps import get_session
 from pr_monitor_app.bootstrap.rss_sources import sync_rss_sources
 from pr_monitor_app.config import settings
 from pr_monitor_app.models import DailyPodcastReport
+from pr_monitor_app.runtime_status import collect_pr_runtime_status
 from pr_monitor_app.schedule_config import get_beat_schedule_seconds, set_beat_schedule_seconds
 from pr_monitor_app.scheduler import get_scheduler_status, update_scheduler_tick_seconds
 from pr_monitor_app.state import StateStore
@@ -28,6 +29,11 @@ class SchedulerPatchIn(BaseModel):
 class BeatSchedulePatchIn(BaseModel):
     ingest_seconds: int | None = Field(default=None, ge=1, le=86400)
     process_seconds: int | None = Field(default=None, ge=1, le=86400)
+
+
+class RepairEventsIn(BaseModel):
+    limit: int = Field(default=500, ge=1, le=5000)
+    rebuild_clusters: bool = True
 
 
 @router.post("/run/ingest")
@@ -70,6 +76,19 @@ async def run_process(sync: bool = Query(default=False), session: AsyncSession =
 
     task = process_pipeline_task.delay(force=True)
     return {"mode": "async", "task_id": task.id}
+
+
+@router.post("/run/repair-events")
+async def repair_events(payload: RepairEventsIn, session: AsyncSession = Depends(get_session)) -> dict:
+    from pr_monitor_app.pipeline.clustering import rebuild_all_clusters
+    from pr_monitor_app.pipeline.normalization import refresh_normalized_events
+
+    refreshed = await refresh_normalized_events(session, limit=payload.limit)
+    clusters = None
+    if payload.rebuild_clusters:
+        clusters = await rebuild_all_clusters(session)
+    await session.commit()
+    return {"mode": "sync", "refresh": refreshed, "clusters": clusters}
 
 
 @router.post("/run/daily-podcast")
@@ -125,6 +144,11 @@ async def get_daily_podcast_status(session: AsyncSession = Depends(get_session))
             else None
         ),
     }
+
+
+@router.get("/runtime-status")
+async def get_runtime_status(session: AsyncSession = Depends(get_session)) -> dict:
+    return await collect_pr_runtime_status(session)
 
 
 @router.get("/scheduler")

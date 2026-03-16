@@ -39,15 +39,15 @@ celery_app.conf.imports = ("pr_monitor_app.tasks.tasks",)
 
 
 _beat_schedule = {
-    # Beat wakes up every minute; effective cadence is dynamically enforced
-    # by worker-side schedule gates (see /admin/beat-schedule).
-    "ingest-every-1-min": {
+    # Keep beat cadence aligned with the default worker-side schedule gates
+    # so the system does real work on each dispatch instead of logging noisy skips.
+    "ingest-every-10-min": {
         "task": "npe.ingest_sources",
-        "schedule": 60.0,
+        "schedule": 600.0,
     },
-    "process-every-1-min": {
+    "process-every-15-min": {
         "task": "npe.process_pipeline",
-        "schedule": 60.0,
+        "schedule": 900.0,
     },
 }
 

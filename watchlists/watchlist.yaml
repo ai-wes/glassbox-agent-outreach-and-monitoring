@@ -1,0 +1,128 @@
+companies:
+  - name: Recursion
+    domain: recursion.com
+    aliases:
+      - Recursion Pharmaceuticals
+    hq: Salt Lake City, UT
+    stage: public
+    lead_investors:
+      - Lux Capital
+      - DCVC
+      - Baillie Gifford
+    therapeutic_areas:
+      - oncology
+      - rare disease
+      - AI drug discovery
+    warm_intro_paths:
+      - AI biotech operator network
+    rss_feeds:
+      - https://fiercebiotech.com/rss/biotech
+      - https://www.biopharmadive.com/feeds/news
+      - https://feeds.feedburner.com/GenGeneticEngineeringNews
+    contacts:
+      - name: Business Development
+        role: BD
+        is_primary: true
+    programs:
+      - asset_name: REC-994
+        target: CCM2 pathway
+        mechanism: small molecule
+        modality: oral small molecule
+        indication: cerebral cavernous malformation
+        stage: phase 2
+        key_terms:
+          - CCM
+          - phase 2
+          - readout
+        lead_program_flag: true
+      - asset_name: REC-2282
+        target: HDAC pathway
+        mechanism: epigenetic modulation
+        modality: oral small molecule
+        indication: neurofibromatosis type 2
+        stage: phase 2
+        key_terms:
+          - neurofibromatosis
+          - phase 2
+
+  - name: AbCellera
+    domain: abcellera.com
+    aliases:
+      - AbCellera Biologics
+    hq: Vancouver, BC
+    stage: public
+    lead_investors:
+      - Peter Thiel
+      - OrbiMed
+    therapeutic_areas:
+      - antibody discovery
+      - immunology
+      - oncology
+    warm_intro_paths:
+      - biotech communications network
+    rss_feeds:
+      - https://fiercebiotech.com/rss/biotech
+      - https://www.biopharmadive.com/feeds/news
+      - https://feeds.feedburner.com/GenGeneticEngineeringNews
+    contacts:
+      - name: Corporate Development
+        role: BD
+        is_primary: true
+    programs:
+      - asset_name: Antibody Discovery Platform
+        target: partner portfolio
+        mechanism: AI-enabled antibody discovery
+        modality: antibody platform
+        indication: multi-program
+        stage: discovery
+        key_terms:
+          - antibody discovery
+          - platform
+          - partnership
+        lead_program_flag: true
+
+  - name: Beam Therapeutics
+    domain: beamtx.com
+    aliases:
+      - Beam
+    hq: Cambridge, MA
+    stage: public
+    lead_investors:
+      - ARCH Venture Partners
+      - F-Prime
+    therapeutic_areas:
+      - gene editing
+      - hematology
+      - genetic disease
+    warm_intro_paths:
+      - cell and gene therapy network
+    rss_feeds:
+      - https://fiercebiotech.com/rss/biotech
+      - https://www.biopharmadive.com/feeds/news
+      - https://feeds.feedburner.com/GenGeneticEngineeringNews
+    contacts:
+      - name: Strategic Communications
+        role: communications
+        is_primary: true
+    programs:
+      - asset_name: BEAM-101
+        target: HBB
+        mechanism: base editing
+        modality: ex vivo cell therapy
+        indication: sickle cell disease
+        stage: clinical
+        key_terms:
+          - sickle cell
+          - base editing
+          - clinical
+        lead_program_flag: true
+      - asset_name: BEAM-302
+        target: SERPINA1
+        mechanism: base editing
+        modality: in vivo liver editing
+        indication: alpha-1 antitrypsin deficiency
+        stage: clinical
+        key_terms:
+          - alpha-1 antitrypsin
+          - liver
+          - in vivo

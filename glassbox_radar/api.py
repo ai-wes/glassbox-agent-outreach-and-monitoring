@@ -16,6 +16,7 @@ from glassbox_radar.schemas import CompanyOut, OpportunityOut, ProgramOut
 from glassbox_radar.services.pipeline import RadarPipeline
 from glassbox_radar.services.scheduler import EmbeddedScheduler
 from glassbox_radar.services.watchlist_sync import sync_watchlist
+from glassbox_radar.runtime_status import collect_radar_runtime_status, log_radar_runtime_warnings
 from glassbox_radar.watchlist import load_watchlist
 from glassbox_radar.core.config import get_settings
 from glassbox_radar.core.logging import configure_logging
@@ -74,6 +75,11 @@ async def list_opportunities(db: AsyncSession = Depends(get_db)) -> list[Opportu
     return list(result.scalars().all())
 
 
+@router.get("/api/status", dependencies=[Depends(require_api_token)])
+async def runtime_status(db: AsyncSession = Depends(get_db)) -> dict[str, object]:
+    return await collect_radar_runtime_status(db)
+
+
 @router.post("/api/pipeline/run", dependencies=[Depends(require_api_token)])
 async def run_pipeline() -> dict:
     pipeline = RadarPipeline(SessionLocal)
@@ -91,6 +97,8 @@ async def run_watchlist_sync(db: AsyncSession = Depends(get_db)) -> dict:
 async def lifespan(_: FastAPI):
     configure_logging()
     await init_db()
+    async with SessionLocal() as session:
+        await log_radar_runtime_warnings(session)
     scheduler = EmbeddedScheduler(SessionLocal)
     await scheduler.start()
     try:

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Annotated
 
-from pydantic import Field, field_validator
+from pydantic import AliasChoices, Field, field_validator
 from pydantic_settings import BaseSettings, NoDecode, SettingsConfigDict
 
 
@@ -16,12 +16,24 @@ class Settings(BaseSettings):
     api_port: int = Field(default=8000, alias="API_PORT")
 
     # Storage
-    database_url: str = Field(default="sqlite+aiosqlite:///./data/pr_monitor.db", alias="DATABASE_URL")
+    database_url: str = Field(
+        default="sqlite+aiosqlite:///./data/pr_monitor.db",
+        validation_alias=AliasChoices("PR_DATABASE_URL", "DATABASE_URL"),
+    )
 
     # Redis / Celery
-    redis_url: str = Field(default="redis://localhost:6379/0", alias="REDIS_URL")
-    celery_broker_url: str = Field(default="redis://localhost:6379/0", alias="CELERY_BROKER_URL")
-    celery_result_backend: str = Field(default="redis://localhost:6379/1", alias="CELERY_RESULT_BACKEND")
+    redis_url: str = Field(
+        default="redis://localhost:6379/0",
+        validation_alias=AliasChoices("PR_REDIS_URL", "REDIS_URL"),
+    )
+    celery_broker_url: str = Field(
+        default="redis://localhost:6379/0",
+        validation_alias=AliasChoices("PR_CELERY_BROKER_URL", "CELERY_BROKER_URL"),
+    )
+    celery_result_backend: str = Field(
+        default="redis://localhost:6379/1",
+        validation_alias=AliasChoices("PR_CELERY_RESULT_BACKEND", "CELERY_RESULT_BACKEND"),
+    )
 
     # Embeddings
     embedding_model_name: str = Field(default="sentence-transformers/all-MiniLM-L6-v2", alias="EMBEDDING_MODEL_NAME")
@@ -99,8 +111,11 @@ class Settings(BaseSettings):
 
     # Layer 1 subscription ingestion
     db_auto_create: bool = Field(default=False, alias="DB_AUTO_CREATE")
-    ingest_enable_scheduler: bool = Field(default=False, alias="INGEST_ENABLE_SCHEDULER")
-    ingest_tick_seconds: int = Field(default=30, alias="INGEST_TICK_SECONDS")
+    ingest_enable_scheduler: bool = Field(
+        default=False,
+        validation_alias=AliasChoices("PR_INGEST_ENABLE_SCHEDULER", "INGEST_ENABLE_SCHEDULER"),
+    )
+    ingest_tick_seconds: int = Field(default=60, alias="INGEST_TICK_SECONDS")
     ingest_max_subscriptions_per_tick: int = Field(default=25, alias="INGEST_MAX_SUBSCRIPTIONS_PER_TICK")
     ingest_min_text_length: int = Field(default=200, alias="INGEST_MIN_TEXT_LENGTH")
     http_timeout_seconds: float = Field(default=20.0, alias="HTTP_TIMEOUT_SECONDS")

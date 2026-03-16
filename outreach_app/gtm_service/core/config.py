@@ -31,6 +31,7 @@ class Settings(BaseSettings):
     llm_timeout_seconds: int = Field(default=45, alias="LLM_TIMEOUT_SECONDS")
 
     allow_auto_send: bool = Field(default=True, alias="ALLOW_AUTO_SEND")
+    email_send_requires_approval: bool = Field(default=True, alias="EMAIL_SEND_REQUIRES_APPROVAL")
     only_queue_ab_grades: bool = Field(default=True, alias="ONLY_QUEUE_AB_GRADES")
     sequence_timezone: str = Field(default="America/Los_Angeles", alias="SEQUENCE_TIMEZONE")
 

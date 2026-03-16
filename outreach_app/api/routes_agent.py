@@ -10,10 +10,16 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import selectinload
 
 from app.api.auth import require_api_key
+from app.scheduler import get_scheduler_status, set_scheduler_paused
 from app.db.session import db_session
 from app.integrations.google_sheets import SheetsConfigurationError, SheetsRequestError
 from app.models.artifact import Artifact
 from app.models.run import Run
+from glassbox_radar.db import SessionLocal as RadarSessionLocal
+from glassbox_radar.models import Company as RadarCompany
+from glassbox_radar.models import Opportunity as RadarOpportunity
+from glassbox_radar.models import Program as RadarProgram
+from glassbox_radar.runtime_status import collect_radar_runtime_status
 from outreach_app.gtm_service.api.routes import _lead_read, _reply_read
 from outreach_app.gtm_service.db.models import Company as GtmCompany
 from outreach_app.gtm_service.db.models import Lead as GtmLead
@@ -37,6 +43,10 @@ from app.schemas.run import ApprovalRequestOut, RunOut
 from app.schemas.task import TaskOut
 from app.tools.factory import build_registry
 from app.utils.id import new_id
+from pr_monitor_app.db import SessionLocal as PrSessionLocal
+from pr_monitor_app.models import Event as PrEvent
+from pr_monitor_app.models import SourceType as PrSourceType
+from pr_monitor_app.runtime_status import collect_pr_runtime_status
 
 router = APIRouter(prefix="/agent", tags=["agent"], dependencies=[Depends(require_api_key)])
 
@@ -247,6 +257,104 @@ async def agent_crm_lead_telemetry(lead_id: str, request: Request):
     if telemetry is None:
         raise HTTPException(status_code=404, detail="lead not found")
     return telemetry
+
+
+@router.get("/platform/status")
+async def agent_platform_status(request: Request):
+    container = request.app.state.gtm_container
+    async with AsyncSessionLocal() as crm_session:
+        crm = {
+            "summary": await container.metrics_service.summary(crm_session),
+            "funnel": (await container.metrics_service.funnel(crm_session)).model_dump(),
+        }
+    async with PrSessionLocal() as pr_session:
+        pr = await collect_pr_runtime_status(pr_session)
+    async with RadarSessionLocal() as radar_session:
+        radar = await collect_radar_runtime_status(radar_session)
+    return {
+        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "automation": get_scheduler_status(),
+        "crm": crm,
+        "pr": pr,
+        "radar": radar,
+    }
+
+
+@router.get("/platform/automation/status")
+async def agent_platform_automation_status():
+    return get_scheduler_status()
+
+
+@router.post("/platform/automation/pause")
+async def agent_platform_automation_pause():
+    return set_scheduler_paused(True)
+
+
+@router.post("/platform/automation/resume")
+async def agent_platform_automation_resume():
+    return set_scheduler_paused(False)
+
+
+@router.get("/platform/pr/events")
+async def agent_platform_pr_events(
+    limit: int = Query(default=100, ge=1, le=500),
+    source_type: PrSourceType | None = None,
+):
+    async with PrSessionLocal() as session:
+        stmt = select(PrEvent).order_by(PrEvent.published_at.desc()).limit(limit)
+        if source_type is not None:
+            stmt = stmt.where(PrEvent.source_type == source_type)
+        rows = (await session.execute(stmt)).scalars().all()
+    return [
+        {
+            "event_id": str(row.id),
+            "published_at": row.published_at.isoformat() if row.published_at else None,
+            "created_at": row.created_at.isoformat() if row.created_at else None,
+            "source_type": row.source_type.value if hasattr(row.source_type, "value") else str(row.source_type),
+            "title": row.title,
+            "author": row.author,
+            "url": row.url,
+            "sentiment": row.sentiment,
+            "detected_entities": list(row.detected_entities or []),
+            "raw_text_excerpt": row.raw_text[:500] if row.raw_text else "",
+        }
+        for row in rows
+    ]
+
+
+@router.get("/platform/radar/opportunities")
+async def agent_platform_radar_opportunities(limit: int = Query(default=100, ge=1, le=500)):
+    async with RadarSessionLocal() as session:
+        rows = (
+            await session.execute(
+                select(RadarOpportunity, RadarCompany, RadarProgram)
+                .join(RadarCompany, RadarCompany.id == RadarOpportunity.company_id)
+                .join(RadarProgram, RadarProgram.id == RadarOpportunity.program_id)
+                .order_by(RadarOpportunity.radar_score.desc(), RadarOpportunity.updated_at.desc())
+                .limit(limit)
+            )
+        ).all()
+    return [
+        {
+            "opportunity_id": opportunity.id,
+            "company_id": company.id,
+            "company_name": company.name,
+            "program_id": program.id,
+            "program_target": program.target,
+            "asset_name": program.asset_name,
+            "indication": program.indication,
+            "stage": program.stage,
+            "status": opportunity.status.value,
+            "tier": opportunity.tier,
+            "radar_score": opportunity.radar_score,
+            "outreach_angle": opportunity.outreach_angle,
+            "risk_hypothesis": opportunity.risk_hypothesis,
+            "updated_at": opportunity.updated_at.isoformat() if opportunity.updated_at else None,
+            "dossier_path": opportunity.dossier_path,
+            "sheet_row_reference": opportunity.sheet_row_reference,
+        }
+        for opportunity, company, program in rows
+    ]
 
 
 @router.get("/reports/runs")

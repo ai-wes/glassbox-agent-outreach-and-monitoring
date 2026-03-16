@@ -180,6 +180,27 @@ class SequenceService:
                 if message.channel == OutreachChannel.EMAIL:
                     if not contact or not contact.email:
                         raise ValueError("Lead has no email address")
+                    if self.settings.email_send_requires_approval and not self._is_email_approved(message):
+                        message.status = MessageStatus.AWAITING_MANUAL
+                        message.metadata_json = {
+                            **message.metadata_json,
+                            "manual_review_required": True,
+                            "manual_review_reason": "Email requires manual approval before send",
+                            "pending_approval_since": now.isoformat(),
+                        }
+                        delivery_event = self._delivery_event(
+                            message=message,
+                            lead=lead,
+                            event_type=DeliveryEventType.BLOCKED,
+                            occurred_at=now,
+                            reason="Awaiting manual approval",
+                            metadata_json={"channel": "email", "awaiting_manual_approval": True},
+                        )
+                        session.add(delivery_event)
+                        sheet_sync_events.append((delivery_event, lead, sequence, message, company, contact))
+                        queued_manual += 1
+                        details.append({"message_id": message.id, "status": "awaiting_manual", "channel": "email"})
+                        continue
                     provider_id = await self.mailer.send_email(
                         to_email=contact.email,
                         subject=message.subject or f"Glassbox for {company.name if company else 'your team'}",
@@ -293,6 +314,63 @@ class SequenceService:
                 )
         return RunDueResponse(sent=sent, queued_manual=queued_manual, failed=failed, details=details)
 
+    async def approve_message(
+        self,
+        session: AsyncSession,
+        *,
+        message_id: str,
+        approved_by: str,
+        notes: str | None = None,
+        send_immediately: bool = True,
+    ) -> OutreachMessage:
+        message = await self._get_message(session, message_id)
+        if message is None:
+            raise ValueError(f"Message {message_id} not found")
+        if message.channel != OutreachChannel.EMAIL:
+            raise ValueError("Manual approval is only implemented for email messages")
+        if message.status not in {MessageStatus.AWAITING_MANUAL, MessageStatus.QUEUED}:
+            raise ValueError(f"Message cannot be approved from status {message.status.value}")
+        message.metadata_json = {
+            **message.metadata_json,
+            "manual_review_required": True,
+            "manual_approved": True,
+            "approved_by": approved_by,
+            "approved_at": datetime.now(timezone.utc).isoformat(),
+            "approval_notes": notes or "",
+        }
+        message.status = MessageStatus.QUEUED
+        if send_immediately:
+            message.scheduled_for = datetime.now(timezone.utc)
+        await session.commit()
+        await session.refresh(message)
+        return message
+
+    async def reject_message(
+        self,
+        session: AsyncSession,
+        *,
+        message_id: str,
+        rejected_by: str,
+        notes: str | None = None,
+    ) -> OutreachMessage:
+        message = await self._get_message(session, message_id)
+        if message is None:
+            raise ValueError(f"Message {message_id} not found")
+        if message.status not in {MessageStatus.AWAITING_MANUAL, MessageStatus.QUEUED}:
+            raise ValueError(f"Message cannot be rejected from status {message.status.value}")
+        message.status = MessageStatus.SKIPPED
+        message.metadata_json = {
+            **message.metadata_json,
+            "manual_review_required": True,
+            "manual_rejected": True,
+            "rejected_by": rejected_by,
+            "rejected_at": datetime.now(timezone.utc).isoformat(),
+            "rejection_notes": notes or "",
+        }
+        await session.commit()
+        await session.refresh(message)
+        return message
+
     async def stop_active_sequences_for_lead(self, session: AsyncSession, lead_id: str) -> None:
         stmt = (
             select(OutreachSequence)
@@ -322,9 +400,28 @@ class SequenceService:
         )
         return (await session.execute(stmt)).scalars().unique().one_or_none()
 
+    async def _get_message(self, session: AsyncSession, message_id: str) -> OutreachMessage | None:
+        stmt = (
+            select(OutreachMessage)
+            .where(OutreachMessage.id == message_id)
+            .options(
+                selectinload(OutreachMessage.sequence)
+                .selectinload(OutreachSequence.lead)
+                .selectinload(Lead.company),
+                selectinload(OutreachMessage.sequence)
+                .selectinload(OutreachSequence.lead)
+                .selectinload(Lead.contact),
+            )
+        )
+        return (await session.execute(stmt)).scalars().unique().one_or_none()
+
     def _sequence_done(self, sequence: OutreachSequence) -> bool:
         terminal = {MessageStatus.SENT, MessageStatus.FAILED, MessageStatus.SKIPPED, MessageStatus.AWAITING_MANUAL}
         return all(message.status in terminal for message in sequence.messages)
+
+    def _is_email_approved(self, message: OutreachMessage) -> bool:
+        metadata = message.metadata_json or {}
+        return bool(metadata.get("manual_approved"))
 
     def _lead_source_labels(self, lead: Lead) -> list[str]:
         company = lead.company

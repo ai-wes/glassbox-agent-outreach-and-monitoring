@@ -11,6 +11,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker
 from sqlalchemy.orm import selectinload
 
 from glassbox_radar.connectors.clinical_trials import ClinicalTrialsCollector
+from glassbox_radar.connectors.funding import FundingCollector
 from glassbox_radar.connectors.preprints import PreprintCollector
 from glassbox_radar.connectors.pubmed import PubMedCollector
 from glassbox_radar.connectors.rss import RSSCollector
@@ -39,6 +40,7 @@ class RadarPipeline:
         self.preprints = PreprintCollector()
         self.clinical_trials = ClinicalTrialsCollector()
         self.rss = RSSCollector()
+        self.funding = FundingCollector()
 
     async def _load_contexts(self, session: AsyncSession) -> list[tuple[Company, Program, CollectionContext]]:
         result = await session.execute(
@@ -85,8 +87,11 @@ class RadarPipeline:
 
     async def _sync_watchlist_if_present(self, session: AsyncSession) -> dict[str, int]:
         if not self.settings.watchlist_path.exists():
+            logger.warning("Radar watchlist file missing: %s", self.settings.watchlist_path)
             return {"companies": 0, "programs": 0, "contacts": 0}
         companies = load_watchlist(self.settings.watchlist_path)
+        if not companies:
+            logger.warning("Radar watchlist is empty: %s", self.settings.watchlist_path)
         return await sync_watchlist(session, companies)
 
     async def _collect_for_context(
@@ -101,6 +106,7 @@ class RadarPipeline:
                 self.preprints.collect(context, client),
                 self.clinical_trials.collect(context, client),
                 self.rss.collect(context, client),
+                self.funding.collect(context, client),
                 return_exceptions=True,
             )
 
@@ -305,6 +311,8 @@ class RadarPipeline:
                 stats["watchlist_sync"] = await self._sync_watchlist_if_present(session)
                 contexts = await self._load_contexts(session)
                 stats["contexts"] = len(contexts)
+                if not contexts:
+                    logger.warning("Radar pipeline has no active company/program contexts to evaluate.")
 
                 semaphore = asyncio.Semaphore(self.settings.max_connector_concurrency)
                 timeout = httpx.Timeout(self.settings.request_timeout_seconds)

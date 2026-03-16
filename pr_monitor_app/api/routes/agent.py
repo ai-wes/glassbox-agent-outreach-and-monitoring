@@ -15,6 +15,7 @@ from glassbox_radar.db import SessionLocal as RadarSessionLocal
 from glassbox_radar.models import Company as RadarCompany
 from glassbox_radar.models import Opportunity as RadarOpportunity
 from glassbox_radar.models import Program as RadarProgram
+from glassbox_radar.runtime_status import collect_radar_runtime_status
 from glassbox_radar.schemas import CompanyOut as RadarCompanyOut
 from glassbox_radar.schemas import OpportunityOut as RadarOpportunityOut
 from glassbox_radar.schemas import ProgramOut as RadarProgramOut
@@ -410,6 +411,12 @@ async def list_radar_opportunities(limit: int = Query(default=100, ge=1, le=500)
             )
         ).scalars().all()
     return list(rows)
+
+
+@router.get("/radar/status")
+async def get_radar_status() -> dict[str, object]:
+    async with RadarSessionLocal() as session:
+        return await collect_radar_runtime_status(session)
 
 
 @router.get("/reports/radar/opportunities")

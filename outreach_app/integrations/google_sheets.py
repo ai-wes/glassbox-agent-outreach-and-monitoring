@@ -40,6 +40,7 @@ class SheetsClient:
     def __init__(self):
         try:
             from google.oauth2 import service_account
+            from google.oauth2 import credentials as user_credentials
             from googleapiclient.discovery import build
         except Exception as e:
             raise SheetsConfigurationError('Google extras not installed. Run: pip install ".[google]"') from e
@@ -51,7 +52,16 @@ class SheetsClient:
             raise SheetsConfigurationError(str(e)) from e
         if info is not None:
             try:
-                creds = service_account.Credentials.from_service_account_info(info, scopes=scopes)
+                credential_type = str(info.get("type") or "").strip().lower()
+                if credential_type == "service_account":
+                    creds = service_account.Credentials.from_service_account_info(info, scopes=scopes)
+                elif credential_type == "authorized_user":
+                    creds = user_credentials.Credentials.from_authorized_user_info(info, scopes=scopes)
+                else:
+                    raise SheetsConfigurationError(
+                        "Unsupported GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON type. "
+                        "Expected service_account or authorized_user."
+                    )
             except Exception as e:
                 raise SheetsConfigurationError(
                     "Invalid GOOGLE_SHEETS_SERVICE_ACCOUNT_JSON for Google Sheets auth."

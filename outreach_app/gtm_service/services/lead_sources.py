@@ -5,11 +5,11 @@ from datetime import datetime, timedelta, timezone
 
 import feedparser
 import httpx
-from bs4 import BeautifulSoup
 from pydantic import BaseModel
 
 from outreach_app.gtm_service.core.config import Settings
 from outreach_app.gtm_service.schemas.lead import CandidateCompanyInput, CandidateContactInput, CandidateIngestRequest, RawSignalInput
+from outreach_app.gtm_service.services.html_utils import parse_html_document
 from outreach_app.gtm_service.services.text_utils import compute_recency_score, csv_rows, normalize_domain, normalize_url, parse_datetime
 
 
@@ -73,18 +73,12 @@ class SourceIngestionService:
     async def scrape_website(self, url: str) -> WebsiteSnapshot:
         response = await self.client.get(url)
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
-        for tag in soup(["script", "style", "noscript"]):
-            tag.extract()
-        text = " ".join(chunk.strip() for chunk in soup.stripped_strings)[: self.settings.max_scrape_text_chars]
-        links: list[str] = []
-        for anchor in soup.select("a[href]")[:50]:
-            href = anchor.get("href")
-            if href and (href.startswith("http://") or href.startswith("https://")):
-                links.append(href)
+        document = parse_html_document(response.text)
+        text = document.text[: self.settings.max_scrape_text_chars]
+        links = [href for href in document.links if href.startswith("http://") or href.startswith("https://")][:50]
         return WebsiteSnapshot(
             url=url,
-            title=soup.title.string.strip() if soup.title and soup.title.string else None,
+            title=document.title,
             text=text,
             links=links,
         )

@@ -18,18 +18,28 @@ import asyncio
 import uuid
 import smtplib
 import logging
+import re
 from urllib.parse import urlparse
 from email.message import EmailMessage
 from dotenv import load_dotenv
 
 # OpenAI imports
-from openai import OpenAI
+try:
+    from openai import OpenAI
+except Exception:
+    OpenAI = None  # type: ignore[assignment]
 
 # ElevenLabs TTS import
-from elevenlabs import ElevenLabs
+try:
+    from elevenlabs import ElevenLabs
+except Exception:
+    ElevenLabs = None  # type: ignore[assignment]
 
 # Faster Whisper import for transcription
-from faster_whisper import WhisperModel
+try:
+    from faster_whisper import WhisperModel
+except Exception:
+    WhisperModel = None  # type: ignore[assignment]
 
 # Load environment variables
 load_dotenv()
@@ -51,11 +61,17 @@ for dir_path in [AUDIO_DIR, VOICE_DIR, TRANSCRIPT_DIR, DIGEST_DIR]:
     dir_path.mkdir(exist_ok=True)
 
 # Initialize OpenAI client
-client = OpenAI(api_key=os.getenv('OPENROUTER_API_KEY'), base_url="https://openrouter.ai/api/v1")
+client = (
+    OpenAI(api_key=os.getenv('OPENROUTER_API_KEY'), base_url="https://openrouter.ai/api/v1")
+    if OpenAI is not None and os.getenv('OPENROUTER_API_KEY')
+    else None
+)
 
 # Initialize ElevenLabs client
-elevenlabs_client = ElevenLabs(
-    api_key=os.getenv("ELEVENLABS_API_KEY"),
+elevenlabs_client = (
+    ElevenLabs(api_key=os.getenv("ELEVENLABS_API_KEY"))
+    if ElevenLabs is not None and os.getenv("ELEVENLABS_API_KEY")
+    else None
 )
 
 # Database functions
@@ -189,6 +205,8 @@ def transcribe_audio(audio_path):
     """
     try:
         logger.info(f"Transcribing (faster-whisper): {audio_path.name}")
+        if WhisperModel is None:
+            raise RuntimeError("faster_whisper is not installed")
 
         # Use CUDA when torch is available and reports a usable GPU; otherwise
         # fall back to CPU instead of failing the whole transcription step.
@@ -237,6 +255,8 @@ def summarize_transcript(transcript_text, episode_title):
     """Generate concise summary using GPT-3.5-turbo"""
     try:
         logger.info(f"Summarizing: {episode_title}")
+        if client is None:
+            return _fallback_summary(transcript_text, episode_title)
         
         # Truncate to avoid token limits
         max_chars = 120000
@@ -261,12 +281,24 @@ def summarize_transcript(transcript_text, episode_title):
         
     except Exception as e:
         logger.error(f"Error summarizing {episode_title}: {e}")
-        return None
+        return _fallback_summary(transcript_text, episode_title)
+
+
+def _fallback_summary(transcript_text, episode_title):
+    text = re.sub(r"\s+", " ", transcript_text or "").strip()
+    if not text:
+        return f"- {episode_title}: transcript unavailable."
+    sentences = re.split(r"(?<=[.!?])\s+", text)
+    picks = [s.strip() for s in sentences if s.strip()][:6]
+    bullets = "\n".join(f"- {s[:240]}" for s in picks)
+    return bullets or f"- {episode_title}: summary unavailable."
 
 # Text-to-speech using ElevenLabs
 async def text_to_speech(text, output_dir):
     """Convert text to speech using ElevenLabs API"""
     try:
+        if elevenlabs_client is None:
+            raise RuntimeError("ElevenLabs client is not configured")
         output_file = output_dir / f"digest-{uuid.uuid4().hex}.mp3"
         # ElevenLabs API call
         audio_response = elevenlabs_client.text_to_speech.convert(
@@ -302,6 +334,9 @@ def create_digest_email(summaries, date):
 def send_digest_email(text_body, audio_path):
     """Send email with text digest and audio attachment"""
     try:
+        if not os.getenv('MAIL_FROM') or not os.getenv('MAIL_TO'):
+            logger.info("Skipping digest email because MAIL_FROM or MAIL_TO is not configured")
+            return
         msg = EmailMessage()
         msg['Subject'] = f"Daily Tech Podcast Briefing – {dt.date.today():%b %d}"
         msg['From'] = os.getenv('MAIL_FROM')
@@ -398,28 +433,22 @@ async def process_podcasts():
     # If we have new summaries, create and send digest
     if all_summaries:
         logger.info(f"Creating digest for {len(all_summaries)} episodes")
-        
-        # Sort by publication date
         all_summaries.sort(key=lambda x: x['published'], reverse=True)
-        
-        # Create email body
         email_body = create_digest_email(all_summaries, dt.date.today())
-        
-        # Save digest to file
-        digest_path = DIGEST_DIR / f"digest-{dt.date.today():%Y%m%d}.md"
-        with open(digest_path, 'w', encoding='utf-8') as f:
-            f.write(email_body)
-        
-        # Generate audio digest
         audio_summary = "\n\n".join([f"{s['title']}. {s['summary']}" for s in all_summaries])
         audio_path = await text_to_speech(audio_summary, VOICE_DIR)
-        
-        # Send email
         send_digest_email(email_body, audio_path)
-        
         logger.info("Daily podcast briefing complete!")
     else:
         logger.info("No new episodes found")
+        email_body = (
+            f"# Daily Tech Podcast Briefing - {dt.date.today():%B %d, %Y}\n\n"
+            "No new podcast episodes were processed in this run.\n"
+        )
+
+    digest_path = DIGEST_DIR / f"digest-{dt.date.today():%Y%m%d}.md"
+    with open(digest_path, 'w', encoding='utf-8') as f:
+        f.write(email_body)
 
 # Cleanup old files
 def cleanup_old_files(days=14):
